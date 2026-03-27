@@ -1,5 +1,7 @@
 # MCU Films and Directors Knowledge Graph
 
+Suggested repository name: `mcu-films-kg`
+
 Course project for **Web Mining & Semantics** built around a simpler, more stable theme:
 **Marvel Cinematic Universe films, directors, cast, characters, genres, and phases**.
 
@@ -19,30 +21,30 @@ Instead of depending on fragile live crawling or public SPARQL endpoints during 
 
 ```text
 project/
-├── src/
-│   ├── crawl/
-│   │   └── crawler.py
-│   ├── domain/
-│   │   └── mcu_data.py
-│   ├── ie/
-│   │   └── ner_extractor.py
-│   ├── kg/
-│   │   ├── build_kg.py
-│   │   ├── align_entities.py
-│   │   └── expand_sparql.py
-│   ├── reason/
-│   │   └── swrl_reasoning.py
-│   ├── kge/
-│   │   ├── prepare_kge_data.py
-│   │   ├── train_kge.py
-│   │   └── swrl_vs_kge.py
-│   └── rag/
-│       └── rag_sparql.py
-├── data/
-├── kg_artifacts/
-├── run_pipeline.py
-├── requirements.txt
-└── README.md
+|-- src/
+|   |-- crawl/
+|   |   `-- crawler.py
+|   |-- domain/
+|   |   `-- mcu_data.py
+|   |-- ie/
+|   |   `-- ner_extractor.py
+|   |-- kg/
+|   |   |-- build_kg.py
+|   |   |-- align_entities.py
+|   |   `-- expand_sparql.py
+|   |-- reason/
+|   |   `-- swrl_reasoning.py
+|   |-- kge/
+|   |   |-- prepare_kge_data.py
+|   |   |-- train_kge.py
+|   |   `-- swrl_vs_kge.py
+|   `-- rag/
+|       `-- rag_sparql.py
+|-- data/
+|-- kg_artifacts/
+|-- run_pipeline.py
+|-- requirements.txt
+`-- README.md
 ```
 
 ## Domain
