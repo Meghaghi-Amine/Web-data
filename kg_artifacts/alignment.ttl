@@ -1,0 +1,316 @@
+@prefix footy: <http://example.org/football/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <http://example.org/football/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+footy:2006_07 owl:sameAs wd:Q233604 .
+
+footy:2013_14 owl:sameAs wd:Q53386030 .
+
+footy:2015_16 owl:sameAs wd:Q53386085 .
+
+footy:2016_17 owl:sameAs wd:Q30201458 .
+
+footy:2019_20 owl:sameAs wd:Q81068910 .
+
+footy:2020_21 owl:sameAs wd:Q57401068 .
+
+footy:2022_23 owl:sameAs wd:Q73889978 .
+
+footy:2023_24 owl:sameAs wd:Q111309338 .
+
+footy:ACLRupture a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: ACLRupture"@en .
+
+footy:ACL_rupture owl:sameAs wd:Q66406255 .
+
+footy:AS_Monaco_FC owl:sameAs wd:Q180305 .
+
+footy:Abou_Diaby owl:sameAs wd:Q1943 .
+
+footy:Abou_Diaby_Muscle_tear_2013_14 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Abou Diaby Muscle tear 2013-14"@en .
+
+footy:Achilles owl:sameAs wd:Q18086783 .
+
+footy:AchillesRupture a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: AchillesRupture"@en .
+
+footy:Achilles_tendon_rupture owl:sameAs wd:Q340311 .
+
+footy:Ankle owl:sameAs wd:Q168002 .
+
+footy:Ankle_sprain owl:sameAs wd:Q61967536 .
+
+footy:Anterior_cruciate_ligament_rupture owl:sameAs wd:Q66406255 .
+
+footy:Arsenal_FC owl:sameAs wd:Q9617 .
+
+footy:Back owl:sameAs wd:Q285676 .
+
+footy:Belgium owl:sameAs wd:Q31 .
+
+footy:BodyPart owl:sameAs wd:Q4936952 .
+
+footy:Brazil owl:sameAs wd:Q155 .
+
+footy:Calf owl:sameAs wd:Q2935 .
+
+footy:Club owl:sameAs wd:Q988108 .
+
+footy:Colombia owl:sameAs wd:Q739 .
+
+footy:Competition owl:sameAs wd:Q476300 .
+
+footy:Concussion owl:sameAs wd:Q326921 .
+
+footy:Country owl:sameAs wd:Q83440 .
+
+footy:Coupe_de_France owl:sameAs wd:Q212412 .
+
+footy:England owl:sameAs wd:Q21 .
+
+footy:FC_Barcelona owl:sameAs wd:Q7156 .
+
+footy:Fibula owl:sameAs wd:Q324926 .
+
+footy:Fibula_fracture owl:sameAs wd:Q1410873 .
+
+footy:Foot owl:sameAs wd:Q3710 .
+
+footy:Fracture owl:sameAs wd:Q81841 .
+
+footy:France owl:sameAs wd:Q142 .
+
+footy:Groin owl:sameAs wd:Q65182530 .
+
+footy:Hamstring owl:sameAs wd:Q196002 .
+
+footy:HamstringStrain a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: HamstringStrain"@en .
+
+footy:Hamstring_strain owl:sameAs wd:Q66068465 .
+
+footy:Head owl:sameAs wd:Q23640 .
+
+footy:Hip owl:sameAs wd:Q537199 .
+
+footy:Injury owl:sameAs wd:Q15752765 .
+
+footy:InjuryType a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: InjuryType"@en .
+
+footy:Jack_Wilshere owl:sameAs wd:Q15199 .
+
+footy:Jack_Wilshere_Fibula_fracture_2015_16 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Jack Wilshere Fibula fracture 2015-16"@en .
+
+footy:Kevin_De_Bruyne owl:sameAs wd:Q357984 .
+
+footy:Kevin_De_Bruyne_Hamstring_strain_2023_24 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Kevin De Bruyne Hamstring strain 2023-24"@en .
+
+footy:Knee owl:sameAs wd:Q25379686 .
+
+footy:La_Liga owl:sameAs wd:Q324867 .
+
+footy:Ligue_1 owl:sameAs wd:Q13394 .
+
+footy:Liverpool_FC owl:sameAs wd:Q1130849 .
+
+footy:Luke_Shaw owl:sameAs wd:Q93563 .
+
+footy:Luke_Shaw_Tibia_fracture_2015_16 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Luke Shaw Tibia fracture 2015-16"@en .
+
+footy:Manchester_City_FC owl:sameAs wd:Q50602 .
+
+footy:Manchester_United_FC owl:sameAs wd:Q18656 .
+
+footy:MedicalStaff a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: MedicalStaff"@en .
+
+footy:Meniscus owl:sameAs wd:Q27438478 .
+
+footy:MeniscusTear a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: MeniscusTear"@en .
+
+footy:Meniscus_tear owl:sameAs wd:Q95595412 .
+
+footy:Metatarsal owl:sameAs wd:Q320524 .
+
+footy:MetatarsalFracture a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: MetatarsalFracture"@en .
+
+footy:Michael_Owen owl:sameAs wd:Q128829 .
+
+footy:Michael_Owen_Anterior_cruciate_ligament_rupture_2006_07 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Michael Owen Anterior cruciate ligament rupture 2006-07"@en .
+
+footy:MuscleTear a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: MuscleTear"@en .
+
+footy:Muscle_tear owl:sameAs wd:Q91630461 .
+
+footy:Netherlands owl:sameAs wd:Q55 .
+
+footy:Newcastle_United_FC owl:sameAs wd:Q18716 .
+
+footy:Neymar owl:sameAs wd:Q142794 .
+
+footy:Neymar_Ankle_sprain_2022_23 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Neymar Ankle sprain 2022-23"@en .
+
+footy:Ousmane_Dembele owl:sameAs wd:Q20851003 .
+
+footy:Ousmane_Dembele_Hamstring_strain_2019_20 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Ousmane Dembele Hamstring strain 2019-20"@en .
+
+footy:Paris_Saint_Germain_FC owl:sameAs wd:Q483020 .
+
+footy:Player owl:sameAs wd:Q937857 .
+
+footy:Premier_League owl:sameAs wd:Q9448 .
+
+footy:Radamel_Falcao owl:sameAs wd:Q138172 .
+
+footy:Radamel_Falcao_Anterior_cruciate_ligament_rupture_2013_14 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Radamel Falcao Anterior cruciate ligament rupture 2013-14"@en .
+
+footy:Santi_Cazorla owl:sameAs wd:Q185225 .
+
+footy:Santi_Cazorla_Achilles_tendon_rupture_2016_17 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Santi Cazorla Achilles tendon rupture 2016-17"@en .
+
+footy:Season owl:sameAs wd:Q27020041 .
+
+footy:Shoulder owl:sameAs wd:Q16363 .
+
+footy:Spain owl:sameAs wd:Q29 .
+
+footy:SpainedAnkle a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: SpainedAnkle"@en .
+
+footy:Sweden owl:sameAs wd:Q34 .
+
+footy:Thiago_Alcantara owl:sameAs wd:Q17493 .
+
+footy:Thiago_Alcantara_Meniscus_tear_2020_21 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Thiago Alcantara Meniscus tear 2020-21"@en .
+
+footy:Thigh owl:sameAs wd:Q129757 .
+
+footy:Tibia owl:sameAs wd:Q7800437 .
+
+footy:Tibia_fracture owl:sameAs wd:Q3080298 .
+
+footy:UEFA_Champions_League owl:sameAs wd:Q18756 .
+
+footy:UEFA_Europa_League owl:sameAs wd:Q18760 .
+
+footy:Virgil_van_Dijk owl:sameAs wd:Q133903 .
+
+footy:Virgil_van_Dijk_Anterior_cruciate_ligament_rupture_2020_21 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Virgil van Dijk Anterior cruciate ligament rupture 2020-21"@en .
+
+footy:World_Cup owl:sameAs wd:Q19317 .
+
+footy:Wrist owl:sameAs wd:Q674840 .
+
+footy:Zlatan_Ibrahimovic owl:sameAs wd:Q46896 .
+
+footy:Zlatan_Ibrahimovic_Anterior_cruciate_ligament_rupture_2016_17 a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17"@en .
+
+footy:achilles owl:sameAs wd:Q18086783 .
+
+footy:achilles_rupture owl:sameAs wd:Q340311 .
+
+footy:ankle owl:sameAs wd:Q168002 .
+
+footy:ankle_sprain owl:sameAs wd:Q61967536 .
+
+footy:concussion owl:sameAs wd:Q52548086 .
+
+footy:fibula owl:sameAs wd:Q324926 .
+
+footy:fibula_fracture owl:sameAs wd:Q1410873 .
+
+footy:hamstring owl:sameAs wd:Q196002 .
+
+footy:hamstring_strain owl:sameAs wd:Q77815740 .
+
+footy:knee owl:sameAs wd:Q25379686 .
+
+footy:meniscus owl:sameAs wd:Q27438478 .
+
+footy:meniscus_tear a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Meniscus cartilage tear"@en .
+
+footy:metatarsal_fracture owl:sameAs wd:Q35865379 .
+
+footy:muscle_tear a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: Muscle fibre tear"@en .
+
+prop:affectsBodyPart a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: affectsBodyPart"@en .
+
+prop:birthDate owl:sameAs wd:Q2389905 .
+
+prop:causesSurgery a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: causesSurgery"@en .
+
+prop:competesIn a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: competesIn"@en .
+
+prop:foundedYear a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: foundedYear"@en .
+
+prop:gamesAbsent a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: gamesAbsent"@en .
+
+prop:injuryDate a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: injuryDate"@en .
+
+prop:injuryDescription a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: injuryDescription"@en .
+
+prop:injuryType a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: injuryType"@en .
+
+prop:locatedIn a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: locatedIn"@en .
+
+prop:missedDueTo a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: missedDueTo"@en .
+
+prop:nationality owl:sameAs wd:Q42138 .
+
+prop:occuredDuring a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: occuredDuring"@en ;
+    owl:equivalentProperty wd:P118 .
+
+prop:playsFor owl:equivalentProperty wd:P54 ;
+    owl:sameAs wd:Q477621 .
+
+prop:position owl:sameAs wd:Q1449592 .
+
+prop:recoveryDays a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: recoveryDays"@en .
+
+prop:represents owl:equivalentProperty wd:P1532 ;
+    owl:sameAs wd:Q109425297 .
+
+prop:suffersInjury a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: suffersInjury"@en .
+
+prop:treatedBy a owl:NamedIndividual ;
+    rdfs:comment "Private entity not found in Wikidata: treatedBy"@en .
+
+footy:thigh owl:sameAs wd:Q129757 .
+
+footy:tibia owl:sameAs wd:Q7800437 .
+
+footy:tibia_fracture owl:sameAs wd:Q3080298 .
+

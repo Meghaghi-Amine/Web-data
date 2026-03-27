@@ -1,0 +1,145 @@
+entity,label,injury_context,source_url
+Virgil van Dijk,PERSON,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+Liverpool FC,ORG,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+Netherlands,GPE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+2020-21,SEASON,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+Virgil van Dijk Anterior cruciate ligament rupture 2020-21,INJURY,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+knee,BODY_PART,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+2020-10-17,DATE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+285,NUMBER,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+45,NUMBER,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
+Kevin De Bruyne,PERSON,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+Manchester City FC,ORG,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+Belgium,GPE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+2023-24,SEASON,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+Kevin De Bruyne Hamstring strain 2023-24,INJURY,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+HamstringStrain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+Hamstring strain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+hamstring,BODY_PART,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+2023-08-11,DATE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+122,NUMBER,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+18,NUMBER,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
+Neymar,PERSON,True,https://en.wikipedia.org/wiki/Neymar
+Paris Saint-Germain FC,ORG,True,https://en.wikipedia.org/wiki/Neymar
+Brazil,GPE,True,https://en.wikipedia.org/wiki/Neymar
+Ligue 1,COMPETITION,True,https://en.wikipedia.org/wiki/Neymar
+2022-23,SEASON,True,https://en.wikipedia.org/wiki/Neymar
+Neymar Ankle sprain 2022-23,INJURY,True,https://en.wikipedia.org/wiki/Neymar
+SpainedAnkle,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Neymar
+Ankle sprain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Neymar
+ankle,BODY_PART,True,https://en.wikipedia.org/wiki/Neymar
+2023-02-19,DATE,True,https://en.wikipedia.org/wiki/Neymar
+110,NUMBER,True,https://en.wikipedia.org/wiki/Neymar
+20,NUMBER,True,https://en.wikipedia.org/wiki/Neymar
+Santi Cazorla,PERSON,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+Arsenal FC,ORG,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+Spain,GPE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+2016-17,SEASON,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+Santi Cazorla Achilles tendon rupture 2016-17,INJURY,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+AchillesRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+Achilles tendon rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+achilles,BODY_PART,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+2016-10-19,DATE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+636,NUMBER,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+86,NUMBER,True,https://en.wikipedia.org/wiki/Santi_Cazorla
+Michael Owen,PERSON,True,https://en.wikipedia.org/wiki/Michael_Owen
+Newcastle United FC,ORG,True,https://en.wikipedia.org/wiki/Michael_Owen
+England,GPE,True,https://en.wikipedia.org/wiki/Michael_Owen
+World Cup,COMPETITION,True,https://en.wikipedia.org/wiki/Michael_Owen
+2006-07,SEASON,True,https://en.wikipedia.org/wiki/Michael_Owen
+Michael Owen Anterior cruciate ligament rupture 2006-07,INJURY,True,https://en.wikipedia.org/wiki/Michael_Owen
+ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Michael_Owen
+Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Michael_Owen
+knee,BODY_PART,True,https://en.wikipedia.org/wiki/Michael_Owen
+2006-06-22,DATE,True,https://en.wikipedia.org/wiki/Michael_Owen
+301,NUMBER,True,https://en.wikipedia.org/wiki/Michael_Owen
+40,NUMBER,True,https://en.wikipedia.org/wiki/Michael_Owen
+Abou Diaby,PERSON,True,https://en.wikipedia.org/wiki/Abou_Diaby
+Arsenal FC,ORG,True,https://en.wikipedia.org/wiki/Abou_Diaby
+France,GPE,True,https://en.wikipedia.org/wiki/Abou_Diaby
+Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Abou_Diaby
+2013-14,SEASON,True,https://en.wikipedia.org/wiki/Abou_Diaby
+Abou Diaby Muscle tear 2013-14,INJURY,True,https://en.wikipedia.org/wiki/Abou_Diaby
+MuscleTear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Abou_Diaby
+Muscle tear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Abou_Diaby
+thigh,BODY_PART,True,https://en.wikipedia.org/wiki/Abou_Diaby
+2013-09-01,DATE,True,https://en.wikipedia.org/wiki/Abou_Diaby
+214,NUMBER,True,https://en.wikipedia.org/wiki/Abou_Diaby
+32,NUMBER,True,https://en.wikipedia.org/wiki/Abou_Diaby
+Luke Shaw,PERSON,True,https://en.wikipedia.org/wiki/Luke_Shaw
+Manchester United FC,ORG,True,https://en.wikipedia.org/wiki/Luke_Shaw
+England,GPE,True,https://en.wikipedia.org/wiki/Luke_Shaw
+UEFA Champions League,COMPETITION,True,https://en.wikipedia.org/wiki/Luke_Shaw
+2015-16,SEASON,True,https://en.wikipedia.org/wiki/Luke_Shaw
+Luke Shaw Tibia fracture 2015-16,INJURY,True,https://en.wikipedia.org/wiki/Luke_Shaw
+Fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Luke_Shaw
+Tibia fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Luke_Shaw
+tibia,BODY_PART,True,https://en.wikipedia.org/wiki/Luke_Shaw
+2015-09-15,DATE,True,https://en.wikipedia.org/wiki/Luke_Shaw
+289,NUMBER,True,https://en.wikipedia.org/wiki/Luke_Shaw
+42,NUMBER,True,https://en.wikipedia.org/wiki/Luke_Shaw
+Radamel Falcao,PERSON,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+AS Monaco FC,ORG,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+Colombia,GPE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+Coupe de France,COMPETITION,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+2013-14,SEASON,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+Radamel Falcao Anterior cruciate ligament rupture 2013-14,INJURY,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+knee,BODY_PART,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+2014-01-22,DATE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+157,NUMBER,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+22,NUMBER,True,https://en.wikipedia.org/wiki/Radamel_Falcao
+Zlatan Ibrahimovic,PERSON,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+Manchester United FC,ORG,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+Sweden,GPE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+UEFA Europa League,COMPETITION,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+2016-17,SEASON,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17,INJURY,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+knee,BODY_PART,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+2017-04-20,DATE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+213,NUMBER,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+31,NUMBER,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
+Jack Wilshere,PERSON,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+Arsenal FC,ORG,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+England,GPE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+2015-16,SEASON,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+Jack Wilshere Fibula fracture 2015-16,INJURY,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+Fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+Fibula fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+fibula,BODY_PART,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+2015-08-08,DATE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+161,NUMBER,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+27,NUMBER,True,https://en.wikipedia.org/wiki/Jack_Wilshere
+Thiago Alcantara,PERSON,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+Liverpool FC,ORG,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+Spain,GPE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+2020-21,SEASON,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+Thiago Alcantara Meniscus tear 2020-21,INJURY,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+MeniscusTear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+Meniscus tear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+meniscus,BODY_PART,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+2020-10-17,DATE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+84,NUMBER,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+14,NUMBER,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
+Ousmane Dembele,PERSON,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+FC Barcelona,ORG,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+France,GPE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+La Liga,COMPETITION,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+2019-20,SEASON,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+Ousmane Dembele Hamstring strain 2019-20,INJURY,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+HamstringStrain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+Hamstring strain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+hamstring,BODY_PART,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+2020-02-03,DATE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+191,NUMBER,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+29,NUMBER,True,https://en.wikipedia.org/wiki/Ousmane_Dembele

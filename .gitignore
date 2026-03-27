@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.DS_Store
+.vscode/
+.idea/
+data/kge/
+kg_artifacts/expanded.nt
+data/crawler_output.jsonl
+!data/samples/
+.ipynb_checkpoints/

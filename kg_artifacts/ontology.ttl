@@ -1,0 +1,291 @@
+@prefix footy: <http://example.org/football/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <http://example.org/football/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+footy:ACL_rupture a footy:ACLRupture ;
+    rdfs:label "Anterior cruciate ligament rupture"@en .
+
+footy:Achilles a footy:BodyPart ;
+    rdfs:label "achilles"@en .
+
+footy:Ankle a footy:BodyPart ;
+    rdfs:label "ankle"@en .
+
+footy:Back a footy:BodyPart ;
+    rdfs:label "back"@en .
+
+footy:Calf a footy:BodyPart ;
+    rdfs:label "calf"@en .
+
+footy:Fibula a footy:BodyPart ;
+    rdfs:label "fibula"@en .
+
+footy:Foot a footy:BodyPart ;
+    rdfs:label "foot"@en .
+
+footy:Groin a footy:BodyPart ;
+    rdfs:label "groin"@en .
+
+footy:Hamstring a footy:BodyPart ;
+    rdfs:label "hamstring"@en .
+
+footy:Head a footy:BodyPart ;
+    rdfs:label "head"@en .
+
+footy:Hip a footy:BodyPart ;
+    rdfs:label "hip"@en .
+
+footy:Knee a footy:BodyPart ;
+    rdfs:label "knee"@en .
+
+footy:Meniscus a footy:BodyPart ;
+    rdfs:label "meniscus"@en .
+
+footy:Metatarsal a footy:BodyPart ;
+    rdfs:label "metatarsal"@en .
+
+footy:Season a owl:Class ;
+    rdfs:label "Season"@en ;
+    rdfs:comment "A football season (e.g. 2022-23)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Shoulder a footy:BodyPart ;
+    rdfs:label "shoulder"@en .
+
+footy:Thigh a footy:BodyPart ;
+    rdfs:label "thigh"@en .
+
+footy:Tibia a footy:BodyPart ;
+    rdfs:label "tibia"@en .
+
+footy:Wrist a footy:BodyPart ;
+    rdfs:label "wrist"@en .
+
+footy:achilles_rupture a footy:AchillesRupture ;
+    rdfs:label "Achilles tendon rupture"@en .
+
+footy:ankle_sprain a footy:SpainedAnkle ;
+    rdfs:label "Ankle sprain"@en .
+
+footy:concussion a footy:Concussion ;
+    rdfs:label "Head concussion"@en .
+
+footy:fibula_fracture a footy:Fracture ;
+    rdfs:label "Fibula fracture"@en .
+
+footy:hamstring_strain a footy:HamstringStrain ;
+    rdfs:label "Hamstring muscle strain"@en .
+
+footy:meniscus_tear a footy:MeniscusTear ;
+    rdfs:label "Meniscus cartilage tear"@en .
+
+footy:metatarsal_fracture a footy:MetatarsalFracture ;
+    rdfs:label "Metatarsal fracture"@en .
+
+footy:muscle_tear a footy:MuscleTear ;
+    rdfs:label "Muscle fibre tear"@en .
+
+prop:affectsBodyPart a owl:ObjectProperty ;
+    rdfs:label "affectsBodyPart"@en ;
+    rdfs:comment "The body part affected by the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:BodyPart .
+
+prop:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birthDate"@en ;
+    rdfs:comment "Player's date of birth."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range xsd:date .
+
+prop:causesSurgery a owl:ObjectProperty ;
+    rdfs:label "causesSurgery"@en ;
+    rdfs:comment "Injury that required surgery."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:Injury .
+
+prop:competesIn a owl:ObjectProperty ;
+    rdfs:label "competesIn"@en ;
+    rdfs:comment "Competition the club participates in."@en ;
+    rdfs:domain footy:Club ;
+    rdfs:range footy:Competition .
+
+prop:foundedYear a owl:DatatypeProperty ;
+    rdfs:label "foundedYear"@en ;
+    rdfs:comment "Year the club was founded."@en ;
+    rdfs:domain footy:Club ;
+    rdfs:range xsd:gYear .
+
+prop:gamesAbsent a owl:DatatypeProperty ;
+    rdfs:label "gamesAbsent"@en ;
+    rdfs:comment "Number of games missed."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:integer .
+
+prop:injuryDate a owl:DatatypeProperty ;
+    rdfs:label "injuryDate"@en ;
+    rdfs:comment "Date when the injury occurred."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:date .
+
+prop:injuryDescription a owl:DatatypeProperty ;
+    rdfs:label "injuryDescription"@en ;
+    rdfs:comment "Textual description of the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:string .
+
+prop:injuryType a owl:ObjectProperty ;
+    rdfs:label "injuryType"@en ;
+    rdfs:comment "The type/category of the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:InjuryType .
+
+prop:locatedIn a owl:ObjectProperty ;
+    rdfs:label "locatedIn"@en ;
+    rdfs:comment "Country where the club is based."@en ;
+    rdfs:domain footy:Club ;
+    rdfs:range footy:Country .
+
+prop:missedDueTo a owl:ObjectProperty ;
+    rdfs:label "missedDueTo"@en ;
+    rdfs:comment "Games or events missed due to the injury."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Injury .
+
+prop:nationality a owl:DatatypeProperty ;
+    rdfs:label "nationality"@en ;
+    rdfs:comment "Nationality of the player."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range xsd:string .
+
+prop:occuredDuring a owl:ObjectProperty ;
+    rdfs:label "occuredDuring"@en ;
+    rdfs:comment "Competition during which the injury occurred."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:Competition .
+
+prop:playsFor a owl:ObjectProperty ;
+    rdfs:label "playsFor"@en ;
+    rdfs:comment "The player plays or played for this club."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Club .
+
+prop:position a owl:DatatypeProperty ;
+    rdfs:label "position"@en ;
+    rdfs:comment "Playing position (e.g. Midfielder)."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range xsd:string .
+
+prop:recoveryDays a owl:DatatypeProperty ;
+    rdfs:label "recoveryDays"@en ;
+    rdfs:comment "Number of days of recovery."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:integer .
+
+prop:represents a owl:ObjectProperty ;
+    rdfs:label "represents"@en ;
+    rdfs:comment "National team represented by the player."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Country .
+
+prop:suffersInjury a owl:ObjectProperty ;
+    rdfs:label "suffersInjury"@en ;
+    rdfs:comment "The player suffered this injury."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Injury .
+
+prop:treatedBy a owl:ObjectProperty ;
+    rdfs:label "treatedBy"@en ;
+    rdfs:comment "Medical staff who treated the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:MedicalStaff .
+
+footy:tibia_fracture a footy:Fracture ;
+    rdfs:label "Tibia fracture"@en .
+
+footy:ACLRupture a owl:Class ;
+    rdfs:label "ACLRupture"@en ;
+    rdfs:comment "Anterior Cruciate Ligament rupture."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:AchillesRupture a owl:Class ;
+    rdfs:label "AchillesRupture"@en ;
+    rdfs:comment "Rupture of the Achilles tendon."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Concussion a owl:Class ;
+    rdfs:label "Concussion"@en ;
+    rdfs:comment "Brain concussion from impact."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:HamstringStrain a owl:Class ;
+    rdfs:label "HamstringStrain"@en ;
+    rdfs:comment "Strain or tear of the hamstring muscle."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:MedicalStaff a owl:Class ;
+    rdfs:label "MedicalStaff"@en ;
+    rdfs:comment "A doctor or physiotherapist involved in treatment."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:MeniscusTear a owl:Class ;
+    rdfs:label "MeniscusTear"@en ;
+    rdfs:comment "Tear of the meniscus cartilage."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:MetatarsalFracture a owl:Class ;
+    rdfs:label "MetatarsalFracture"@en ;
+    rdfs:comment "Fracture of a metatarsal bone in the foot."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:MuscleTear a owl:Class ;
+    rdfs:label "MuscleTear"@en ;
+    rdfs:comment "Tear of a muscle fibre."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:SpainedAnkle a owl:Class ;
+    rdfs:label "SpainedAnkle"@en ;
+    rdfs:comment "Ankle sprain."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Competition a owl:Class ;
+    rdfs:label "Competition"@en ;
+    rdfs:comment "A football tournament or league."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Country a owl:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation associated with a player or club."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Fracture a owl:Class ;
+    rdfs:label "Fracture"@en ;
+    rdfs:comment "Bone fracture."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Club a owl:Class ;
+    rdfs:label "Club"@en ;
+    rdfs:comment "A football club or team."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Player a owl:Class ;
+    rdfs:label "Player"@en ;
+    rdfs:comment "A professional football player."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:InjuryType a owl:Class ;
+    rdfs:label "InjuryType"@en ;
+    rdfs:comment "A category of injury (e.g. ACL rupture, fracture)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Injury a owl:Class ;
+    rdfs:label "Injury"@en ;
+    rdfs:comment "A specific injury suffered by a player."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:BodyPart a owl:Class ;
+    rdfs:label "BodyPart"@en ;
+    rdfs:comment "The body part affected by an injury."@en ;
+    rdfs:subClassOf owl:Thing .
+

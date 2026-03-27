@@ -1,0 +1,619 @@
+@prefix footy: <http://example.org/football/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <http://example.org/football/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+footy:2006_07 a footy:Season ;
+    rdfs:label "2006-07"@en .
+
+footy:2013_14 a footy:Season ;
+    rdfs:label "2013-14"@en .
+
+footy:2015_16 a footy:Season ;
+    rdfs:label "2015-16"@en .
+
+footy:2016_17 a footy:Season ;
+    rdfs:label "2016-17"@en .
+
+footy:2019_20 a footy:Season ;
+    rdfs:label "2019-20"@en .
+
+footy:2020_21 a footy:Season ;
+    rdfs:label "2020-21"@en .
+
+footy:2022_23 a footy:Season ;
+    rdfs:label "2022-23"@en .
+
+footy:2023_24 a footy:Season ;
+    rdfs:label "2023-24"@en .
+
+footy:ACL_rupture a footy:ACLRupture ;
+    rdfs:label "Anterior cruciate ligament rupture"@en .
+
+footy:Abou_Diaby a footy:Player ;
+    rdfs:label "Abou Diaby"@en ;
+    prop:playsFor footy:Arsenal_FC ;
+    prop:represents footy:France ;
+    prop:suffersInjury footy:Abou_Diaby_Muscle_tear_2013_14 .
+
+footy:Achilles a footy:BodyPart ;
+    rdfs:label "achilles"@en .
+
+footy:Achilles_tendon_rupture a footy:InjuryType ;
+    rdfs:label "Achilles tendon rupture"@en .
+
+footy:Ankle a footy:BodyPart ;
+    rdfs:label "ankle"@en .
+
+footy:Ankle_sprain a footy:InjuryType ;
+    rdfs:label "Ankle sprain"@en .
+
+footy:Anterior_cruciate_ligament_rupture a footy:InjuryType ;
+    rdfs:label "Anterior cruciate ligament rupture"@en .
+
+footy:Back a footy:BodyPart ;
+    rdfs:label "back"@en .
+
+footy:Calf a footy:BodyPart ;
+    rdfs:label "calf"@en .
+
+footy:Fibula a footy:BodyPart ;
+    rdfs:label "fibula"@en .
+
+footy:Fibula_fracture a footy:InjuryType ;
+    rdfs:label "Fibula fracture"@en .
+
+footy:Foot a footy:BodyPart ;
+    rdfs:label "foot"@en .
+
+footy:Groin a footy:BodyPart ;
+    rdfs:label "groin"@en .
+
+footy:Hamstring a footy:BodyPart ;
+    rdfs:label "hamstring"@en .
+
+footy:Hamstring_strain a footy:InjuryType ;
+    rdfs:label "Hamstring strain"@en .
+
+footy:Head a footy:BodyPart ;
+    rdfs:label "head"@en .
+
+footy:Hip a footy:BodyPart ;
+    rdfs:label "hip"@en .
+
+footy:Jack_Wilshere a footy:Player ;
+    rdfs:label "Jack Wilshere"@en ;
+    prop:playsFor footy:Arsenal_FC ;
+    prop:represents footy:England ;
+    prop:suffersInjury footy:Jack_Wilshere_Fibula_fracture_2015_16 .
+
+footy:Kevin_De_Bruyne a footy:Player ;
+    rdfs:label "Kevin De Bruyne"@en ;
+    prop:playsFor footy:Manchester_City_FC ;
+    prop:represents footy:Belgium ;
+    prop:suffersInjury footy:Kevin_De_Bruyne_Hamstring_strain_2023_24 .
+
+footy:Knee a footy:BodyPart ;
+    rdfs:label "knee"@en .
+
+footy:Luke_Shaw a footy:Player ;
+    rdfs:label "Luke Shaw"@en ;
+    prop:playsFor footy:Manchester_United_FC ;
+    prop:represents footy:England ;
+    prop:suffersInjury footy:Luke_Shaw_Tibia_fracture_2015_16 .
+
+footy:Meniscus a footy:BodyPart ;
+    rdfs:label "meniscus"@en .
+
+footy:Meniscus_tear a footy:InjuryType ;
+    rdfs:label "Meniscus tear"@en .
+
+footy:Metatarsal a footy:BodyPart ;
+    rdfs:label "metatarsal"@en .
+
+footy:Michael_Owen a footy:Player ;
+    rdfs:label "Michael Owen"@en ;
+    prop:playsFor footy:Newcastle_United_FC ;
+    prop:represents footy:England ;
+    prop:suffersInjury footy:Michael_Owen_Anterior_cruciate_ligament_rupture_2006_07 .
+
+footy:Muscle_tear a footy:InjuryType ;
+    rdfs:label "Muscle tear"@en .
+
+footy:Neymar a footy:Player ;
+    rdfs:label "Neymar"@en ;
+    prop:playsFor footy:Paris_Saint_Germain_FC ;
+    prop:represents footy:Brazil ;
+    prop:suffersInjury footy:Neymar_Ankle_sprain_2022_23 .
+
+footy:Ousmane_Dembele a footy:Player ;
+    rdfs:label "Ousmane Dembele"@en ;
+    prop:playsFor footy:FC_Barcelona ;
+    prop:represents footy:France ;
+    prop:suffersInjury footy:Ousmane_Dembele_Hamstring_strain_2019_20 .
+
+footy:Radamel_Falcao a footy:Player ;
+    rdfs:label "Radamel Falcao"@en ;
+    prop:playsFor footy:AS_Monaco_FC ;
+    prop:represents footy:Colombia ;
+    prop:suffersInjury footy:Radamel_Falcao_Anterior_cruciate_ligament_rupture_2013_14 .
+
+footy:Santi_Cazorla a footy:Player ;
+    rdfs:label "Santi Cazorla"@en ;
+    prop:playsFor footy:Arsenal_FC ;
+    prop:represents footy:Spain ;
+    prop:suffersInjury footy:Santi_Cazorla_Achilles_tendon_rupture_2016_17 .
+
+footy:Shoulder a footy:BodyPart ;
+    rdfs:label "shoulder"@en .
+
+footy:Thiago_Alcantara a footy:Player ;
+    rdfs:label "Thiago Alcantara"@en ;
+    prop:playsFor footy:Liverpool_FC ;
+    prop:represents footy:Spain ;
+    prop:suffersInjury footy:Thiago_Alcantara_Meniscus_tear_2020_21 .
+
+footy:Thigh a footy:BodyPart ;
+    rdfs:label "thigh"@en .
+
+footy:Tibia a footy:BodyPart ;
+    rdfs:label "tibia"@en .
+
+footy:Tibia_fracture a footy:InjuryType ;
+    rdfs:label "Tibia fracture"@en .
+
+footy:Virgil_van_Dijk a footy:Player ;
+    rdfs:label "Virgil van Dijk"@en ;
+    prop:playsFor footy:Liverpool_FC ;
+    prop:represents footy:Netherlands ;
+    prop:suffersInjury footy:Virgil_van_Dijk_Anterior_cruciate_ligament_rupture_2020_21 .
+
+footy:Wrist a footy:BodyPart ;
+    rdfs:label "wrist"@en .
+
+footy:Zlatan_Ibrahimovic a footy:Player ;
+    rdfs:label "Zlatan Ibrahimovic"@en ;
+    prop:playsFor footy:Manchester_United_FC ;
+    prop:represents footy:Sweden ;
+    prop:suffersInjury footy:Zlatan_Ibrahimovic_Anterior_cruciate_ligament_rupture_2016_17 .
+
+footy:achilles_rupture a footy:AchillesRupture ;
+    rdfs:label "Achilles tendon rupture"@en .
+
+footy:ankle_sprain a footy:SpainedAnkle ;
+    rdfs:label "Ankle sprain"@en .
+
+footy:concussion a footy:Concussion ;
+    rdfs:label "Head concussion"@en .
+
+footy:fibula_fracture a footy:Fracture ;
+    rdfs:label "Fibula fracture"@en .
+
+footy:hamstring_strain a footy:HamstringStrain ;
+    rdfs:label "Hamstring muscle strain"@en .
+
+footy:meniscus_tear a footy:MeniscusTear ;
+    rdfs:label "Meniscus cartilage tear"@en .
+
+footy:metatarsal_fracture a footy:MetatarsalFracture ;
+    rdfs:label "Metatarsal fracture"@en .
+
+footy:muscle_tear a footy:MuscleTear ;
+    rdfs:label "Muscle fibre tear"@en .
+
+prop:affectsBodyPart a owl:ObjectProperty ;
+    rdfs:label "affectsBodyPart"@en ;
+    rdfs:comment "The body part affected by the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:BodyPart .
+
+prop:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birthDate"@en ;
+    rdfs:comment "Player's date of birth."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range xsd:date .
+
+prop:causesSurgery a owl:ObjectProperty ;
+    rdfs:label "causesSurgery"@en ;
+    rdfs:comment "Injury that required surgery."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:Injury .
+
+prop:competesIn a owl:ObjectProperty ;
+    rdfs:label "competesIn"@en ;
+    rdfs:comment "Competition the club participates in."@en ;
+    rdfs:domain footy:Club ;
+    rdfs:range footy:Competition .
+
+prop:foundedYear a owl:DatatypeProperty ;
+    rdfs:label "foundedYear"@en ;
+    rdfs:comment "Year the club was founded."@en ;
+    rdfs:domain footy:Club ;
+    rdfs:range xsd:gYear .
+
+prop:gamesAbsent a owl:DatatypeProperty ;
+    rdfs:label "gamesAbsent"@en ;
+    rdfs:comment "Number of games missed."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:integer .
+
+prop:injuryDate a owl:DatatypeProperty ;
+    rdfs:label "injuryDate"@en ;
+    rdfs:comment "Date when the injury occurred."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:date .
+
+prop:injuryDescription a owl:DatatypeProperty ;
+    rdfs:label "injuryDescription"@en ;
+    rdfs:comment "Textual description of the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:string .
+
+prop:injuryType a owl:ObjectProperty ;
+    rdfs:label "injuryType"@en ;
+    rdfs:comment "The type/category of the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:InjuryType .
+
+prop:locatedIn a owl:ObjectProperty ;
+    rdfs:label "locatedIn"@en ;
+    rdfs:comment "Country where the club is based."@en ;
+    rdfs:domain footy:Club ;
+    rdfs:range footy:Country .
+
+prop:missedDueTo a owl:ObjectProperty ;
+    rdfs:label "missedDueTo"@en ;
+    rdfs:comment "Games or events missed due to the injury."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Injury .
+
+prop:nationality a owl:DatatypeProperty ;
+    rdfs:label "nationality"@en ;
+    rdfs:comment "Nationality of the player."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range xsd:string .
+
+prop:occuredDuring a owl:ObjectProperty ;
+    rdfs:label "occuredDuring"@en ;
+    rdfs:comment "Competition during which the injury occurred."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:Competition .
+
+prop:playsFor a owl:ObjectProperty ;
+    rdfs:label "playsFor"@en ;
+    rdfs:comment "The player plays or played for this club."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Club .
+
+prop:position a owl:DatatypeProperty ;
+    rdfs:label "position"@en ;
+    rdfs:comment "Playing position (e.g. Midfielder)."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range xsd:string .
+
+prop:recoveryDays a owl:DatatypeProperty ;
+    rdfs:label "recoveryDays"@en ;
+    rdfs:comment "Number of days of recovery."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range xsd:integer .
+
+prop:represents a owl:ObjectProperty ;
+    rdfs:label "represents"@en ;
+    rdfs:comment "National team represented by the player."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Country .
+
+prop:suffersInjury a owl:ObjectProperty ;
+    rdfs:label "suffersInjury"@en ;
+    rdfs:comment "The player suffered this injury."@en ;
+    rdfs:domain footy:Player ;
+    rdfs:range footy:Injury .
+
+prop:treatedBy a owl:ObjectProperty ;
+    rdfs:label "treatedBy"@en ;
+    rdfs:comment "Medical staff who treated the injury."@en ;
+    rdfs:domain footy:Injury ;
+    rdfs:range footy:MedicalStaff .
+
+footy:tibia_fracture a footy:Fracture ;
+    rdfs:label "Tibia fracture"@en .
+
+footy:AS_Monaco_FC a footy:Club ;
+    rdfs:label "AS Monaco FC"@en .
+
+footy:Abou_Diaby_Muscle_tear_2013_14 a footy:Injury ;
+    rdfs:label "Abou Diaby Muscle tear 2013-14"@en ;
+    prop:affectsBodyPart footy:thigh ;
+    prop:gamesAbsent 32 ;
+    prop:injuryDate "2013-09-01"^^xsd:date ;
+    prop:injuryType footy:MuscleTear ;
+    prop:occuredDuring footy:Premier_League ;
+    prop:recoveryDays 214 .
+
+footy:Belgium a footy:Country ;
+    rdfs:label "Belgium"@en .
+
+footy:Brazil a footy:Country ;
+    rdfs:label "Brazil"@en .
+
+footy:Colombia a footy:Country ;
+    rdfs:label "Colombia"@en .
+
+footy:Concussion a owl:Class ;
+    rdfs:label "Concussion"@en ;
+    rdfs:comment "Brain concussion from impact."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Coupe_de_France a footy:Competition ;
+    rdfs:label "Coupe de France"@en .
+
+footy:FC_Barcelona a footy:Club ;
+    rdfs:label "FC Barcelona"@en .
+
+footy:Jack_Wilshere_Fibula_fracture_2015_16 a footy:Injury ;
+    rdfs:label "Jack Wilshere Fibula fracture 2015-16"@en ;
+    prop:affectsBodyPart footy:fibula ;
+    prop:gamesAbsent 27 ;
+    prop:injuryDate "2015-08-08"^^xsd:date ;
+    prop:injuryType footy:Fracture ;
+    prop:occuredDuring footy:Premier_League ;
+    prop:recoveryDays 161 .
+
+footy:Kevin_De_Bruyne_Hamstring_strain_2023_24 a footy:Injury ;
+    rdfs:label "Kevin De Bruyne Hamstring strain 2023-24"@en ;
+    prop:affectsBodyPart footy:hamstring ;
+    prop:gamesAbsent 18 ;
+    prop:injuryDate "2023-08-11"^^xsd:date ;
+    prop:injuryType footy:HamstringStrain ;
+    prop:occuredDuring footy:Premier_League ;
+    prop:recoveryDays 122 .
+
+footy:La_Liga a footy:Competition ;
+    rdfs:label "La Liga"@en .
+
+footy:Ligue_1 a footy:Competition ;
+    rdfs:label "Ligue 1"@en .
+
+footy:Luke_Shaw_Tibia_fracture_2015_16 a footy:Injury ;
+    rdfs:label "Luke Shaw Tibia fracture 2015-16"@en ;
+    prop:affectsBodyPart footy:tibia ;
+    prop:gamesAbsent 42 ;
+    prop:injuryDate "2015-09-15"^^xsd:date ;
+    prop:injuryType footy:Fracture ;
+    prop:occuredDuring footy:UEFA_Champions_League ;
+    prop:recoveryDays 289 .
+
+footy:Manchester_City_FC a footy:Club ;
+    rdfs:label "Manchester City FC"@en .
+
+footy:MedicalStaff a owl:Class ;
+    rdfs:label "MedicalStaff"@en ;
+    rdfs:comment "A doctor or physiotherapist involved in treatment."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:MetatarsalFracture a owl:Class ;
+    rdfs:label "MetatarsalFracture"@en ;
+    rdfs:comment "Fracture of a metatarsal bone in the foot."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Michael_Owen_Anterior_cruciate_ligament_rupture_2006_07 a footy:Injury ;
+    rdfs:label "Michael Owen Anterior cruciate ligament rupture 2006-07"@en ;
+    prop:affectsBodyPart footy:knee ;
+    prop:gamesAbsent 40 ;
+    prop:injuryDate "2006-06-22"^^xsd:date ;
+    prop:injuryType footy:ACLRupture ;
+    prop:occuredDuring footy:World_Cup ;
+    prop:recoveryDays 301 .
+
+footy:Netherlands a footy:Country ;
+    rdfs:label "Netherlands"@en .
+
+footy:Newcastle_United_FC a footy:Club ;
+    rdfs:label "Newcastle United FC"@en .
+
+footy:Neymar_Ankle_sprain_2022_23 a footy:Injury ;
+    rdfs:label "Neymar Ankle sprain 2022-23"@en ;
+    prop:affectsBodyPart footy:ankle ;
+    prop:gamesAbsent 20 ;
+    prop:injuryDate "2023-02-19"^^xsd:date ;
+    prop:injuryType footy:SpainedAnkle ;
+    prop:occuredDuring footy:Ligue_1 ;
+    prop:recoveryDays 110 .
+
+footy:Ousmane_Dembele_Hamstring_strain_2019_20 a footy:Injury ;
+    rdfs:label "Ousmane Dembele Hamstring strain 2019-20"@en ;
+    prop:affectsBodyPart footy:hamstring ;
+    prop:gamesAbsent 29 ;
+    prop:injuryDate "2020-02-03"^^xsd:date ;
+    prop:injuryType footy:HamstringStrain ;
+    prop:occuredDuring footy:La_Liga ;
+    prop:recoveryDays 191 .
+
+footy:Paris_Saint_Germain_FC a footy:Club ;
+    rdfs:label "Paris Saint-Germain FC"@en .
+
+footy:Radamel_Falcao_Anterior_cruciate_ligament_rupture_2013_14 a footy:Injury ;
+    rdfs:label "Radamel Falcao Anterior cruciate ligament rupture 2013-14"@en ;
+    prop:affectsBodyPart footy:knee ;
+    prop:gamesAbsent 22 ;
+    prop:injuryDate "2014-01-22"^^xsd:date ;
+    prop:injuryType footy:ACLRupture ;
+    prop:occuredDuring footy:Coupe_de_France ;
+    prop:recoveryDays 157 .
+
+footy:Santi_Cazorla_Achilles_tendon_rupture_2016_17 a footy:Injury ;
+    rdfs:label "Santi Cazorla Achilles tendon rupture 2016-17"@en ;
+    prop:affectsBodyPart footy:achilles ;
+    prop:gamesAbsent 86 ;
+    prop:injuryDate "2016-10-19"^^xsd:date ;
+    prop:injuryType footy:AchillesRupture ;
+    prop:occuredDuring footy:Premier_League ;
+    prop:recoveryDays 636 .
+
+footy:Sweden a footy:Country ;
+    rdfs:label "Sweden"@en .
+
+footy:Thiago_Alcantara_Meniscus_tear_2020_21 a footy:Injury ;
+    rdfs:label "Thiago Alcantara Meniscus tear 2020-21"@en ;
+    prop:affectsBodyPart footy:meniscus ;
+    prop:gamesAbsent 14 ;
+    prop:injuryDate "2020-10-17"^^xsd:date ;
+    prop:injuryType footy:MeniscusTear ;
+    prop:occuredDuring footy:Premier_League ;
+    prop:recoveryDays 84 .
+
+footy:UEFA_Champions_League a footy:Competition ;
+    rdfs:label "UEFA Champions League"@en .
+
+footy:UEFA_Europa_League a footy:Competition ;
+    rdfs:label "UEFA Europa League"@en .
+
+footy:Virgil_van_Dijk_Anterior_cruciate_ligament_rupture_2020_21 a footy:Injury ;
+    rdfs:label "Virgil van Dijk Anterior cruciate ligament rupture 2020-21"@en ;
+    prop:affectsBodyPart footy:knee ;
+    prop:gamesAbsent 45 ;
+    prop:injuryDate "2020-10-17"^^xsd:date ;
+    prop:injuryType footy:ACLRupture ;
+    prop:occuredDuring footy:Premier_League ;
+    prop:recoveryDays 285 .
+
+footy:World_Cup a footy:Competition ;
+    rdfs:label "World Cup"@en .
+
+footy:Zlatan_Ibrahimovic_Anterior_cruciate_ligament_rupture_2016_17 a footy:Injury ;
+    rdfs:label "Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17"@en ;
+    prop:affectsBodyPart footy:knee ;
+    prop:gamesAbsent 31 ;
+    prop:injuryDate "2017-04-20"^^xsd:date ;
+    prop:injuryType footy:ACLRupture ;
+    prop:occuredDuring footy:UEFA_Europa_League ;
+    prop:recoveryDays 213 .
+
+footy:achilles a footy:BodyPart ;
+    rdfs:label "achilles"@en .
+
+footy:ankle a footy:BodyPart ;
+    rdfs:label "ankle"@en .
+
+footy:fibula a footy:BodyPart ;
+    rdfs:label "fibula"@en .
+
+footy:meniscus a footy:BodyPart ;
+    rdfs:label "meniscus"@en .
+
+footy:thigh a footy:BodyPart ;
+    rdfs:label "thigh"@en .
+
+footy:tibia a footy:BodyPart ;
+    rdfs:label "tibia"@en .
+
+footy:AchillesRupture a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "AchillesRupture"@en ;
+    rdfs:comment "Rupture of the Achilles tendon."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:France a footy:Country ;
+    rdfs:label "France"@en .
+
+footy:Liverpool_FC a footy:Club ;
+    rdfs:label "Liverpool FC"@en .
+
+footy:Manchester_United_FC a footy:Club ;
+    rdfs:label "Manchester United FC"@en .
+
+footy:MeniscusTear a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "MeniscusTear"@en ;
+    rdfs:comment "Tear of the meniscus cartilage."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:MuscleTear a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "MuscleTear"@en ;
+    rdfs:comment "Tear of a muscle fibre."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Spain a footy:Country ;
+    rdfs:label "Spain"@en .
+
+footy:SpainedAnkle a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "SpainedAnkle"@en ;
+    rdfs:comment "Ankle sprain."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:hamstring a footy:BodyPart ;
+    rdfs:label "hamstring"@en .
+
+footy:Arsenal_FC a footy:Club ;
+    rdfs:label "Arsenal FC"@en .
+
+footy:England a footy:Country ;
+    rdfs:label "England"@en .
+
+footy:HamstringStrain a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "HamstringStrain"@en ;
+    rdfs:comment "Strain or tear of the hamstring muscle."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Fracture a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "Fracture"@en ;
+    rdfs:comment "Bone fracture."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:knee a footy:BodyPart ;
+    rdfs:label "knee"@en .
+
+footy:ACLRupture a footy:InjuryType,
+        owl:Class ;
+    rdfs:label "ACLRupture"@en ;
+    rdfs:comment "Anterior Cruciate Ligament rupture."@en ;
+    rdfs:subClassOf footy:InjuryType .
+
+footy:Premier_League a footy:Competition ;
+    rdfs:label "Premier League"@en .
+
+footy:Season a owl:Class ;
+    rdfs:label "Season"@en ;
+    rdfs:comment "A football season (e.g. 2022-23)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Competition a owl:Class ;
+    rdfs:label "Competition"@en ;
+    rdfs:comment "A football tournament or league."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Country a owl:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation associated with a player or club."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Club a owl:Class ;
+    rdfs:label "Club"@en ;
+    rdfs:comment "A football club or team."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Player a owl:Class ;
+    rdfs:label "Player"@en ;
+    rdfs:comment "A professional football player."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:Injury a owl:Class ;
+    rdfs:label "Injury"@en ;
+    rdfs:comment "A specific injury suffered by a player."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:InjuryType a owl:Class ;
+    rdfs:label "InjuryType"@en ;
+    rdfs:comment "A category of injury (e.g. ACL rupture, fracture)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+footy:BodyPart a owl:Class ;
+    rdfs:label "BodyPart"@en ;
+    rdfs:comment "The body part affected by an injury."@en ;
+    rdfs:subClassOf owl:Thing .
+

@@ -1,0 +1,168 @@
+[
+  {
+    "question": "Which players have suffered injuries?",
+    "baseline_answer": "I am unable to access real-time information or access to specific athlete profiles, therefore I cannot provide a list of players who have suffered injuries.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:suffersInjury ?injury .\n}\nORDER BY ?playerLabel",
+    "rag_rows": [
+      [
+        "Abou Diaby"
+      ],
+      [
+        "Jack Wilshere"
+      ],
+      [
+        "Kevin De Bruyne"
+      ],
+      [
+        "Luke Shaw"
+      ],
+      [
+        "Michael Owen"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  },
+  {
+    "question": "Which players play for English clubs?",
+    "baseline_answer": "I cannot provide real-time information or answer this question. For the most up-to-date information on football injuries and player news, I recommend checking reputable sports news websites or reputable sports news channels.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel ?clubLabel WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:playsFor ?club .\n  ?club rdfs:label ?clubLabel .\n  FILTER(CONTAINS(LCASE(STR(?clubLabel)), \"united\") || CONTAINS(LCASE(STR(?clubLabel)), \"liverpool\") || CONTAINS(LCASE(STR(?clubLabel)), \"arsenal\") || CONTAINS(LCASE(STR(?clubLabel)), \"manchester\"))\n}\nORDER BY ?playerLabel",
+    "rag_rows": [
+      [
+        "Abou Diaby",
+        "Arsenal FC"
+      ],
+      [
+        "Jack Wilshere",
+        "Arsenal FC"
+      ],
+      [
+        "Kevin De Bruyne",
+        "Manchester City FC"
+      ],
+      [
+        "Luke Shaw",
+        "Manchester United FC"
+      ],
+      [
+        "Michael Owen",
+        "Newcastle United FC"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  },
+  {
+    "question": "What types of injuries are in the knowledge graph?",
+    "baseline_answer": "The context does not provide any information about the types of injuries in the knowledge graph, so I cannot answer this question from the provided context.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nSELECT DISTINCT ?injuryTypeLabel WHERE {\n  ?injuryType rdf:type footy:InjuryType ;\n              rdfs:label ?injuryTypeLabel .\n}\nORDER BY ?injuryTypeLabel",
+    "rag_rows": [
+      [
+        "ACLRupture"
+      ],
+      [
+        "Achilles tendon rupture"
+      ],
+      [
+        "AchillesRupture"
+      ],
+      [
+        "Ankle sprain"
+      ],
+      [
+        "Anterior cruciate ligament rupture"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  },
+  {
+    "question": "Which players represent France?",
+    "baseline_answer": "I cannot generate a response to this question as I do not have access to real-time or specific information.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:represents ?country .\n  ?country rdfs:label ?countryLabel .\n  FILTER(LCASE(STR(?countryLabel)) = \"france\")\n}\nORDER BY ?playerLabel",
+    "rag_rows": [
+      [
+        "Abou Diaby"
+      ],
+      [
+        "Ousmane Dembele"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  },
+  {
+    "question": "Which clubs are in the graph?",
+    "baseline_answer": "I cannot access the context of the question, so I cannot answer this question from the provided context.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nSELECT DISTINCT ?clubLabel WHERE {\n  ?club rdf:type footy:Club ;\n        rdfs:label ?clubLabel .\n}\nORDER BY ?clubLabel",
+    "rag_rows": [
+      [
+        "AS Monaco FC"
+      ],
+      [
+        "Arsenal FC"
+      ],
+      [
+        "FC Barcelona"
+      ],
+      [
+        "Liverpool FC"
+      ],
+      [
+        "Manchester City FC"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  },
+  {
+    "question": "Which injuries affected the knee?",
+    "baseline_answer": "I am unable to answer this question as the context does not specify which injuries affected the knee.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?injuryLabel WHERE {\n  ?injury rdf:type footy:Injury ;\n          rdfs:label ?injuryLabel ;\n          prop:affectsBodyPart ?bodyPart .\n  ?bodyPart rdfs:label ?bodyPartLabel .\n  FILTER(LCASE(STR(?bodyPartLabel)) = \"knee\")\n}\nORDER BY ?injuryLabel",
+    "rag_rows": [
+      [
+        "Michael Owen Anterior cruciate ligament rupture 2006-07"
+      ],
+      [
+        "Radamel Falcao Anterior cruciate ligament rupture 2013-14"
+      ],
+      [
+        "Virgil van Dijk Anterior cruciate ligament rupture 2020-21"
+      ],
+      [
+        "Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  },
+  {
+    "question": "Which players missed games due to injury?",
+    "baseline_answer": "I am unable to access real-time information or access to the context of your question, therefore I cannot provide you with the players who missed games due to injury.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel ?gamesAbsent WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:suffersInjury ?injury .\n  ?injury prop:gamesAbsent ?gamesAbsent .\n}\nORDER BY DESC(?gamesAbsent)",
+    "rag_rows": [
+      [
+        "Santi Cazorla",
+        "86"
+      ],
+      [
+        "Virgil van Dijk",
+        "45"
+      ],
+      [
+        "Luke Shaw",
+        "42"
+      ],
+      [
+        "Michael Owen",
+        "40"
+      ],
+      [
+        "Abou Diaby",
+        "32"
+      ]
+    ],
+    "repaired": false,
+    "error": null
+  }
+]
