@@ -1,316 +1,657 @@
-@prefix footy: <http://example.org/football/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix mcu: <http://example.org/mcu/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prop: <http://example.org/football/property/> .
+@prefix prop: <http://example.org/mcu/property/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wd: <http://www.wikidata.org/entity/> .
 
-footy:2006_07 owl:sameAs wd:Q233604 .
+mcu:2008 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2008"@en .
 
-footy:2013_14 owl:sameAs wd:Q53386030 .
+mcu:2010 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2010"@en .
 
-footy:2015_16 owl:sameAs wd:Q53386085 .
+mcu:2011 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2011"@en .
 
-footy:2016_17 owl:sameAs wd:Q30201458 .
+mcu:2012 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2012"@en .
 
-footy:2019_20 owl:sameAs wd:Q81068910 .
+mcu:2014 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2014"@en .
 
-footy:2020_21 owl:sameAs wd:Q57401068 .
+mcu:2015 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2015"@en .
 
-footy:2022_23 owl:sameAs wd:Q73889978 .
+mcu:2016 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2016"@en .
 
-footy:2023_24 owl:sameAs wd:Q111309338 .
+mcu:2017 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2017"@en .
 
-footy:ACLRupture a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: ACLRupture"@en .
+mcu:2018 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2018"@en .
 
-footy:ACL_rupture owl:sameAs wd:Q66406255 .
+mcu:2019 a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for 2019"@en .
 
-footy:AS_Monaco_FC owl:sameAs wd:Q180305 .
+mcu:Action_film owl:sameAs dbr:Action_film .
 
-footy:Abou_Diaby owl:sameAs wd:Q1943 .
+mcu:Actor a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Actor"@en .
 
-footy:Abou_Diaby_Muscle_tear_2013_14 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Abou Diaby Muscle tear 2013-14"@en .
+mcu:Anna_Boden owl:sameAs dbr:Anna_Boden .
 
-footy:Achilles owl:sameAs wd:Q18086783 .
+mcu:Anthony_Hopkins a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Anthony Hopkins"@en .
 
-footy:AchillesRupture a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: AchillesRupture"@en .
+mcu:Anthony_Mackie a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Anthony Mackie"@en .
 
-footy:Achilles_tendon_rupture owl:sameAs wd:Q340311 .
+mcu:Anthony_Russo owl:sameAs dbr:Anthony_Russo .
 
-footy:Ankle owl:sameAs wd:Q168002 .
+mcu:Avengers_Age_of_Ultron owl:sameAs <http://dbpedia.org/resource/Avengers:_Age_of_Ultron> .
 
-footy:Ankle_sprain owl:sameAs wd:Q61967536 .
+mcu:Avengers_Endgame owl:sameAs <http://dbpedia.org/resource/Avengers:_Endgame> .
 
-footy:Anterior_cruciate_ligament_rupture owl:sameAs wd:Q66406255 .
+mcu:Avengers_Infinity_War owl:sameAs <http://dbpedia.org/resource/Avengers:_Infinity_War> .
 
-footy:Arsenal_FC owl:sameAs wd:Q9617 .
+mcu:Ben_Mendelsohn a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Ben Mendelsohn"@en .
 
-footy:Back owl:sameAs wd:Q285676 .
+mcu:Benedict_Cumberbatch a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Benedict Cumberbatch"@en .
 
-footy:Belgium owl:sameAs wd:Q31 .
+mcu:Benedict_Wong a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Benedict Wong"@en .
 
-footy:BodyPart owl:sameAs wd:Q4936952 .
+mcu:Betty_Ross a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Betty Ross"@en .
 
-footy:Brazil owl:sameAs wd:Q155 .
+mcu:Black_Panther owl:sameAs dbr:Black_Panther_\(film\) .
 
-footy:Calf owl:sameAs wd:Q2935 .
+mcu:Bradley_Cooper a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Bradley Cooper"@en .
 
-footy:Club owl:sameAs wd:Q988108 .
+mcu:Brie_Larson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Brie Larson"@en .
 
-footy:Colombia owl:sameAs wd:Q739 .
+mcu:Bruce_Banner a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Bruce Banner"@en .
 
-footy:Competition owl:sameAs wd:Q476300 .
+mcu:Bucky_Barnes a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Bucky Barnes"@en .
 
-footy:Concussion owl:sameAs wd:Q326921 .
+mcu:Captain_America_Civil_War owl:sameAs <http://dbpedia.org/resource/Captain_America:_Civil_War> .
 
-footy:Country owl:sameAs wd:Q83440 .
+mcu:Captain_America_The_First_Avenger owl:sameAs <http://dbpedia.org/resource/Captain_America:_The_First_Avenger> .
 
-footy:Coupe_de_France owl:sameAs wd:Q212412 .
+mcu:Captain_America_The_Winter_Soldier owl:sameAs <http://dbpedia.org/resource/Captain_America:_The_Winter_Soldier> .
 
-footy:England owl:sameAs wd:Q21 .
+mcu:Captain_Marvel owl:sameAs dbr:Captain_Marvel_\(film\) .
 
-footy:FC_Barcelona owl:sameAs wd:Q7156 .
+mcu:Carol_Danvers a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Carol Danvers"@en .
 
-footy:Fibula owl:sameAs wd:Q324926 .
+mcu:Cate_Blanchett a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Cate Blanchett"@en .
 
-footy:Fibula_fracture owl:sameAs wd:Q1410873 .
+mcu:Chadwick_Boseman a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Chadwick Boseman"@en .
 
-footy:Foot owl:sameAs wd:Q3710 .
+mcu:Character a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Character"@en .
 
-footy:Fracture owl:sameAs wd:Q81841 .
+mcu:Chester_Phillips a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Chester Phillips"@en .
 
-footy:France owl:sameAs wd:Q142 .
+mcu:Chiwetel_Ejiofor a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Chiwetel Ejiofor"@en .
 
-footy:Groin owl:sameAs wd:Q65182530 .
+mcu:Chris_Evans a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Chris Evans"@en .
 
-footy:Hamstring owl:sameAs wd:Q196002 .
+mcu:Chris_Hemsworth a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Chris Hemsworth"@en .
 
-footy:HamstringStrain a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: HamstringStrain"@en .
+mcu:Chris_Pratt a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Chris Pratt"@en .
 
-footy:Hamstring_strain owl:sameAs wd:Q66068465 .
+mcu:Christine_Palmer a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Christine Palmer"@en .
 
-footy:Head owl:sameAs wd:Q23640 .
+mcu:Clark_Gregg a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Clark Gregg"@en .
 
-footy:Hip owl:sameAs wd:Q537199 .
+mcu:Clint_Barton a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Clint Barton"@en .
 
-footy:Injury owl:sameAs wd:Q15752765 .
+mcu:Comedy_film owl:sameAs dbr:Comedy_film .
 
-footy:InjuryType a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: InjuryType"@en .
+mcu:Country a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Country"@en .
 
-footy:Jack_Wilshere owl:sameAs wd:Q15199 .
+mcu:Danai_Gurira a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Danai Gurira"@en .
 
-footy:Jack_Wilshere_Fibula_fracture_2015_16 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Jack Wilshere Fibula fracture 2015-16"@en .
+mcu:Daniel_Bruhl a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Daniel Bruhl"@en .
 
-footy:Kevin_De_Bruyne owl:sameAs wd:Q357984 .
+mcu:Dave_Bautista a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Dave Bautista"@en .
 
-footy:Kevin_De_Bruyne_Hamstring_strain_2023_24 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Kevin De Bruyne Hamstring strain 2023-24"@en .
+mcu:Director a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Director"@en .
 
-footy:Knee owl:sameAs wd:Q25379686 .
+mcu:Doctor_Strange owl:sameAs dbr:Doctor_Strange_\(2016_film\) .
 
-footy:La_Liga owl:sameAs wd:Q324867 .
+mcu:Don_Cheadle a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Don Cheadle"@en .
 
-footy:Ligue_1 owl:sameAs wd:Q13394 .
+mcu:Drax a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Drax"@en .
 
-footy:Liverpool_FC owl:sameAs wd:Q1130849 .
+mcu:Edward_Norton a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Edward Norton"@en .
 
-footy:Luke_Shaw owl:sameAs wd:Q93563 .
+mcu:Emil_Blonsky a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Emil Blonsky"@en .
 
-footy:Luke_Shaw_Tibia_fracture_2015_16 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Luke Shaw Tibia fracture 2015-16"@en .
+mcu:Erik_Killmonger a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Erik Killmonger"@en .
 
-footy:Manchester_City_FC owl:sameAs wd:Q50602 .
+mcu:Fantasy_film owl:sameAs dbr:Fantasy_film .
 
-footy:Manchester_United_FC owl:sameAs wd:Q18656 .
+mcu:Film a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Film"@en .
 
-footy:MedicalStaff a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: MedicalStaff"@en .
+mcu:Franchise a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Franchise"@en .
 
-footy:Meniscus owl:sameAs wd:Q27438478 .
+mcu:Gamora a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Gamora"@en .
 
-footy:MeniscusTear a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: MeniscusTear"@en .
+mcu:Genre a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Genre"@en .
 
-footy:Meniscus_tear owl:sameAs wd:Q95595412 .
+mcu:Groot a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Groot"@en .
 
-footy:Metatarsal owl:sameAs wd:Q320524 .
+mcu:Guardians_of_the_Galaxy owl:sameAs dbr:Guardians_of_the_Galaxy_\(film\) .
 
-footy:MetatarsalFracture a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: MetatarsalFracture"@en .
+mcu:Gwyneth_Paltrow a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Gwyneth Paltrow"@en .
 
-footy:Michael_Owen owl:sameAs wd:Q128829 .
+mcu:Hayley_Atwell a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Hayley Atwell"@en .
 
-footy:Michael_Owen_Anterior_cruciate_ligament_rupture_2006_07 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Michael Owen Anterior cruciate ligament rupture 2006-07"@en .
+mcu:Heimdall a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Heimdall"@en .
 
-footy:MuscleTear a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: MuscleTear"@en .
+mcu:Hela a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Hela"@en .
 
-footy:Muscle_tear owl:sameAs wd:Q91630461 .
+mcu:Helmut_Zemo a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Helmut Zemo"@en .
 
-footy:Netherlands owl:sameAs wd:Q55 .
+mcu:Hugo_Weaving a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Hugo Weaving"@en .
 
-footy:Newcastle_United_FC owl:sameAs wd:Q18716 .
+mcu:Idris_Elba a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Idris Elba"@en .
 
-footy:Neymar owl:sameAs wd:Q142794 .
+mcu:Iron_Man owl:sameAs dbr:Iron_Man_\(2008_film\) .
 
-footy:Neymar_Ankle_sprain_2022_23 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Neymar Ankle sprain 2022-23"@en .
+mcu:Iron_Man_2 owl:sameAs dbr:Iron_Man_2 .
 
-footy:Ousmane_Dembele owl:sameAs wd:Q20851003 .
+mcu:Ivan_Vanko a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Ivan Vanko"@en .
 
-footy:Ousmane_Dembele_Hamstring_strain_2019_20 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Ousmane Dembele Hamstring strain 2019-20"@en .
+mcu:James_Gunn owl:sameAs dbr:James_Gunn .
 
-footy:Paris_Saint_Germain_FC owl:sameAs wd:Q483020 .
+mcu:James_Rhodes a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for James Rhodes"@en .
 
-footy:Player owl:sameAs wd:Q937857 .
+mcu:James_Spader a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for James Spader"@en .
 
-footy:Premier_League owl:sameAs wd:Q9448 .
+mcu:Jane_Foster a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Jane Foster"@en .
 
-footy:Radamel_Falcao owl:sameAs wd:Q138172 .
+mcu:Jeff_Bridges a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Jeff Bridges"@en .
 
-footy:Radamel_Falcao_Anterior_cruciate_ligament_rupture_2013_14 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Radamel Falcao Anterior cruciate ligament rupture 2013-14"@en .
+mcu:Jeremy_Renner a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Jeremy Renner"@en .
 
-footy:Santi_Cazorla owl:sameAs wd:Q185225 .
+mcu:Joe_Johnston owl:sameAs dbr:Joe_Johnston .
 
-footy:Santi_Cazorla_Achilles_tendon_rupture_2016_17 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Santi Cazorla Achilles tendon rupture 2016-17"@en .
+mcu:Joe_Russo owl:sameAs dbr:Joe_Russo .
 
-footy:Season owl:sameAs wd:Q27020041 .
+mcu:Jon_Favreau owl:sameAs dbr:Jon_Favreau .
 
-footy:Shoulder owl:sameAs wd:Q16363 .
+mcu:Josh_Brolin a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Josh Brolin"@en .
 
-footy:Spain owl:sameAs wd:Q29 .
+mcu:Joss_Whedon owl:sameAs dbr:Joss_Whedon .
 
-footy:SpainedAnkle a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: SpainedAnkle"@en .
+mcu:Jude_Law a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Jude Law"@en .
 
-footy:Sweden owl:sameAs wd:Q34 .
+mcu:Kaecilius a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Kaecilius"@en .
 
-footy:Thiago_Alcantara owl:sameAs wd:Q17493 .
+mcu:Karl_Mordo a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Karl Mordo"@en .
 
-footy:Thiago_Alcantara_Meniscus_tear_2020_21 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Thiago Alcantara Meniscus tear 2020-21"@en .
+mcu:Kenneth_Branagh owl:sameAs dbr:Kenneth_Branagh .
 
-footy:Thigh owl:sameAs wd:Q129757 .
+mcu:Lashana_Lynch a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Lashana Lynch"@en .
 
-footy:Tibia owl:sameAs wd:Q7800437 .
+mcu:Lee_Pace a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Lee Pace"@en .
 
-footy:Tibia_fracture owl:sameAs wd:Q3080298 .
+mcu:Letitia_Wright a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Letitia Wright"@en .
 
-footy:UEFA_Champions_League owl:sameAs wd:Q18756 .
+mcu:Liv_Tyler a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Liv Tyler"@en .
 
-footy:UEFA_Europa_League owl:sameAs wd:Q18760 .
+mcu:Loki a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Loki"@en .
 
-footy:Virgil_van_Dijk owl:sameAs wd:Q133903 .
+mcu:Louis_Leterrier owl:sameAs dbr:Louis_Leterrier .
 
-footy:Virgil_van_Dijk_Anterior_cruciate_ligament_rupture_2020_21 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Virgil van Dijk Anterior cruciate ligament rupture 2020-21"@en .
+mcu:Lupita_Nyong_o a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Lupita Nyong'o"@en .
 
-footy:World_Cup owl:sameAs wd:Q19317 .
+mcu:Mads_Mikkelsen a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Mads Mikkelsen"@en .
 
-footy:Wrist owl:sameAs wd:Q674840 .
+mcu:Maria_Rambeau a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Maria Rambeau"@en .
 
-footy:Zlatan_Ibrahimovic owl:sameAs wd:Q46896 .
+mcu:Mark_Ruffalo a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Mark Ruffalo"@en .
 
-footy:Zlatan_Ibrahimovic_Anterior_cruciate_ligament_rupture_2016_17 a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17"@en .
+mcu:Marvel_Cinematic_Universe owl:sameAs dbr:Marvel_Cinematic_Universe .
 
-footy:achilles owl:sameAs wd:Q18086783 .
+mcu:Marvel_Studios owl:sameAs dbr:Marvel_Studios .
 
-footy:achilles_rupture owl:sameAs wd:Q340311 .
+mcu:Michael_B_Jordan a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Michael B. Jordan"@en .
 
-footy:ankle owl:sameAs wd:Q168002 .
+mcu:Mickey_Rourke a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Mickey Rourke"@en .
 
-footy:ankle_sprain owl:sameAs wd:Q61967536 .
+mcu:Nakia a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Nakia"@en .
 
-footy:concussion owl:sameAs wd:Q52548086 .
+mcu:Natalie_Portman a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Natalie Portman"@en .
 
-footy:fibula owl:sameAs wd:Q324926 .
+mcu:Natasha_Romanoff a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Natasha Romanoff"@en .
 
-footy:fibula_fracture owl:sameAs wd:Q1410873 .
+mcu:Nick_Fury a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Nick Fury"@en .
 
-footy:hamstring owl:sameAs wd:Q196002 .
+mcu:Obadiah_Stane a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Obadiah Stane"@en .
 
-footy:hamstring_strain owl:sameAs wd:Q77815740 .
+mcu:Odin a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Odin"@en .
 
-footy:knee owl:sameAs wd:Q25379686 .
+mcu:Okoye a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Okoye"@en .
 
-footy:meniscus owl:sameAs wd:Q27438478 .
+mcu:Peggy_Carter a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Peggy Carter"@en .
 
-footy:meniscus_tear a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Meniscus cartilage tear"@en .
+mcu:Pepper_Potts a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Pepper Potts"@en .
 
-footy:metatarsal_fracture owl:sameAs wd:Q35865379 .
+mcu:Peter_Parker a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Peter Parker"@en .
 
-footy:muscle_tear a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: Muscle fibre tear"@en .
+mcu:Peter_Quill a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Peter Quill"@en .
 
-prop:affectsBodyPart a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: affectsBodyPart"@en .
+mcu:Phase a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Phase"@en .
 
-prop:birthDate owl:sameAs wd:Q2389905 .
+mcu:PhaseThreeFilm a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for PhaseThreeFilm"@en .
 
-prop:causesSurgery a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: causesSurgery"@en .
+mcu:Phase_1 owl:sameAs <http://dbpedia.org/resource/Marvel_Cinematic_Universe:_Phase_One> .
 
-prop:competesIn a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: competesIn"@en .
+mcu:Phase_2 owl:sameAs <http://dbpedia.org/resource/Marvel_Cinematic_Universe:_Phase_Two> .
 
-prop:foundedYear a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: foundedYear"@en .
+mcu:Phase_3 owl:sameAs <http://dbpedia.org/resource/Marvel_Cinematic_Universe:_Phase_Three> .
 
-prop:gamesAbsent a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: gamesAbsent"@en .
+mcu:Phil_Coulson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Phil Coulson"@en .
 
-prop:injuryDate a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: injuryDate"@en .
+mcu:Political_thriller owl:sameAs dbr:Political_thriller .
 
-prop:injuryDescription a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: injuryDescription"@en .
+mcu:Rachel_McAdams a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Rachel McAdams"@en .
 
-prop:injuryType a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: injuryType"@en .
+mcu:Red_Skull a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Red Skull"@en .
 
-prop:locatedIn a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: locatedIn"@en .
+mcu:ReleaseYear a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for ReleaseYear"@en .
 
-prop:missedDueTo a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: missedDueTo"@en .
+mcu:Robert_Downey_Jr a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Robert Downey Jr."@en .
 
-prop:nationality owl:sameAs wd:Q42138 .
+mcu:Rocket a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Rocket"@en .
 
-prop:occuredDuring a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: occuredDuring"@en ;
-    owl:equivalentProperty wd:P118 .
+mcu:RoleType a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for RoleType"@en .
 
-prop:playsFor owl:equivalentProperty wd:P54 ;
-    owl:sameAs wd:Q477621 .
+mcu:Ronan a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Ronan"@en .
 
-prop:position owl:sameAs wd:Q1449592 .
+mcu:Ryan_Coogler owl:sameAs dbr:Ryan_Coogler .
 
-prop:recoveryDays a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: recoveryDays"@en .
+mcu:Ryan_Fleck owl:sameAs dbr:Ryan_Fleck .
 
-prop:represents owl:equivalentProperty wd:P1532 ;
-    owl:sameAs wd:Q109425297 .
+mcu:SagaFilm a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for SagaFilm"@en .
 
-prop:suffersInjury a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: suffersInjury"@en .
+mcu:Sam_Wilson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Sam Wilson"@en .
 
-prop:treatedBy a owl:NamedIndividual ;
-    rdfs:comment "Private entity not found in Wikidata: treatedBy"@en .
+mcu:Samuel_L_Jackson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Samuel L. Jackson"@en .
 
-footy:thigh owl:sameAs wd:Q129757 .
+mcu:Samuel_Sterns a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Samuel Sterns"@en .
 
-footy:tibia owl:sameAs wd:Q7800437 .
+mcu:Scarlett_Johansson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Scarlett Johansson"@en .
 
-footy:tibia_fracture owl:sameAs wd:Q3080298 .
+mcu:Science_fiction_film owl:sameAs dbr:Science_fiction_film .
+
+mcu:Scott_Derrickson owl:sameAs dbr:Scott_Derrickson .
+
+mcu:Sebastian_Stan a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Sebastian Stan"@en .
+
+mcu:Shuri a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Shuri"@en .
+
+mcu:Space_opera owl:sameAs dbr:Space_opera .
+
+mcu:Stephen_Strange a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Stephen Strange"@en .
+
+mcu:Steve_Rogers a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Steve Rogers"@en .
+
+mcu:Studio a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Studio"@en .
+
+mcu:Superhero_film owl:sameAs dbr:Superhero_film .
+
+mcu:T_Challa a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for T'Challa"@en .
+
+mcu:Tag a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tag"@en .
+
+mcu:Taika_Waititi owl:sameAs dbr:Taika_Waititi .
+
+mcu:Talos a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Talos"@en .
+
+mcu:Terrence_Howard a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Terrence Howard"@en .
+
+mcu:Tessa_Thompson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tessa Thompson"@en .
+
+mcu:Thaddeus_Ross a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Thaddeus Ross"@en .
+
+mcu:Thanos a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Thanos"@en .
+
+mcu:The_Avengers owl:sameAs dbr:The_Avengers_\(2012_film\) .
+
+mcu:The_Incredible_Hulk owl:sameAs dbr:The_Incredible_Hulk_\(film\) .
+
+mcu:Thor owl:sameAs dbr:Thor_\(film\) .
+
+mcu:Thor_Ragnarok owl:sameAs <http://dbpedia.org/resource/Thor:_Ragnarok> .
+
+mcu:Tim_Blake_Nelson a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tim Blake Nelson"@en .
+
+mcu:Tim_Roth a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tim Roth"@en .
+
+mcu:Tom_Hiddleston a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tom Hiddleston"@en .
+
+mcu:Tom_Holland a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tom Holland"@en .
+
+mcu:Tommy_Lee_Jones a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tommy Lee Jones"@en .
+
+mcu:Tony_Stark a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Tony Stark"@en .
+
+mcu:Ultron a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Ultron"@en .
+
+mcu:United_States owl:sameAs dbr:United_States .
+
+mcu:Valkyrie a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Valkyrie"@en .
+
+mcu:Vin_Diesel a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Vin Diesel"@en .
+
+mcu:War_film owl:sameAs dbr:War_film .
+
+mcu:William_Hurt a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for William Hurt"@en .
+
+mcu:Wong a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Wong"@en .
+
+mcu:Yon_Rogg a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Yon-Rogg"@en .
+
+mcu:Zoe_Saldana a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for Zoe Saldana"@en .
+
+mcu:alien_invasion a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for alien invasion"@en .
+
+mcu:armor a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for armor"@en .
+
+mcu:artificial_intelligence a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for artificial intelligence"@en .
+
+mcu:comedy a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for comedy"@en .
+
+mcu:conspiracy a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for conspiracy"@en .
+
+mcu:cosmic a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for cosmic"@en .
+
+mcu:crossover a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for crossover"@en .
+
+mcu:ensemble a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for ensemble"@en .
+
+mcu:espionage a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for espionage"@en .
+
+mcu:family_conflict a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for family conflict"@en .
+
+mcu:friendship a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for friendship"@en .
+
+mcu:global_threat a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for global threat"@en .
+
+mcu:government_pressure a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for government pressure"@en .
+
+mcu:hero_introduction a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for hero introduction"@en .
+
+mcu:historical a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for historical"@en .
+
+mcu:humor a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for humor"@en .
+
+mcu:identity a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for identity"@en .
+
+mcu:lead a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for lead"@en .
+
+mcu:legacy a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for legacy"@en .
+
+mcu:magic a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for magic"@en .
+
+mcu:memory a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for memory"@en .
+
+mcu:military_pursuit a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for military pursuit"@en .
+
+mcu:monster a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for monster"@en .
+
+mcu:multiverse a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for multiverse"@en .
+
+mcu:mysticism a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for mysticism"@en .
+
+mcu:mythology a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for mythology"@en .
+
+mcu:nation a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for nation"@en .
+
+mcu:origin_story a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for origin story"@en .
+
+mcu:outlaws a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for outlaws"@en .
+
+mcu:patriotism a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for patriotism"@en .
+
+mcu:politics a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for politics"@en .
+
+prop:appearsInFilm a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for appearsInFilm"@en .
+
+prop:directedBy a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for directedBy"@en ;
+    owl:equivalentProperty dbo:director .
+
+prop:followsFilm a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for followsFilm"@en .
+
+prop:hasCastMember a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for hasCastMember"@en ;
+    owl:equivalentProperty dbo:starring .
+
+prop:hasCountry a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for hasCountry"@en ;
+    owl:equivalentProperty dbo:country .
+
+prop:hasGenre a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for hasGenre"@en ;
+    owl:equivalentProperty dbo:genre .
+
+prop:hasRoleType a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for hasRoleType"@en .
+
+prop:hasTag a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for hasTag"@en .
+
+prop:partOfFranchise a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for partOfFranchise"@en .
+
+prop:partOfPhase a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for partOfPhase"@en .
+
+prop:portraysCharacter a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for portraysCharacter"@en .
+
+prop:producedBy a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for producedBy"@en ;
+    owl:equivalentProperty dbo:company .
+
+prop:releaseDate a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for releaseDate"@en ;
+    owl:equivalentProperty dbo:releaseDate .
+
+prop:releaseYear a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for releaseYear"@en .
+
+prop:samePhaseAs a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for samePhaseAs"@en .
+
+prop:sharesCastMemberWith a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for sharesCastMemberWith"@en .
+
+prop:sharesDirectorWith a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for sharesDirectorWith"@en .
+
+prop:sharesGenreWith a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for sharesGenreWith"@en .
+
+mcu:saga_climax a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for saga climax"@en .
+
+mcu:science_experiment a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for science experiment"@en .
+
+mcu:supporting a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for supporting"@en .
+
+mcu:surveillance a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for surveillance"@en .
+
+mcu:team_conflict a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for team conflict"@en .
+
+mcu:team_up a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for team up"@en .
+
+mcu:technology a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for technology"@en .
+
+mcu:time_travel a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for time travel"@en .
+
+mcu:villain a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for villain"@en .
+
+mcu:war a owl:NamedIndividual ;
+    rdfs:comment "No external alignment available for war"@en .
 

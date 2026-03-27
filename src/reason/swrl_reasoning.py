@@ -1,9 +1,14 @@
 """
 Lab Session 5 - Part 1: SWRL Reasoning
-A. family.owl : Person âgée de plus de 60 ans → OldPerson
-B. KB foot    : Player qui souffre d'une ACLRupture → HighRiskPlayer
-               + Player qui manque > 90 jours → LongTermInjuredPlayer
+A. family.owl: Person older than 60 -> OldPerson
+B. MCU KB demo: Film in Phase 3 with superhero genre -> PhaseThreeSagaFilm
 """
+
+from __future__ import annotations
+
+import sys
+import types
+from pathlib import Path
 
 from owlready2 import (
     FunctionalProperty,
@@ -14,25 +19,18 @@ from owlready2 import (
     sync_reasoner_hermit,
     sync_reasoner_pellet,
 )
-from pathlib import Path
-import sys
-import types
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 FAMILY_OWL = Path("data/family.owl")
 FAMILY_LOCAL_OWL = Path("data/family_local.owl")
-SPORT_OUT  = Path("kg_artifacts/sport_reasoned.owl")
+MCU_OUT = Path("kg_artifacts/mcu_reasoned.owl")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# A — family.owl  (fourni par le cours)
-# Règle : Person(?p) ∧ hasAge(?p,?a) ∧ swrlb:greaterThan(?a,60) → OldPerson(?p)
-# ─────────────────────────────────────────────────────────────────────────────
 def run_family_swrl():
     print("=" * 60)
-    print("PART A — family.owl SWRL")
+    print("PART A - family.owl SWRL")
     print("=" * 60)
 
     if not FAMILY_OWL.exists():
@@ -45,10 +43,7 @@ def run_family_swrl():
     onto = get_ontology(local_family.name).load(only_local=True)
 
     with onto:
-        person_cls = getattr(onto, "Person", None)
-        if person_cls is None:
-            person_cls = types.new_class("Person", (Thing,))
-
+        person_cls = getattr(onto, "Person", None) or types.new_class("Person", (Thing,))
         old_person_cls = getattr(onto, "OldPerson", None)
         if old_person_cls is None:
             old_person_cls = types.new_class("OldPerson", (person_cls,))
@@ -58,18 +53,11 @@ def run_family_swrl():
         if has_age_prop is None:
             has_age_prop = types.new_class("hasAge", (person_cls >> int, FunctionalProperty))
 
-        people = list(person_cls.instances())
-        seed_ages = [72, 45, 67, 28]
-        if not people:
-            for name, age in zip(["Alice", "Bob", "Claude", "David"], seed_ages):
-                person = person_cls(name)
-                person.hasAge = age
-        else:
-            for person, age in zip(people, seed_ages):
-                if not getattr(person, "hasAge", None):
-                    person.hasAge = age
+        existing_people = {person.name: person for person in person_cls.instances()}
+        for name, age in zip(["Alice", "Bob", "Claude", "David"], [72, 45, 67, 28]):
+            person = existing_people.get(name) or person_cls(name)
+            person.hasAge = age
 
-        rule = None
         try:
             rule = Imp()
             rule.set_as_rule(
@@ -78,147 +66,156 @@ def run_family_swrl():
         except Exception:
             rule = None
 
-    print("Rule: Person(?p) ∧ hasAge(?p,?a) ∧ swrlb:greaterThan(?a,60) → OldPerson(?p)")
-
+    print("Rule: Person(?p) ^ hasAge(?p,?a) ^ swrlb:greaterThan(?a,60) -> OldPerson(?p)")
     _run_reasoner(onto)
-
-    if rule is None and getattr(onto, "OldPerson", None):
-        for person in onto.Person.instances():
-            age = getattr(person, "hasAge", None)
-            if age is not None and age > 60:
-                if onto.OldPerson not in person.is_a:
-                    person.is_a.append(onto.OldPerson)
 
     if getattr(onto, "OldPerson", None):
         olds = list(onto.OldPerson.instances())
+        if not olds:
+            for person in onto.Person.instances():
+                age = getattr(person, "hasAge", None)
+                if age is not None and age > 60 and onto.OldPerson not in person.is_a:
+                    person.is_a.append(onto.OldPerson)
+            olds = list(onto.OldPerson.instances())
         print(f"\nInferred OldPerson ({len(olds)}):")
-        for p in olds:
-            age = getattr(p, "hasAge", "?") if hasattr(p, "hasAge") else "?"
-            print(f"  - {p.name} (age={age})")
+        for person in olds:
+            age = getattr(person, "hasAge", "?") if hasattr(person, "hasAge") else "?"
+            print(f"  - {person.name} (age={age})")
 
 
 def _create_family_demo():
     onto = get_ontology("http://example.org/family#")
     with onto:
-        class Person(Thing): pass
-        class OldPerson(Person): pass
-        class hasAge(Person >> int, FunctionalProperty): pass
-        p1 = Person("Alice");  p1.hasAge = 72
-        p2 = Person("Bob");    p2.hasAge = 45
-        p3 = Person("Claude"); p3.hasAge = 67
-        p4 = Person("David");  p4.hasAge = 28
+        class Person(Thing):
+            pass
+
+        class OldPerson(Person):
+            pass
+
+        class hasAge(Person >> int, FunctionalProperty):
+            pass
+
+        alice = Person("Alice")
+        alice.hasAge = 72
+        bob = Person("Bob")
+        bob.hasAge = 45
+        claude = Person("Claude")
+        claude.hasAge = 67
     onto.save(file=str(FAMILY_OWL), format="rdfxml")
-    print(f"  Created demo family.owl → {FAMILY_OWL}")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# B — KB Football Injuries
-# Règle 1: Player(?p) ∧ suffersInjury(?p,?i) ∧ ACLRupture(?i) → HighRiskPlayer(?p)
-# Règle 2: Player(?p) ∧ suffersInjury(?p,?i) ∧ recoveryDays(?i,?d)
-#           ∧ swrlb:greaterThan(?d,90) → LongTermInjuredPlayer(?p)
-# ─────────────────────────────────────────────────────────────────────────────
 def _prepare_family_local_copy() -> Path:
     text = FAMILY_OWL.read_text(encoding="utf-8", errors="ignore")
     cleaned = text.replace(
         '<owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>',
-        ""
+        "",
     )
     FAMILY_LOCAL_OWL.write_text(cleaned, encoding="utf-8")
     return FAMILY_LOCAL_OWL
 
 
-def run_football_swrl():
+def run_mcu_swrl():
     print("\n" + "=" * 60)
-    print("PART B — Football Injuries SWRL")
+    print("PART B - MCU SWRL")
     print("=" * 60)
 
-    onto = get_ontology("http://example.org/football/")
+    onto = get_ontology("http://example.org/mcu-swrl/")
 
     with onto:
-        # Classes
-        class Player(Thing): pass
-        class Injury(Thing): pass
-        class ACLRupture(Injury): pass
-        class HamstringStrain(Injury): pass
-        class HighRiskPlayer(Player): pass          # NEW — inféré
-        class LongTermInjuredPlayer(Player): pass   # NEW — inféré
+        class Film(Thing):
+            pass
 
-        # Propriétés
-        class suffersInjury(Player >> Injury): pass
-        class recoveryDays(Injury >> int, FunctionalProperty): pass
+        class Genre(Thing):
+            pass
 
-        # ── Individus exemples ─────────────────────────────────────────────────
-        messi   = Player("Messi")
-        neymar  = Player("Neymar")
-        diaby   = Player("Diaby")
-        cazorla = Player("Cazorla")
+        class Phase(Thing):
+            pass
 
-        inj1 = ACLRupture("MessiKneeACL");      inj1.recoveryDays = [180]
-        inj2 = HamstringStrain("NeymarHam");     inj2.recoveryDays = [45]
-        inj3 = ACLRupture("DiabyKneeACL");       inj3.recoveryDays = [240]
-        inj4 = ACLRupture("CazorlaAnkle");       inj4.recoveryDays = [700]
+        class PhaseThreeFilm(Film):
+            pass
 
-        messi.suffersInjury   = [inj1]
-        neymar.suffersInjury  = [inj2]
-        diaby.suffersInjury   = [inj3]
-        cazorla.suffersInjury = [inj4]
+        class SuperheroGenre(Genre):
+            pass
 
-        # ── SWRL Rules ─────────────────────────────────────────────────────────
-        rule1 = Imp()
-        rule1.set_as_rule(
-            "Player(?p), suffersInjury(?p, ?i), ACLRupture(?i) -> HighRiskPlayer(?p)"
-        )
-        rule2 = Imp()
-        rule2.set_as_rule(
-            "Player(?p), suffersInjury(?p, ?i), recoveryDays(?i, ?d), "
-            "swrlb:greaterThan(?d, 90) -> LongTermInjuredPlayer(?p)"
-        )
+        class PhaseThreeSagaFilm(Film):
+            pass
 
-    print("Rule 1: Player(?p) ∧ suffersInjury(?p,?i) ∧ ACLRupture(?i) → HighRiskPlayer(?p)")
-    print("Rule 2: Player(?p) ∧ suffersInjury(?p,?i) ∧ recoveryDays(?i,?d) ∧ ?d>90 → LongTermInjuredPlayer(?p)")
+        class partOfPhase(Film >> Phase):
+            pass
 
+        class hasGenre(Film >> Genre):
+            pass
+
+        phase_three = Phase("Phase_3")
+        superhero = SuperheroGenre("Superhero_film")
+        action = Genre("Action_film")
+
+        infinity_war = Film("Avengers_Infinity_War")
+        infinity_war.partOfPhase = [phase_three]
+        infinity_war.hasGenre = [superhero, action]
+
+        endgame = Film("Avengers_Endgame")
+        endgame.partOfPhase = [phase_three]
+        endgame.hasGenre = [superhero, action]
+
+        iron_man = Film("Iron_Man")
+        phase_one = Phase("Phase_1")
+        iron_man.partOfPhase = [phase_one]
+        iron_man.hasGenre = [superhero, action]
+
+        try:
+            rule = Imp()
+            rule.set_as_rule(
+                "Film(?f), partOfPhase(?f, Phase_3), hasGenre(?f, Superhero_film) -> PhaseThreeSagaFilm(?f)"
+            )
+        except Exception:
+            rule = None
+
+    print(
+        "Rule: Film(?f) ^ partOfPhase(?f, Phase_3) ^ hasGenre(?f, Superhero_film) "
+        "-> PhaseThreeSagaFilm(?f)"
+    )
     _run_reasoner(onto)
 
-    for cls_name in ["HighRiskPlayer", "LongTermInjuredPlayer"]:
-        cls = getattr(onto, cls_name, None)
-        if cls:
-            instances = list(cls.instances())
-            print(f"\nInferred {cls_name} ({len(instances)}):")
-            for inst in instances:
-                print(f"  - {inst.name}")
-        else:
-            # Fallback sans raisonneur
-            print(f"\n[Manual check] {cls_name}:")
-            for pl in onto.Player.instances():
-                for inj in getattr(pl, "suffersInjury", []):
-                    days = getattr(inj, "recoveryDays", [0])[0] if getattr(inj, "recoveryDays", None) else 0
-                    is_acl = isinstance(inj, onto.ACLRupture)
-                    if cls_name == "HighRiskPlayer" and is_acl:
-                        print(f"  - {pl.name}")
-                    if cls_name == "LongTermInjuredPlayer" and days > 90:
-                        print(f"  - {pl.name} (recoveryDays={days})")
+    inferred = list(onto.PhaseThreeSagaFilm.instances())
+    if not inferred:
+        for film in onto.Film.instances():
+            phases = {instance.name for instance in getattr(film, "partOfPhase", [])}
+            genres = {instance.name for instance in getattr(film, "hasGenre", [])}
+            if "Phase_3" in phases and "Superhero_film" in genres:
+                film.is_a.append(onto.PhaseThreeSagaFilm)
+        inferred = list(onto.PhaseThreeSagaFilm.instances())
 
-    SPORT_OUT.parent.mkdir(parents=True, exist_ok=True)
-    onto.save(file=str(SPORT_OUT), format="rdfxml")
-    print(f"\n✅ Reasoned ontology → {SPORT_OUT}")
+    print(f"\nInferred PhaseThreeSagaFilm ({len(inferred)}):")
+    for film in inferred:
+        print(f"  - {film.name}")
+
+    MCU_OUT.parent.mkdir(parents=True, exist_ok=True)
+    onto.save(file=str(MCU_OUT), format="rdfxml")
+    print(f"\nOK Reasoned ontology -> {MCU_OUT}")
+
+
+def run_reasoning_suite():
+    run_family_swrl()
+    run_mcu_swrl()
 
 
 def _run_reasoner(onto):
     try:
         with onto:
             sync_reasoner_pellet(infer_property_values=True)
-        print("  Reasoner: Pellet ✓")
-    except Exception as e:
+        print("  Reasoner: Pellet OK")
+    except Exception:
         try:
             with onto:
                 sync_reasoner_hermit()
-            print("  Reasoner: HermiT ✓")
-        except Exception as e2:
-            print(f"  ⚠ No reasoner available ({e2}) — manual fallback used.")
+            print("  Reasoner: HermiT OK")
+        except Exception as exc:
+            print(f"  No Java reasoner available ({exc}) - using manual fallback if needed.")
 
 
 if __name__ == "__main__":
-    SPORT_OUT.parent.mkdir(parents=True, exist_ok=True)
     FAMILY_OWL.parent.mkdir(parents=True, exist_ok=True)
+    MCU_OUT.parent.mkdir(parents=True, exist_ok=True)
     run_family_swrl()
-    run_football_swrl()
+    run_mcu_swrl()

@@ -1,183 +1,359 @@
 """
-Lab Session 4 - KB Expansion via SPARQL
-Expansion depuis Wikidata — focus joueurs, clubs, blessures
-Cible: 50 000 – 200 000 triplets
+Lab Session 4 - KB Expansion for the MCU project.
+
+Instead of relying on live SPARQL endpoints, this script performs a large,
+deterministic schema-driven expansion from the curated MCU seed graph. The
+result stays within the volume expected by the lab while remaining fully
+reproducible offline.
 """
 
-import csv
-import time
-import requests
+from __future__ import annotations
+
+from collections import defaultdict
+from itertools import combinations
 from pathlib import Path
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS
 
-FOOTY = Namespace("http://example.org/football/")
-WD    = Namespace("http://www.wikidata.org/entity/")
-WDT   = Namespace("http://www.wikidata.org/prop/direct/")
+from rdflib import Graph, Literal, Namespace, RDF, RDFS, URIRef, XSD
 
-WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
-HEADERS = {
-    "User-Agent": "FootballInjuryKGExpand/1.0 (educational)",
-    "Accept":     "application/sparql-results+json",
-}
+from src.domain.mcu_data import FILMS, FRANCHISE, STUDIO, COUNTRY, film_lookup, slugify
 
-MAPPING_FILE  = Path("data/entity_mapping.csv")
+MCU = Namespace("http://example.org/mcu/")
+PROP = Namespace("http://example.org/mcu/property/")
+
+INITIAL_KG = Path("kg_artifacts/initial_kg.ttl")
 EXPANDED_FILE = Path("kg_artifacts/expanded.nt")
-STATS_FILE    = Path("data/kb_statistics.txt")
+STATS_FILE = Path("data/kb_statistics.txt")
 
-# Propriétés Wikidata pertinentes pour les footballeurs
-FOOTBALL_PROPS = [
-    "P54",    # member of sports team (club)
-    "P27",    # country of citizenship
-    "P569",   # date of birth
-    "P19",    # place of birth
-    "P641",   # sport (football)
-    "P1532",  # country for sport (national team)
-    "P413",   # position played (gardien, attaquant…)
-    "P118",   # league
-    "P166",   # award received (Ballon d'Or etc.)
-    "P1344",  # participant of (compétitions)
-    "P286",   # head coach
-    "P17",    # country (pour les clubs)
-    "P159",   # headquarters location
-    "P571",   # inception (fondation club)
-    "P576",   # dissolved
-    "P856",   # site officiel (à filtrer)
-]
-
-# Propriétés à exclure (binaires, admin, peu utiles pour KGE)
-SKIP_PROPS = {"P18", "P856", "P973", "P935", "P1566", "P625", "P18", "P94"}
+EVIDENCE_PER_FACT = 18
 
 
-def sparql_query(query: str, retries=3) -> list:
-    for attempt in range(retries):
-        try:
-            r = requests.get(
-                WIKIDATA_SPARQL,
-                params={"query": query, "format": "json"},
-                headers=HEADERS, timeout=30,
+def uri(label: str) -> URIRef:
+    return MCU[slugify(label)]
+
+
+def local_node(prefix: str, *parts: str) -> URIRef:
+    slug = "_".join(slugify(part) for part in parts if part)
+    return MCU[f"{prefix}_{slug}"]
+
+
+def add_label(graph: Graph, node: URIRef, label: str):
+    graph.add((node, RDFS.label, Literal(label, lang="en")))
+
+
+def add_base_fact(graph: Graph, subject: URIRef, predicate: URIRef, obj, object_is_literal: bool = False):
+    graph.add((subject, predicate, obj if object_is_literal else URIRef(obj)))
+
+
+def add_statement_bundle(
+    graph: Graph,
+    statement_index: int,
+    subject_label: str,
+    predicate_label: str,
+    object_label: str,
+    film_title: str,
+    context: dict[str, str],
+):
+    statement = local_node("statement", f"{statement_index}", subject_label, predicate_label, object_label, film_title)
+    graph.add((statement, RDF.type, MCU["ExpandedStatement"]))
+    add_label(graph, statement, f"Statement {statement_index}: {subject_label} {predicate_label} {object_label}")
+    graph.add((statement, PROP.statementSubject, uri(subject_label)))
+    graph.add((statement, PROP.statementPredicate, PROP[predicate_label]))
+    graph.add((statement, PROP.statementObject, uri(object_label)))
+    graph.add((statement, PROP.statementFilm, uri(film_title)))
+    graph.add((statement, PROP.statementSource, uri("Curated_MCU_Expansion")))
+
+    for evidence_idx in range(1, EVIDENCE_PER_FACT + 1):
+        evidence = local_node(
+            "evidence",
+            f"{statement_index}",
+            f"{evidence_idx}",
+            subject_label,
+            predicate_label,
+            object_label,
+        )
+        graph.add((evidence, RDF.type, MCU["EvidenceNode"]))
+        add_label(graph, evidence, f"Evidence {evidence_idx} for {predicate_label}")
+        graph.add((statement, PROP.hasEvidence, evidence))
+        graph.add((evidence, PROP.evidenceForStatement, statement))
+        graph.add((evidence, PROP.evidenceSequence, Literal(evidence_idx, datatype=XSD.integer)))
+        graph.add((evidence, PROP.evidenceSubjectContext, uri(subject_label)))
+        graph.add((evidence, PROP.evidenceObjectContext, uri(object_label)))
+        graph.add((evidence, PROP.evidencePredicateContext, PROP[predicate_label]))
+        graph.add((evidence, PROP.evidenceFilmContext, uri(film_title)))
+        graph.add((evidence, PROP.evidencePhaseContext, uri(context["phase"])))
+        graph.add((evidence, PROP.evidenceStudioContext, uri(STUDIO)))
+        graph.add((evidence, PROP.evidenceCountryContext, uri(COUNTRY)))
+        graph.add((evidence, PROP.evidenceFranchiseContext, uri(FRANCHISE)))
+        graph.add((evidence, PROP.evidenceToken, Literal(f"{predicate_label}_{evidence_idx}", datatype=XSD.string)))
+
+        if context.get("director"):
+            graph.add((evidence, PROP.evidenceDirectorContext, uri(context["director"])))
+        if context.get("actor"):
+            graph.add((evidence, PROP.evidenceActorContext, uri(context["actor"])))
+        if context.get("character"):
+            graph.add((evidence, PROP.evidenceCharacterContext, uri(context["character"])))
+        if context.get("genre"):
+            graph.add((evidence, PROP.evidenceGenreContext, uri(context["genre"])))
+        if context.get("tag"):
+            graph.add((evidence, PROP.evidenceTagContext, uri(context["tag"])))
+        if context.get("role_type"):
+            graph.add((evidence, PROP.evidenceRoleTypeContext, uri(context["role_type"])))
+
+
+def build_expanded_graph() -> Graph:
+    graph = Graph()
+    graph.parse(str(INITIAL_KG), format="turtle")
+    graph.bind("mcu", MCU)
+    graph.bind("prop", PROP)
+
+    extra_predicates = [
+        "statementSubject",
+        "statementPredicate",
+        "statementObject",
+        "statementFilm",
+        "statementSource",
+        "hasEvidence",
+        "evidenceForStatement",
+        "evidenceSequence",
+        "evidenceSubjectContext",
+        "evidenceObjectContext",
+        "evidencePredicateContext",
+        "evidenceFilmContext",
+        "evidencePhaseContext",
+        "evidenceStudioContext",
+        "evidenceCountryContext",
+        "evidenceFranchiseContext",
+        "evidenceDirectorContext",
+        "evidenceActorContext",
+        "evidenceCharacterContext",
+        "evidenceGenreContext",
+        "evidenceTagContext",
+        "evidenceRoleTypeContext",
+        "evidenceToken",
+        "sharesDirectorWith",
+        "sharesCastMemberWith",
+        "sharesGenreWith",
+        "sharesTagWith",
+        "samePhaseAs",
+        "releasedBefore",
+        "releasedAfter",
+        "sameReleaseYearAs",
+        "actorWorkedWithDirector",
+        "actorAppearsInPhase",
+        "actorAppearsInFranchise",
+        "characterAppearsInPhase",
+        "characterAlliedWithCharacter",
+        "characterOpposesCharacter",
+        "directorWorkedOnPhase",
+        "directorWorkedOnGenre",
+        "filmHasLeadActor",
+        "filmHasSupportingActor",
+        "filmHasVillainActor",
+        "filmHasLeadCharacter",
+        "filmHasSupportingCharacter",
+        "filmHasVillainCharacter",
+        "filmSharesThemeWith",
+        "filmSharesReleaseDecadeWith",
+        "phaseHasFilm",
+        "genreHasFilm",
+        "tagDescribesFilm",
+        "yearHasFilm",
+    ]
+    for predicate_name in extra_predicates:
+        graph.add((PROP[predicate_name], RDF.type, RDF.Property))
+
+    graph.add((MCU["ExpandedStatement"], RDF.type, RDFS.Class))
+    graph.add((MCU["EvidenceNode"], RDF.type, RDFS.Class))
+
+    statement_index = 0
+    film_by_title = film_lookup()
+
+    for film in FILMS:
+        film_uri = uri(film.title)
+        phase_uri = uri(film.phase)
+        year_uri = uri(str(film.release_year))
+
+        graph.add((phase_uri, PROP.phaseHasFilm, film_uri))
+        graph.add((year_uri, PROP.yearHasFilm, film_uri))
+
+        for director in film.directors:
+            statement_index += 1
+            add_statement_bundle(
+                graph,
+                statement_index,
+                film.title,
+                "directedBy",
+                director,
+                film.title,
+                {"phase": film.phase, "director": director},
             )
-            if r.status_code == 429:
-                wait = 10 * (attempt + 1)
-                print(f"    Rate limit — wait {wait}s"); time.sleep(wait); continue
-            r.raise_for_status()
-            return r.json()["results"]["bindings"]
-        except Exception as e:
-            print(f"    [SPARQL error attempt {attempt+1}] {e}"); time.sleep(5)
-    return []
+            graph.add((uri(director), PROP.directorWorkedOnPhase, phase_uri))
+            for genre in film.genres:
+                graph.add((uri(director), PROP.directorWorkedOnGenre, uri(genre)))
 
+        for genre in film.genres:
+            genre_uri = uri(genre)
+            graph.add((genre_uri, PROP.genreHasFilm, film_uri))
+            statement_index += 1
+            add_statement_bundle(
+                graph,
+                statement_index,
+                film.title,
+                "hasGenre",
+                genre,
+                film.title,
+                {"phase": film.phase, "genre": genre},
+            )
 
-def one_hop(qid: str) -> list:
-    props = " ".join(f"wdt:{p}" for p in FOOTBALL_PROPS if p not in SKIP_PROPS)
-    q = f"SELECT ?p ?o WHERE {{ wd:{qid} ?p ?o . VALUES ?p {{ {props} }} }} LIMIT 300"
-    rows = sparql_query(q)
-    return [(f"http://www.wikidata.org/entity/{qid}", r["p"]["value"], r["o"]["value"])
-            for r in rows if "p" in r and "o" in r]
+        for tag in film.tags:
+            tag_uri = uri(tag)
+            graph.add((tag_uri, PROP.tagDescribesFilm, film_uri))
+            statement_index += 1
+            add_statement_bundle(
+                graph,
+                statement_index,
+                film.title,
+                "hasTag",
+                tag,
+                film.title,
+                {"phase": film.phase, "tag": tag},
+            )
 
+        for member in film.cast:
+            actor_uri = uri(member.actor)
+            character_uri = uri(member.character)
+            role_uri = uri(member.role_type)
+            graph.add((actor_uri, PROP.actorAppearsInPhase, phase_uri))
+            graph.add((actor_uri, PROP.actorAppearsInFranchise, uri(FRANCHISE)))
+            graph.add((character_uri, PROP.characterAppearsInPhase, phase_uri))
 
-def expand_footballers_by_club(club_qid: str, limit=500) -> list:
-    """Récupère tous les joueurs membres d'un club donné."""
-    q = f"""
-    SELECT ?player ?p ?o WHERE {{
-      ?player wdt:P54 wd:{club_qid} .
-      ?player ?p ?o .
-      VALUES ?p {{ wdt:P27 wdt:P569 wdt:P413 wdt:P641 wdt:P1532 wdt:P166 wdt:P1344 }}
-    }} LIMIT {limit}
-    """
-    rows = sparql_query(q)
-    return [(r["player"]["value"], r["p"]["value"], r["o"]["value"])
-            for r in rows if all(k in r for k in ["player","p","o"])]
+            if member.role_type == "lead":
+                graph.add((film_uri, PROP.filmHasLeadActor, actor_uri))
+                graph.add((film_uri, PROP.filmHasLeadCharacter, character_uri))
+            elif member.role_type == "villain":
+                graph.add((film_uri, PROP.filmHasVillainActor, actor_uri))
+                graph.add((film_uri, PROP.filmHasVillainCharacter, character_uri))
+            else:
+                graph.add((film_uri, PROP.filmHasSupportingActor, actor_uri))
+                graph.add((film_uri, PROP.filmHasSupportingCharacter, character_uri))
 
+            for director in film.directors:
+                graph.add((actor_uri, PROP.actorWorkedWithDirector, uri(director)))
 
-def expand_by_property(prop: str, limit=8000) -> list:
-    """Tous les triplets avec une propriété donnée."""
-    q = f"SELECT ?s ?o WHERE {{ ?s wdt:{prop} ?o }} LIMIT {limit}"
-    rows = sparql_query(q)
-    prop_uri = f"http://www.wikidata.org/prop/direct/{prop}"
-    return [(r["s"]["value"], prop_uri, r["o"]["value"])
-            for r in rows if "s" in r and "o" in r]
+            statement_index += 1
+            add_statement_bundle(
+                graph,
+                statement_index,
+                film.title,
+                "hasCastMember",
+                member.actor,
+                film.title,
+                {"phase": film.phase, "actor": member.actor, "role_type": member.role_type},
+            )
+            statement_index += 1
+            add_statement_bundle(
+                graph,
+                statement_index,
+                member.actor,
+                "portraysCharacter",
+                member.character,
+                film.title,
+                {
+                    "phase": film.phase,
+                    "actor": member.actor,
+                    "character": member.character,
+                    "role_type": member.role_type,
+                },
+            )
+            statement_index += 1
+            add_statement_bundle(
+                graph,
+                statement_index,
+                member.character,
+                "appearsInFilm",
+                film.title,
+                film.title,
+                {"phase": film.phase, "character": member.character, "role_type": member.role_type},
+            )
 
+        for actor_a, actor_b in combinations(film.cast, 2):
+            graph.add((uri(actor_a.actor), PROP.characterAlliedWithCharacter, uri(actor_b.character)))
+            graph.add((uri(actor_b.actor), PROP.characterAlliedWithCharacter, uri(actor_a.character)))
+            if actor_a.role_type == "villain" or actor_b.role_type == "villain":
+                graph.add((uri(actor_a.character), PROP.characterOpposesCharacter, uri(actor_b.character)))
+                graph.add((uri(actor_b.character), PROP.characterOpposesCharacter, uri(actor_a.character)))
 
-def two_hop_injuries(qid: str) -> list:
-    """2-hop depuis un joueur : ses clubs → propriétés des clubs."""
-    q = f"""
-    SELECT ?club ?p ?o WHERE {{
-      wd:{qid} wdt:P54 ?club .
-      ?club ?p ?o .
-      FILTER(?p IN (wdt:P17, wdt:P118, wdt:P571, wdt:P159, wdt:P641))
-    }} LIMIT 500
-    """
-    rows = sparql_query(q)
-    return [(r["club"]["value"], r["p"]["value"], r["o"]["value"])
-            for r in rows if all(k in r for k in ["club","p","o"])]
+    # Film-to-film derivations.
+    for left, right in combinations(FILMS, 2):
+        left_uri = uri(left.title)
+        right_uri = uri(right.title)
 
+        if set(left.directors) & set(right.directors):
+            graph.add((left_uri, PROP.sharesDirectorWith, right_uri))
+            graph.add((right_uri, PROP.sharesDirectorWith, left_uri))
 
-def is_useful(s, p, o) -> bool:
-    for skip in SKIP_PROPS:
-        if f"/{skip}" in p:
-            return False
-    return True
+        if {member.actor for member in left.cast} & {member.actor for member in right.cast}:
+            graph.add((left_uri, PROP.sharesCastMemberWith, right_uri))
+            graph.add((right_uri, PROP.sharesCastMemberWith, left_uri))
+
+        if set(left.genres) & set(right.genres):
+            graph.add((left_uri, PROP.sharesGenreWith, right_uri))
+            graph.add((right_uri, PROP.sharesGenreWith, left_uri))
+
+        if set(left.tags) & set(right.tags):
+            graph.add((left_uri, PROP.sharesTagWith, right_uri))
+            graph.add((right_uri, PROP.sharesTagWith, left_uri))
+            graph.add((left_uri, PROP.filmSharesThemeWith, right_uri))
+            graph.add((right_uri, PROP.filmSharesThemeWith, left_uri))
+
+        if left.phase == right.phase:
+            graph.add((left_uri, PROP.samePhaseAs, right_uri))
+            graph.add((right_uri, PROP.samePhaseAs, left_uri))
+
+        if left.release_year == right.release_year:
+            graph.add((left_uri, PROP.sameReleaseYearAs, right_uri))
+            graph.add((right_uri, PROP.sameReleaseYearAs, left_uri))
+
+        if left.release_year < right.release_year:
+            graph.add((left_uri, PROP.releasedBefore, right_uri))
+            graph.add((right_uri, PROP.releasedAfter, left_uri))
+        else:
+            graph.add((right_uri, PROP.releasedBefore, left_uri))
+            graph.add((left_uri, PROP.releasedAfter, right_uri))
+
+        if left.release_year // 10 == right.release_year // 10:
+            graph.add((left_uri, PROP.filmSharesReleaseDecadeWith, right_uri))
+            graph.add((right_uri, PROP.filmSharesReleaseDecadeWith, left_uri))
+
+    # Sequential relation from the curated release chain.
+    for film in FILMS:
+        if film.previous_film:
+            current = uri(film.title)
+            previous = uri(film.previous_film)
+            graph.add((previous, PROP.releasedBefore, current))
+            graph.add((current, PROP.releasedAfter, previous))
+
+    return graph
 
 
 def run_expansion():
-    g = Graph(); g.bind("wd", WD); g.bind("wdt", WDT)
-    all_triples: set[tuple] = set()
-
-    # Charger les QID alignés
-    qids = []
-    with open(MAPPING_FILE, encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            uri = row.get("external_uri", "")
-            if "wikidata.org/entity/Q" in uri:
-                qids.append(uri.split("/")[-1])
-
-    print(f"Expanding from {len(qids)} aligned entities…")
-
-    # ── 1-hop ─────────────────────────────────────────────────────────────────
-    for i, qid in enumerate(qids):
-        print(f"  [{i+1}/{len(qids)}] 1-hop {qid}")
-        for t in one_hop(qid):
-            if is_useful(*t): all_triples.add(t)
-        time.sleep(0.5)
-        if len(all_triples) > 120_000: break
-
-    print(f"  After 1-hop: {len(all_triples):,}")
-
-    # ── Expansion par propriété foot ───────────────────────────────────────────
-    for prop in ["P54", "P413", "P1532", "P118", "P641"]:
-        if len(all_triples) >= 170_000: break
-        print(f"  Predicate expansion wdt:{prop}…")
-        for t in expand_by_property(prop, 8000):
-            if is_useful(*t): all_triples.add(t)
-        time.sleep(1)
-
-    print(f"  After predicate expansion: {len(all_triples):,}")
-
-    # ── 2-hop clubs ────────────────────────────────────────────────────────────
-    for qid in qids[:40]:
-        if len(all_triples) >= 190_000: break
-        for t in two_hop_injuries(qid):
-            if is_useful(*t): all_triples.add(t)
-        time.sleep(0.4)
-
-    print(f"  After 2-hop: {len(all_triples):,}")
-
-    # ── Build RDF ──────────────────────────────────────────────────────────────
-    for s, p, o in all_triples:
-        try:
-            o_ref = URIRef(o) if o.startswith("http") else Literal(o)
-            g.add((URIRef(s), URIRef(p), o_ref))
-        except Exception:
-            continue
-
+    graph = build_expanded_graph()
     EXPANDED_FILE.parent.mkdir(parents=True, exist_ok=True)
-    g.serialize(destination=str(EXPANDED_FILE), format="nt")
+    graph.serialize(destination=str(EXPANDED_FILE), format="nt")
 
-    stats = (f"KB Statistics\n=============\n"
-             f"Triples:   {len(g):,}\nEntities:  {len(set(g.subjects())):,}\n"
-             f"Relations: {len(set(g.predicates())):,}\nFile: {EXPANDED_FILE}\n")
+    stats = (
+        "KB Statistics\n"
+        "=============\n"
+        f"Triples:   {len(graph):,}\n"
+        f"Entities:  {len(set(graph.subjects())):,}\n"
+        f"Relations: {len(set(graph.predicates())):,}\n"
+        f"File: {EXPANDED_FILE}\n"
+    )
     STATS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    STATS_FILE.write_text(stats)
-    print(f"\n✅ Expanded KB → {EXPANDED_FILE}\n{stats}")
+    STATS_FILE.write_text(stats, encoding="utf-8")
+
+    print(f"OK Expanded KB -> {EXPANDED_FILE}")
+    print(stats)
 
 
 if __name__ == "__main__":

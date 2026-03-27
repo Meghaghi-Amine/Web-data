@@ -1,291 +1,179 @@
-@prefix footy: <http://example.org/football/> .
+@prefix mcu: <http://example.org/mcu/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prop: <http://example.org/football/property/> .
+@prefix prop: <http://example.org/mcu/property/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-footy:ACL_rupture a footy:ACLRupture ;
-    rdfs:label "Anterior cruciate ligament rupture"@en .
+mcu:PhaseThreeFilm a owl:Class ;
+    rdfs:label "PhaseThreeFilm"@en ;
+    rdfs:comment "A film inferred to be part of Phase 3."@en .
 
-footy:Achilles a footy:BodyPart ;
-    rdfs:label "achilles"@en .
+mcu:ReleaseYear a owl:Class ;
+    rdfs:label "ReleaseYear"@en ;
+    rdfs:comment "A release year represented as an entity."@en .
 
-footy:Ankle a footy:BodyPart ;
-    rdfs:label "ankle"@en .
+mcu:SagaFilm a owl:Class ;
+    rdfs:label "SagaFilm"@en ;
+    rdfs:comment "A film inferred to belong to a saga-oriented category."@en .
 
-footy:Back a footy:BodyPart ;
-    rdfs:label "back"@en .
+mcu:lead a mcu:RoleType ;
+    rdfs:label "lead"@en .
 
-footy:Calf a footy:BodyPart ;
-    rdfs:label "calf"@en .
+prop:appearsInFilm a owl:ObjectProperty ;
+    rdfs:label "appearsInFilm"@en ;
+    rdfs:comment "Links a character or actor appearance to a film."@en ;
+    rdfs:domain mcu:Character ;
+    rdfs:range mcu:Film .
 
-footy:Fibula a footy:BodyPart ;
-    rdfs:label "fibula"@en .
+prop:directedBy a owl:ObjectProperty ;
+    rdfs:label "directedBy"@en ;
+    rdfs:comment "Links a film to its director."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Director .
 
-footy:Foot a footy:BodyPart ;
-    rdfs:label "foot"@en .
+prop:followsFilm a owl:ObjectProperty ;
+    rdfs:label "followsFilm"@en ;
+    rdfs:comment "Links a film to a previous release in the selected corpus."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Film .
 
-footy:Groin a footy:BodyPart ;
-    rdfs:label "groin"@en .
+prop:hasCastMember a owl:ObjectProperty ;
+    rdfs:label "hasCastMember"@en ;
+    rdfs:comment "Links a film to a cast member."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Actor .
 
-footy:Hamstring a footy:BodyPart ;
-    rdfs:label "hamstring"@en .
+prop:hasCountry a owl:ObjectProperty ;
+    rdfs:label "hasCountry"@en ;
+    rdfs:comment "Links a film to a country."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Country .
 
-footy:Head a footy:BodyPart ;
-    rdfs:label "head"@en .
+prop:hasGenre a owl:ObjectProperty ;
+    rdfs:label "hasGenre"@en ;
+    rdfs:comment "Links a film to a genre."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Genre .
 
-footy:Hip a footy:BodyPart ;
-    rdfs:label "hip"@en .
+prop:hasRoleType a owl:ObjectProperty ;
+    rdfs:label "hasRoleType"@en ;
+    rdfs:comment "Links an actor appearance to a role type."@en ;
+    rdfs:domain mcu:Actor ;
+    rdfs:range mcu:RoleType .
 
-footy:Knee a footy:BodyPart ;
-    rdfs:label "knee"@en .
+prop:hasTag a owl:ObjectProperty ;
+    rdfs:label "hasTag"@en ;
+    rdfs:comment "Links a film to a thematic tag."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Tag .
 
-footy:Meniscus a footy:BodyPart ;
-    rdfs:label "meniscus"@en .
+prop:partOfFranchise a owl:ObjectProperty ;
+    rdfs:label "partOfFranchise"@en ;
+    rdfs:comment "Links a film to a franchise."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Franchise .
 
-footy:Metatarsal a footy:BodyPart ;
-    rdfs:label "metatarsal"@en .
+prop:partOfPhase a owl:ObjectProperty ;
+    rdfs:label "partOfPhase"@en ;
+    rdfs:comment "Links a film to an MCU phase."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Phase .
 
-footy:Season a owl:Class ;
-    rdfs:label "Season"@en ;
-    rdfs:comment "A football season (e.g. 2022-23)."@en ;
-    rdfs:subClassOf owl:Thing .
+prop:portraysCharacter a owl:ObjectProperty ;
+    rdfs:label "portraysCharacter"@en ;
+    rdfs:comment "Links an actor to a portrayed character."@en ;
+    rdfs:domain mcu:Actor ;
+    rdfs:range mcu:Character .
 
-footy:Shoulder a footy:BodyPart ;
-    rdfs:label "shoulder"@en .
+prop:producedBy a owl:ObjectProperty ;
+    rdfs:label "producedBy"@en ;
+    rdfs:comment "Links a film to its studio."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Studio .
 
-footy:Thigh a footy:BodyPart ;
-    rdfs:label "thigh"@en .
-
-footy:Tibia a footy:BodyPart ;
-    rdfs:label "tibia"@en .
-
-footy:Wrist a footy:BodyPart ;
-    rdfs:label "wrist"@en .
-
-footy:achilles_rupture a footy:AchillesRupture ;
-    rdfs:label "Achilles tendon rupture"@en .
-
-footy:ankle_sprain a footy:SpainedAnkle ;
-    rdfs:label "Ankle sprain"@en .
-
-footy:concussion a footy:Concussion ;
-    rdfs:label "Head concussion"@en .
-
-footy:fibula_fracture a footy:Fracture ;
-    rdfs:label "Fibula fracture"@en .
-
-footy:hamstring_strain a footy:HamstringStrain ;
-    rdfs:label "Hamstring muscle strain"@en .
-
-footy:meniscus_tear a footy:MeniscusTear ;
-    rdfs:label "Meniscus cartilage tear"@en .
-
-footy:metatarsal_fracture a footy:MetatarsalFracture ;
-    rdfs:label "Metatarsal fracture"@en .
-
-footy:muscle_tear a footy:MuscleTear ;
-    rdfs:label "Muscle fibre tear"@en .
-
-prop:affectsBodyPart a owl:ObjectProperty ;
-    rdfs:label "affectsBodyPart"@en ;
-    rdfs:comment "The body part affected by the injury."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range footy:BodyPart .
-
-prop:birthDate a owl:DatatypeProperty ;
-    rdfs:label "birthDate"@en ;
-    rdfs:comment "Player's date of birth."@en ;
-    rdfs:domain footy:Player ;
+prop:releaseDate a owl:DatatypeProperty ;
+    rdfs:label "releaseDate"@en ;
+    rdfs:comment "Release date of the film."@en ;
+    rdfs:domain mcu:Film ;
     rdfs:range xsd:date .
 
-prop:causesSurgery a owl:ObjectProperty ;
-    rdfs:label "causesSurgery"@en ;
-    rdfs:comment "Injury that required surgery."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range footy:Injury .
-
-prop:competesIn a owl:ObjectProperty ;
-    rdfs:label "competesIn"@en ;
-    rdfs:comment "Competition the club participates in."@en ;
-    rdfs:domain footy:Club ;
-    rdfs:range footy:Competition .
-
-prop:foundedYear a owl:DatatypeProperty ;
-    rdfs:label "foundedYear"@en ;
-    rdfs:comment "Year the club was founded."@en ;
-    rdfs:domain footy:Club ;
+prop:releaseYear a owl:DatatypeProperty ;
+    rdfs:label "releaseYear"@en ;
+    rdfs:comment "Release year of the film."@en ;
+    rdfs:domain mcu:Film ;
     rdfs:range xsd:gYear .
 
-prop:gamesAbsent a owl:DatatypeProperty ;
-    rdfs:label "gamesAbsent"@en ;
-    rdfs:comment "Number of games missed."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range xsd:integer .
+prop:samePhaseAs a owl:ObjectProperty ;
+    rdfs:label "samePhaseAs"@en ;
+    rdfs:comment "Derived relation for phase membership."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Film .
 
-prop:injuryDate a owl:DatatypeProperty ;
-    rdfs:label "injuryDate"@en ;
-    rdfs:comment "Date when the injury occurred."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range xsd:date .
+prop:sharesCastMemberWith a owl:ObjectProperty ;
+    rdfs:label "sharesCastMemberWith"@en ;
+    rdfs:comment "Derived relation for common cast."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Film .
 
-prop:injuryDescription a owl:DatatypeProperty ;
-    rdfs:label "injuryDescription"@en ;
-    rdfs:comment "Textual description of the injury."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range xsd:string .
+prop:sharesDirectorWith a owl:ObjectProperty ;
+    rdfs:label "sharesDirectorWith"@en ;
+    rdfs:comment "Derived relation for common directors."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Film .
 
-prop:injuryType a owl:ObjectProperty ;
-    rdfs:label "injuryType"@en ;
-    rdfs:comment "The type/category of the injury."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range footy:InjuryType .
+prop:sharesGenreWith a owl:ObjectProperty ;
+    rdfs:label "sharesGenreWith"@en ;
+    rdfs:comment "Derived relation for common genre."@en ;
+    rdfs:domain mcu:Film ;
+    rdfs:range mcu:Film .
 
-prop:locatedIn a owl:ObjectProperty ;
-    rdfs:label "locatedIn"@en ;
-    rdfs:comment "Country where the club is based."@en ;
-    rdfs:domain footy:Club ;
-    rdfs:range footy:Country .
+mcu:supporting a mcu:RoleType ;
+    rdfs:label "supporting"@en .
 
-prop:missedDueTo a owl:ObjectProperty ;
-    rdfs:label "missedDueTo"@en ;
-    rdfs:comment "Games or events missed due to the injury."@en ;
-    rdfs:domain footy:Player ;
-    rdfs:range footy:Injury .
+mcu:villain a mcu:RoleType ;
+    rdfs:label "villain"@en .
 
-prop:nationality a owl:DatatypeProperty ;
-    rdfs:label "nationality"@en ;
-    rdfs:comment "Nationality of the player."@en ;
-    rdfs:domain footy:Player ;
-    rdfs:range xsd:string .
-
-prop:occuredDuring a owl:ObjectProperty ;
-    rdfs:label "occuredDuring"@en ;
-    rdfs:comment "Competition during which the injury occurred."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range footy:Competition .
-
-prop:playsFor a owl:ObjectProperty ;
-    rdfs:label "playsFor"@en ;
-    rdfs:comment "The player plays or played for this club."@en ;
-    rdfs:domain footy:Player ;
-    rdfs:range footy:Club .
-
-prop:position a owl:DatatypeProperty ;
-    rdfs:label "position"@en ;
-    rdfs:comment "Playing position (e.g. Midfielder)."@en ;
-    rdfs:domain footy:Player ;
-    rdfs:range xsd:string .
-
-prop:recoveryDays a owl:DatatypeProperty ;
-    rdfs:label "recoveryDays"@en ;
-    rdfs:comment "Number of days of recovery."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range xsd:integer .
-
-prop:represents a owl:ObjectProperty ;
-    rdfs:label "represents"@en ;
-    rdfs:comment "National team represented by the player."@en ;
-    rdfs:domain footy:Player ;
-    rdfs:range footy:Country .
-
-prop:suffersInjury a owl:ObjectProperty ;
-    rdfs:label "suffersInjury"@en ;
-    rdfs:comment "The player suffered this injury."@en ;
-    rdfs:domain footy:Player ;
-    rdfs:range footy:Injury .
-
-prop:treatedBy a owl:ObjectProperty ;
-    rdfs:label "treatedBy"@en ;
-    rdfs:comment "Medical staff who treated the injury."@en ;
-    rdfs:domain footy:Injury ;
-    rdfs:range footy:MedicalStaff .
-
-footy:tibia_fracture a footy:Fracture ;
-    rdfs:label "Tibia fracture"@en .
-
-footy:ACLRupture a owl:Class ;
-    rdfs:label "ACLRupture"@en ;
-    rdfs:comment "Anterior Cruciate Ligament rupture."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:AchillesRupture a owl:Class ;
-    rdfs:label "AchillesRupture"@en ;
-    rdfs:comment "Rupture of the Achilles tendon."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:Concussion a owl:Class ;
-    rdfs:label "Concussion"@en ;
-    rdfs:comment "Brain concussion from impact."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:HamstringStrain a owl:Class ;
-    rdfs:label "HamstringStrain"@en ;
-    rdfs:comment "Strain or tear of the hamstring muscle."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:MedicalStaff a owl:Class ;
-    rdfs:label "MedicalStaff"@en ;
-    rdfs:comment "A doctor or physiotherapist involved in treatment."@en ;
-    rdfs:subClassOf owl:Thing .
-
-footy:MeniscusTear a owl:Class ;
-    rdfs:label "MeniscusTear"@en ;
-    rdfs:comment "Tear of the meniscus cartilage."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:MetatarsalFracture a owl:Class ;
-    rdfs:label "MetatarsalFracture"@en ;
-    rdfs:comment "Fracture of a metatarsal bone in the foot."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:MuscleTear a owl:Class ;
-    rdfs:label "MuscleTear"@en ;
-    rdfs:comment "Tear of a muscle fibre."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:SpainedAnkle a owl:Class ;
-    rdfs:label "SpainedAnkle"@en ;
-    rdfs:comment "Ankle sprain."@en ;
-    rdfs:subClassOf footy:InjuryType .
-
-footy:Competition a owl:Class ;
-    rdfs:label "Competition"@en ;
-    rdfs:comment "A football tournament or league."@en ;
-    rdfs:subClassOf owl:Thing .
-
-footy:Country a owl:Class ;
+mcu:Country a owl:Class ;
     rdfs:label "Country"@en ;
-    rdfs:comment "A nation associated with a player or club."@en ;
-    rdfs:subClassOf owl:Thing .
+    rdfs:comment "A production country."@en .
 
-footy:Fracture a owl:Class ;
-    rdfs:label "Fracture"@en ;
-    rdfs:comment "Bone fracture."@en ;
-    rdfs:subClassOf footy:InjuryType .
+mcu:Director a owl:Class ;
+    rdfs:label "Director"@en ;
+    rdfs:comment "A film director working on an MCU film."@en .
 
-footy:Club a owl:Class ;
-    rdfs:label "Club"@en ;
-    rdfs:comment "A football club or team."@en ;
-    rdfs:subClassOf owl:Thing .
+mcu:Franchise a owl:Class ;
+    rdfs:label "Franchise"@en ;
+    rdfs:comment "A film franchise."@en .
 
-footy:Player a owl:Class ;
-    rdfs:label "Player"@en ;
-    rdfs:comment "A professional football player."@en ;
-    rdfs:subClassOf owl:Thing .
+mcu:Genre a owl:Class ;
+    rdfs:label "Genre"@en ;
+    rdfs:comment "A film genre."@en .
 
-footy:InjuryType a owl:Class ;
-    rdfs:label "InjuryType"@en ;
-    rdfs:comment "A category of injury (e.g. ACL rupture, fracture)."@en ;
-    rdfs:subClassOf owl:Thing .
+mcu:Phase a owl:Class ;
+    rdfs:label "Phase"@en ;
+    rdfs:comment "A release phase of the MCU."@en .
 
-footy:Injury a owl:Class ;
-    rdfs:label "Injury"@en ;
-    rdfs:comment "A specific injury suffered by a player."@en ;
-    rdfs:subClassOf owl:Thing .
+mcu:Studio a owl:Class ;
+    rdfs:label "Studio"@en ;
+    rdfs:comment "A production studio."@en .
 
-footy:BodyPart a owl:Class ;
-    rdfs:label "BodyPart"@en ;
-    rdfs:comment "The body part affected by an injury."@en ;
-    rdfs:subClassOf owl:Thing .
+mcu:Tag a owl:Class ;
+    rdfs:label "Tag"@en ;
+    rdfs:comment "A thematic tag used for analysis and expansion."@en .
+
+mcu:Character a owl:Class ;
+    rdfs:label "Character"@en ;
+    rdfs:comment "A fictional character appearing in an MCU film."@en .
+
+mcu:Actor a owl:Class ;
+    rdfs:label "Actor"@en ;
+    rdfs:comment "A cast member in an MCU film."@en .
+
+mcu:RoleType a owl:Class ;
+    rdfs:label "RoleType"@en ;
+    rdfs:comment "A cast role category such as lead or villain."@en .
+
+mcu:Film a owl:Class ;
+    rdfs:label "Film"@en ;
+    rdfs:comment "An MCU feature film."@en .
 

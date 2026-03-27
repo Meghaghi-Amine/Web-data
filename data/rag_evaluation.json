@@ -1,165 +1,116 @@
 [
   {
-    "question": "Which players have suffered injuries?",
-    "baseline_answer": "I am unable to access real-time information or access to specific athlete profiles, therefore I cannot provide a list of players who have suffered injuries.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:suffersInjury ?injury .\n}\nORDER BY ?playerLabel",
+    "question": "Who directed Iron Man?",
+    "baseline_answer": "The context does not specify who directed Iron Man, so I cannot answer this question from the provided context.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?directorLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:directedBy ?director .\n  ?director rdfs:label ?directorLabel .\n  FILTER(LCASE(STR(?filmLabel)) = \"iron man\")\n}",
     "rag_rows": [
       [
-        "Abou Diaby"
-      ],
-      [
-        "Jack Wilshere"
-      ],
-      [
-        "Kevin De Bruyne"
-      ],
-      [
-        "Luke Shaw"
-      ],
-      [
-        "Michael Owen"
+        "Jon Favreau"
       ]
     ],
     "repaired": false,
     "error": null
   },
   {
-    "question": "Which players play for English clubs?",
-    "baseline_answer": "I cannot provide real-time information or answer this question. For the most up-to-date information on football injuries and player news, I recommend checking reputable sports news websites or reputable sports news channels.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel ?clubLabel WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:playsFor ?club .\n  ?club rdfs:label ?clubLabel .\n  FILTER(CONTAINS(LCASE(STR(?clubLabel)), \"united\") || CONTAINS(LCASE(STR(?clubLabel)), \"liverpool\") || CONTAINS(LCASE(STR(?clubLabel)), \"arsenal\") || CONTAINS(LCASE(STR(?clubLabel)), \"manchester\"))\n}\nORDER BY ?playerLabel",
+    "question": "Which films are in Phase 3?",
+    "baseline_answer": "I cannot provide real-time information about the Marvel Cinematic Universe films, so I cannot answer this question. For the most up-to-date information about the films in Phase 3, please check the official Marvel Cinematic Universe website or any other reliable sources.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?filmLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:partOfPhase ?phase .\n  ?phase rdfs:label ?phaseLabel .\n  FILTER(LCASE(STR(?phaseLabel)) = \"phase 3\")\n}\nORDER BY ?filmLabel",
     "rag_rows": [
       [
-        "Abou Diaby",
-        "Arsenal FC"
+        "Avengers: Endgame"
       ],
       [
-        "Jack Wilshere",
-        "Arsenal FC"
+        "Avengers: Infinity War"
       ],
       [
-        "Kevin De Bruyne",
-        "Manchester City FC"
+        "Black Panther"
       ],
       [
-        "Luke Shaw",
-        "Manchester United FC"
+        "Captain America: Civil War"
       ],
       [
-        "Michael Owen",
-        "Newcastle United FC"
+        "Captain Marvel"
       ]
     ],
     "repaired": false,
     "error": null
   },
   {
-    "question": "What types of injuries are in the knowledge graph?",
-    "baseline_answer": "The context does not provide any information about the types of injuries in the knowledge graph, so I cannot answer this question from the provided context.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nSELECT DISTINCT ?injuryTypeLabel WHERE {\n  ?injuryType rdf:type footy:InjuryType ;\n              rdfs:label ?injuryTypeLabel .\n}\nORDER BY ?injuryTypeLabel",
+    "question": "Which actors appear in Avengers: Endgame?",
+    "baseline_answer": "The actors who appear in Avengers: Endgame are:\n\n- Chris Evans as Captain America\n- Robert Downey Jr. as Iron Man\n- Spider-Man: Tom Holland\n- Mark Ruffalo as Hulk\n- Scarlett Johansson as Black Widow\n- Chris Hemsworth as Thor\n- Brie Larson as Brie\n- Gwyneth Paltrow as Pepper Potts\n- Jeremy Renner as Hawkeye\n- Paul Rudd as Ant-Man\n- Joe Russo and Anthony Russo as Directors",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?actorLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:hasCastMember ?actor .\n  ?actor rdfs:label ?actorLabel .\n  FILTER(LCASE(STR(?filmLabel)) = \"avengers: endgame\")\n}\nORDER BY ?actorLabel",
     "rag_rows": [
       [
-        "ACLRupture"
+        "Chris Evans"
       ],
       [
-        "Achilles tendon rupture"
+        "Chris Hemsworth"
       ],
       [
-        "AchillesRupture"
+        "Jeremy Renner"
       ],
       [
-        "Ankle sprain"
+        "Josh Brolin"
       ],
       [
-        "Anterior cruciate ligament rupture"
+        "Mark Ruffalo"
       ]
     ],
     "repaired": false,
     "error": null
   },
   {
-    "question": "Which players represent France?",
-    "baseline_answer": "I cannot generate a response to this question as I do not have access to real-time or specific information.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:represents ?country .\n  ?country rdfs:label ?countryLabel .\n  FILTER(LCASE(STR(?countryLabel)) = \"france\")\n}\nORDER BY ?playerLabel",
+    "question": "Which films were directed by the Russo brothers?",
+    "baseline_answer": "The Russo brothers have directed several Marvel Cinematic Universe films, including Avengers: Infinity War and Avengers: Endgame.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT DISTINCT ?filmLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:directedBy ?director .\n  ?director rdfs:label ?directorLabel .\n  FILTER(LCASE(STR(?directorLabel)) = \"anthony russo\" || LCASE(STR(?directorLabel)) = \"joe russo\")\n}\nORDER BY ?filmLabel",
     "rag_rows": [
       [
-        "Abou Diaby"
+        "Avengers: Endgame"
       ],
       [
-        "Ousmane Dembele"
+        "Avengers: Infinity War"
+      ],
+      [
+        "Captain America: Civil War"
+      ],
+      [
+        "Captain America: The Winter Soldier"
       ]
     ],
     "repaired": false,
     "error": null
   },
   {
-    "question": "Which clubs are in the graph?",
-    "baseline_answer": "I cannot access the context of the question, so I cannot answer this question from the provided context.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nSELECT DISTINCT ?clubLabel WHERE {\n  ?club rdf:type footy:Club ;\n        rdfs:label ?clubLabel .\n}\nORDER BY ?clubLabel",
+    "question": "Which characters does Robert Downey Jr. portray?",
+    "baseline_answer": "Robert Downey Jr. portrays Iron Man in the Marvel Cinematic Universe films.",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT DISTINCT ?characterLabel WHERE {\n  ?actor rdf:type mcu:Actor ;\n         rdfs:label ?actorLabel ;\n         prop:portraysCharacter ?character .\n  ?character rdfs:label ?characterLabel .\n  FILTER(LCASE(STR(?actorLabel)) = \"robert downey jr.\")\n}\nORDER BY ?characterLabel",
     "rag_rows": [
       [
-        "AS Monaco FC"
-      ],
-      [
-        "Arsenal FC"
-      ],
-      [
-        "FC Barcelona"
-      ],
-      [
-        "Liverpool FC"
-      ],
-      [
-        "Manchester City FC"
+        "Tony Stark"
       ]
     ],
     "repaired": false,
     "error": null
   },
   {
-    "question": "Which injuries affected the knee?",
-    "baseline_answer": "I am unable to answer this question as the context does not specify which injuries affected the knee.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?injuryLabel WHERE {\n  ?injury rdf:type footy:Injury ;\n          rdfs:label ?injuryLabel ;\n          prop:affectsBodyPart ?bodyPart .\n  ?bodyPart rdfs:label ?bodyPartLabel .\n  FILTER(LCASE(STR(?bodyPartLabel)) = \"knee\")\n}\nORDER BY ?injuryLabel",
+    "question": "Which films have the superhero film genre?",
+    "baseline_answer": "Sure, here are the films that have the superhero film genre:\n\n- Iron Man\n- Spider-Man: Homecoming\n- Thor: Ragnarok\n- Black Widow\n- Avengers: Infinity War\n- Avengers: Endgame",
+    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?filmLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:hasGenre ?genre .\n  ?genre rdfs:label ?genreLabel .\n  FILTER(LCASE(STR(?genreLabel)) = \"superhero film\")\n}\nORDER BY ?filmLabel",
     "rag_rows": [
       [
-        "Michael Owen Anterior cruciate ligament rupture 2006-07"
+        "Avengers: Age of Ultron"
       ],
       [
-        "Radamel Falcao Anterior cruciate ligament rupture 2013-14"
+        "Avengers: Endgame"
       ],
       [
-        "Virgil van Dijk Anterior cruciate ligament rupture 2020-21"
+        "Avengers: Infinity War"
       ],
       [
-        "Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17"
-      ]
-    ],
-    "repaired": false,
-    "error": null
-  },
-  {
-    "question": "Which players missed games due to injury?",
-    "baseline_answer": "I am unable to access real-time information or access to the context of your question, therefore I cannot provide you with the players who missed games due to injury.",
-    "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX footy: <http://example.org/football/>\nPREFIX prop: <http://example.org/football/property/>\nSELECT ?playerLabel ?gamesAbsent WHERE {\n  ?player rdf:type footy:Player ;\n          rdfs:label ?playerLabel ;\n          prop:suffersInjury ?injury .\n  ?injury prop:gamesAbsent ?gamesAbsent .\n}\nORDER BY DESC(?gamesAbsent)",
-    "rag_rows": [
-      [
-        "Santi Cazorla",
-        "86"
+        "Black Panther"
       ],
       [
-        "Virgil van Dijk",
-        "45"
-      ],
-      [
-        "Luke Shaw",
-        "42"
-      ],
-      [
-        "Michael Owen",
-        "40"
-      ],
-      [
-        "Abou Diaby",
-        "32"
+        "Captain America: Civil War"
       ]
     ],
     "repaired": false,

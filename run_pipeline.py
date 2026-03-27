@@ -1,46 +1,60 @@
 """
-run_pipeline.py — Pipeline complet : Blessures de footballeurs
+run_pipeline.py - End-to-end pipeline for the MCU films knowledge graph.
+
 Usage:
-    python run_pipeline.py              # tout
-    python run_pipeline.py --step 1 2   # étapes spécifiques
+    python run_pipeline.py
+    python run_pipeline.py --step 1 2 3
 """
-import sys, argparse, importlib
+
+from __future__ import annotations
+
+import argparse
+import importlib
+import sys
 
 STEPS = {
-    1:  ("Crawling Wikipedia",        "src.crawl.crawler",         "run_crawler"),
-    2:  ("NER + Relations",           "src.ie.ner_extractor",      "run_extraction"),
-    3:  ("Construction KG RDF",       "src.kg.build_kg",           "main"),
-    4:  ("Alignement Wikidata",       "src.kg.align_entities",     "run_alignment"),
-    5:  ("Expansion SPARQL",          "src.kg.expand_sparql",      "run_expansion"),
-    6:  ("Preparation donnees KGE",   "src.kge.prepare_kge_data",  "run_preparation"),
-    7:  ("Entrainement KGE",          "src.kge.train_kge",         "main"),
-    8:  ("Raisonnement SWRL",         "src.reason.swrl_reasoning", "run_family_swrl"),
-    9:  ("Comparaison SWRL vs KGE",   "src.kge.swrl_vs_kge",       "run_comparison"),
-    10: ("Evaluation RAG",            "src.rag.rag_sparql",        "run_evaluation_cli"),
+    1: ("Crawling MCU corpus", "src.crawl.crawler", "run_crawler"),
+    2: ("Information extraction", "src.ie.ner_extractor", "run_extraction"),
+    3: ("RDF knowledge graph construction", "src.kg.build_kg", "main"),
+    4: ("Entity alignment", "src.kg.align_entities", "run_alignment"),
+    5: ("KB expansion", "src.kg.expand_sparql", "run_expansion"),
+    6: ("KGE data preparation", "src.kge.prepare_kge_data", "run_preparation"),
+    7: ("KGE training", "src.kge.train_kge", "main"),
+    8: ("SWRL reasoning", "src.reason.swrl_reasoning", "run_reasoning_suite"),
+    9: ("SWRL vs KGE comparison", "src.kge.swrl_vs_kge", "run_comparison"),
+    10: ("RAG evaluation", "src.rag.rag_sparql", "run_evaluation_cli"),
 }
 
-def run_step(n):
-    label, mod_path, func_name = STEPS[n]
-    print(f"\n{'='*60}\n  STEP {n}: {label}\n{'='*60}\n")
-    mod  = importlib.import_module(mod_path)
-    func = getattr(mod, func_name)
-    func()
+
+def run_step(step_number: int):
+    label, module_path, function_name = STEPS[step_number]
+    print(f"\n{'=' * 60}\nSTEP {step_number}: {label}\n{'=' * 60}\n")
+    module = importlib.import_module(module_path)
+    function = getattr(module, function_name)
+    function()
+
 
 def main():
-    parser = argparse.ArgumentParser(description="Football Injuries KG Pipeline")
+    parser = argparse.ArgumentParser(description="MCU Films Knowledge Graph Pipeline")
     parser.add_argument("--step", nargs="+", type=int)
-    args  = parser.parse_args()
+    args = parser.parse_args()
+
     steps = args.step if args.step else list(STEPS.keys())
-    print("\nFootball Injuries Knowledge Graph - Pipeline")
-    print(f"   Steps: {steps}\n")
-    for s in steps:
-        if s not in STEPS: print(f"Unknown step {s}"); continue
+    print("\nMCU Films Knowledge Graph - Pipeline")
+    print(f"Steps: {steps}\n")
+
+    for step_number in steps:
+        if step_number not in STEPS:
+            print(f"Unknown step {step_number}")
+            continue
         try:
-            run_step(s)
-        except Exception as e:
-            print(f"\nStep {s} failed: {e}")
+            run_step(step_number)
+        except Exception as exc:
+            print(f"\nStep {step_number} failed: {exc}")
             sys.exit(1)
-    print("\nDone!")
+
+    print("\nDone.")
+
 
 if __name__ == "__main__":
     main()

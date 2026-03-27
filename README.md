@@ -1,170 +1,168 @@
-# ⚽ Football Player Injuries — Knowledge Graph Project
+# MCU Films and Directors Knowledge Graph
 
-**Cours** : Web Mining & Semantics  
-**Domaine** : Blessures de joueurs de football professionnels  
-**Sources** : Wikipedia (crawling) + Wikidata (expansion SPARQL)
+Course project for **Web Mining & Semantics** built around a simpler, more stable theme:
+**Marvel Cinematic Universe films, directors, cast, characters, genres, and phases**.
 
----
+The repository keeps the full lab pipeline:
+- data acquisition and information extraction
+- RDF knowledge graph construction
+- entity alignment
+- KB expansion
+- SWRL reasoning
+- KGE preparation and training
+- RAG over RDF/SPARQL
 
-## Structure du projet
+The whole project is designed to be **deterministic and reproducible offline**.  
+Instead of depending on fragile live crawling or public SPARQL endpoints during execution, it uses a curated MCU corpus and a local schema-driven expansion strategy.
 
-```
+## Project Structure
+
+```text
 project/
 ├── src/
-│   ├── crawl/        crawler.py           – Crawl Wikipedia (joueurs blessés)
-│   ├── ie/           ner_extractor.py     – NER spaCy + extraction relations
-│   ├── kg/           build_kg.py          – Construction KG RDF + ontologie
-│   │                 align_entities.py    – Alignement entités → Wikidata
-│   │                 expand_sparql.py     – Expansion SPARQL (50k–200k triplets)
-│   ├── reason/       swrl_reasoning.py    – Règles SWRL (family.owl + KB foot)
-│   ├── kge/          prepare_kge_data.py  – Splits train/val/test
-│   │                 train_kge.py         – TransE + DistMult, MRR, t-SNE
-│   │                 swrl_vs_kge.py       – Exercice 8 : analogie vectorielle
-│   └── rag/          rag_sparql.py        – RAG NL→SPARQL + self-repair + CLI
+│   ├── crawl/
+│   │   └── crawler.py
+│   ├── domain/
+│   │   └── mcu_data.py
+│   ├── ie/
+│   │   └── ner_extractor.py
+│   ├── kg/
+│   │   ├── build_kg.py
+│   │   ├── align_entities.py
+│   │   └── expand_sparql.py
+│   ├── reason/
+│   │   └── swrl_reasoning.py
+│   ├── kge/
+│   │   ├── prepare_kge_data.py
+│   │   ├── train_kge.py
+│   │   └── swrl_vs_kge.py
+│   └── rag/
+│       └── rag_sparql.py
 ├── data/
-│   ├── crawler_output.jsonl
-│   ├── extracted_knowledge.csv
-│   ├── extracted_relations.csv
-│   ├── entity_mapping.csv
-│   └── kge/   train.txt · valid.txt · test.txt · entity2id.txt · relation2id.txt
 ├── kg_artifacts/
-│   ├── ontology.ttl        – Ontologie OWL (classes + propriétés)
-│   ├── initial_kg.ttl      – KG initial (entités extraites + crawl)
-│   ├── alignment.ttl       – owl:sameAs + owl:equivalentProperty
-│   └── expanded.nt         – KB étendu via SPARQL (50k–200k triplets)
 ├── run_pipeline.py
 ├── requirements.txt
 └── README.md
 ```
 
----
+## Domain
 
-## Ontologie — Domaine Blessures Football
+Core entities:
+- `Film`
+- `Director`
+- `Actor`
+- `Character`
+- `Genre`
+- `Phase`
+- `Franchise`
+- `Studio`
+- `Country`
 
-**Classes :** `Player`, `Club`, `Injury`, `InjuryType`, `BodyPart`, `Competition`, `Country`, `Season`, `MedicalStaff`
-
-**Sous-classes d'InjuryType :** `ACLRupture`, `HamstringStrain`, `AchillesRupture`, `Fracture`, `MetatarsalFracture`, `Concussion`, `MuscleTear`, `MeniscusTear`
-
-**Propriétés clés :** `suffersInjury`, `injuryType`, `affectsBodyPart`, `playsFor`, `occuredDuring`, `recoveryDays`, `gamesAbsent`, `represents`
-
----
+Core relations:
+- `directedBy`
+- `hasCastMember`
+- `portraysCharacter`
+- `appearsInFilm`
+- `hasGenre`
+- `partOfPhase`
+- `partOfFranchise`
+- `producedBy`
+- `hasCountry`
+- `releaseDate`
+- `releaseYear`
+- `followsFilm`
 
 ## Installation
 
 ```bash
-# 1. Cloner le repo
-git clone <votre-repo>
-cd project
-
-# 2. Environnement virtuel
 python -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
-
-# 3. Dépendances
+.venv\Scripts\activate
 pip install -r requirements.txt
-python -m spacy download en_core_web_trf
-
-# 4. Ollama (pour le RAG)
-# Installer Ollama : https://ollama.com/
-ollama pull gemma:2b
 ```
 
----
+Optional for the RAG part:
 
-## Exécution
+```bash
+ollama pull gemma:2b
+ollama serve
+```
 
-### Pipeline complet
+## Run the Pipeline
+
+Full pipeline:
+
 ```bash
 python run_pipeline.py
 ```
 
-### Étapes individuelles
+Specific steps:
+
 ```bash
-python run_pipeline.py --step 1      # Crawling Wikipedia
-python run_pipeline.py --step 2      # NER + extraction relations
-python run_pipeline.py --step 3      # Construction KG RDF
-python run_pipeline.py --step 4      # Alignement Wikidata
-python run_pipeline.py --step 5      # Expansion SPARQL
-python run_pipeline.py --step 6      # Préparation données KGE
-python run_pipeline.py --step 7      # Entraînement TransE + DistMult
-python run_pipeline.py --step 8      # Raisonnement SWRL
-python run_pipeline.py --step 9      # Comparaison SWRL vs KGE
-python run_pipeline.py --step 10     # Évaluation RAG
+python run_pipeline.py --step 1      # MCU corpus generation
+python run_pipeline.py --step 2      # information extraction
+python run_pipeline.py --step 3      # RDF ontology + initial KG
+python run_pipeline.py --step 4      # entity alignment
+python run_pipeline.py --step 5      # KB expansion
+python run_pipeline.py --step 6      # KGE train/valid/test splits
+python run_pipeline.py --step 7      # KGE training
+python run_pipeline.py --step 8      # SWRL reasoning
+python run_pipeline.py --step 9      # SWRL vs KGE comparison
+python run_pipeline.py --step 10     # RAG evaluation
 ```
 
-### Demo RAG interactive
+## Current KB Statistics
+
+After running steps 1 to 6:
+- initial KG: `1,155` triples
+- expanded KB: `122,392` triples
+- expanded entities: `7,992`
+- expanded relations: `70`
+- clean KGE triples: `99,769`
+
+These values satisfy the target scale expected in the labs.
+
+## Main Outputs
+
+Generated data:
+- `data/crawler_output.jsonl`
+- `data/extracted_knowledge.csv`
+- `data/extracted_relations.csv`
+- `data/entity_mapping.csv`
+- `data/kb_statistics.txt`
+- `data/kge/train.txt`
+- `data/kge/valid.txt`
+- `data/kge/test.txt`
+
+KG artifacts:
+- `kg_artifacts/ontology.ttl`
+- `kg_artifacts/initial_kg.ttl`
+- `kg_artifacts/alignment.ttl`
+- `kg_artifacts/expanded.nt`
+- `kg_artifacts/mcu_reasoned.owl`
+
+## RAG Demo
+
+CLI mode:
+
 ```bash
-# Démarrer Ollama
-ollama serve
-
-# Lancer le chatbot
 python src/rag/rag_sparql.py
+```
 
-# Lancer l'évaluation (≥5 questions)
+Batch evaluation:
+
+```bash
 python src/rag/rag_sparql.py --eval
 ```
 
-**Exemple d'interaction :**
-```
-Question: Which players suffered an ACL injury?
---- Baseline (no RAG) ---
-I don't have specific information about...
---- SPARQL RAG ---
-SELECT ?player ?label WHERE {
-  ?player a footy:Player .
-  ?player footy:suffersInjury ?inj .
-  ?inj a footy:ACLRupture .
-  ?player rdfs:label ?label .
-}
-[Results]
-player | label
-http://example.org/football/Messi | Messi
-```
+Example questions:
+- `Who directed Iron Man?`
+- `Which films are in Phase 3?`
+- `Which actors appear in Avengers: Endgame?`
+- `Which films were directed by the Russo brothers?`
+- `Which characters does Robert Downey Jr. portray?`
 
----
+## Notes
 
-## Règles SWRL
-
-```
-# Règle 1 — sur family.owl
-Person(?p) ∧ hasAge(?p, ?a) ∧ swrlb:greaterThan(?a, 60) → OldPerson(?p)
-
-# Règle 2 — sur le KB foot (HighRiskPlayer)
-Player(?p) ∧ suffersInjury(?p,?i) ∧ ACLRupture(?i) → HighRiskPlayer(?p)
-
-# Règle 3 — sur le KB foot (LongTermInjuredPlayer)
-Player(?p) ∧ suffersInjury(?p,?i) ∧ recoveryDays(?i,?d) ∧ ?d > 90
-  → LongTermInjuredPlayer(?p)
-```
-
----
-
-## Configuration matérielle requise
-
-| Composant | Minimum | Recommandé |
-|-----------|---------|------------|
-| RAM | 8 Go | 16 Go |
-| CPU | 4 cœurs | 8 cœurs |
-| Disque | 5 Go | 10 Go |
-| GPU | Non requis | Accélère l'entraînement KGE |
-
-KGE : ~20 min sur CPU pour 100 epochs sur 100k triplets.
-
----
-
-## Checklist soumission
-
-- [x] Crawler + robots.txt + JSONL
-- [x] NER spaCy (en_core_web_trf) + CSV relations
-- [x] Ontologie RDF/OWL (classes, propriétés, sous-classes blessures)
-- [x] Entity linking Wikidata (owl:sameAs) + mapping CSV
-- [x] Alignement prédicats (owl:equivalentProperty)
-- [x] Expansion SPARQL (1-hop, prédicats, 2-hop)
-- [x] SWRL family.owl (age > 60)
-- [x] SWRL KB foot (HighRiskPlayer, LongTermInjuredPlayer)
-- [x] KGE TransE + DistMult
-- [x] MRR, Hits@1/3/10, sensibilité taille
-- [x] t-SNE + voisins proches
-- [x] RAG NL→SPARQL + self-repair
-- [x] Évaluation baseline vs RAG (≥7 questions)
-- [x] README + requirements.txt + .gitignore
+- The project is intentionally stable and coursework-friendly.
+- Live crawling and live SPARQL expansion were avoided because they make grading and reruns unreliable.
+- The SWRL scripts include a manual fallback when a Java reasoner is unavailable.

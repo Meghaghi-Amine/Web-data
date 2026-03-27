@@ -1,145 +1,443 @@
-entity,label,injury_context,source_url
-Virgil van Dijk,PERSON,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-Liverpool FC,ORG,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-Netherlands,GPE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-2020-21,SEASON,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-Virgil van Dijk Anterior cruciate ligament rupture 2020-21,INJURY,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-knee,BODY_PART,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-2020-10-17,DATE,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-285,NUMBER,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-45,NUMBER,True,https://en.wikipedia.org/wiki/Virgil_van_Dijk
-Kevin De Bruyne,PERSON,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-Manchester City FC,ORG,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-Belgium,GPE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-2023-24,SEASON,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-Kevin De Bruyne Hamstring strain 2023-24,INJURY,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-HamstringStrain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-Hamstring strain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-hamstring,BODY_PART,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-2023-08-11,DATE,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-122,NUMBER,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-18,NUMBER,True,https://en.wikipedia.org/wiki/Kevin_De_Bruyne
-Neymar,PERSON,True,https://en.wikipedia.org/wiki/Neymar
-Paris Saint-Germain FC,ORG,True,https://en.wikipedia.org/wiki/Neymar
-Brazil,GPE,True,https://en.wikipedia.org/wiki/Neymar
-Ligue 1,COMPETITION,True,https://en.wikipedia.org/wiki/Neymar
-2022-23,SEASON,True,https://en.wikipedia.org/wiki/Neymar
-Neymar Ankle sprain 2022-23,INJURY,True,https://en.wikipedia.org/wiki/Neymar
-SpainedAnkle,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Neymar
-Ankle sprain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Neymar
-ankle,BODY_PART,True,https://en.wikipedia.org/wiki/Neymar
-2023-02-19,DATE,True,https://en.wikipedia.org/wiki/Neymar
-110,NUMBER,True,https://en.wikipedia.org/wiki/Neymar
-20,NUMBER,True,https://en.wikipedia.org/wiki/Neymar
-Santi Cazorla,PERSON,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-Arsenal FC,ORG,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-Spain,GPE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-2016-17,SEASON,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-Santi Cazorla Achilles tendon rupture 2016-17,INJURY,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-AchillesRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-Achilles tendon rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-achilles,BODY_PART,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-2016-10-19,DATE,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-636,NUMBER,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-86,NUMBER,True,https://en.wikipedia.org/wiki/Santi_Cazorla
-Michael Owen,PERSON,True,https://en.wikipedia.org/wiki/Michael_Owen
-Newcastle United FC,ORG,True,https://en.wikipedia.org/wiki/Michael_Owen
-England,GPE,True,https://en.wikipedia.org/wiki/Michael_Owen
-World Cup,COMPETITION,True,https://en.wikipedia.org/wiki/Michael_Owen
-2006-07,SEASON,True,https://en.wikipedia.org/wiki/Michael_Owen
-Michael Owen Anterior cruciate ligament rupture 2006-07,INJURY,True,https://en.wikipedia.org/wiki/Michael_Owen
-ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Michael_Owen
-Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Michael_Owen
-knee,BODY_PART,True,https://en.wikipedia.org/wiki/Michael_Owen
-2006-06-22,DATE,True,https://en.wikipedia.org/wiki/Michael_Owen
-301,NUMBER,True,https://en.wikipedia.org/wiki/Michael_Owen
-40,NUMBER,True,https://en.wikipedia.org/wiki/Michael_Owen
-Abou Diaby,PERSON,True,https://en.wikipedia.org/wiki/Abou_Diaby
-Arsenal FC,ORG,True,https://en.wikipedia.org/wiki/Abou_Diaby
-France,GPE,True,https://en.wikipedia.org/wiki/Abou_Diaby
-Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Abou_Diaby
-2013-14,SEASON,True,https://en.wikipedia.org/wiki/Abou_Diaby
-Abou Diaby Muscle tear 2013-14,INJURY,True,https://en.wikipedia.org/wiki/Abou_Diaby
-MuscleTear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Abou_Diaby
-Muscle tear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Abou_Diaby
-thigh,BODY_PART,True,https://en.wikipedia.org/wiki/Abou_Diaby
-2013-09-01,DATE,True,https://en.wikipedia.org/wiki/Abou_Diaby
-214,NUMBER,True,https://en.wikipedia.org/wiki/Abou_Diaby
-32,NUMBER,True,https://en.wikipedia.org/wiki/Abou_Diaby
-Luke Shaw,PERSON,True,https://en.wikipedia.org/wiki/Luke_Shaw
-Manchester United FC,ORG,True,https://en.wikipedia.org/wiki/Luke_Shaw
-England,GPE,True,https://en.wikipedia.org/wiki/Luke_Shaw
-UEFA Champions League,COMPETITION,True,https://en.wikipedia.org/wiki/Luke_Shaw
-2015-16,SEASON,True,https://en.wikipedia.org/wiki/Luke_Shaw
-Luke Shaw Tibia fracture 2015-16,INJURY,True,https://en.wikipedia.org/wiki/Luke_Shaw
-Fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Luke_Shaw
-Tibia fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Luke_Shaw
-tibia,BODY_PART,True,https://en.wikipedia.org/wiki/Luke_Shaw
-2015-09-15,DATE,True,https://en.wikipedia.org/wiki/Luke_Shaw
-289,NUMBER,True,https://en.wikipedia.org/wiki/Luke_Shaw
-42,NUMBER,True,https://en.wikipedia.org/wiki/Luke_Shaw
-Radamel Falcao,PERSON,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-AS Monaco FC,ORG,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-Colombia,GPE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-Coupe de France,COMPETITION,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-2013-14,SEASON,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-Radamel Falcao Anterior cruciate ligament rupture 2013-14,INJURY,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-knee,BODY_PART,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-2014-01-22,DATE,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-157,NUMBER,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-22,NUMBER,True,https://en.wikipedia.org/wiki/Radamel_Falcao
-Zlatan Ibrahimovic,PERSON,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-Manchester United FC,ORG,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-Sweden,GPE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-UEFA Europa League,COMPETITION,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-2016-17,SEASON,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17,INJURY,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-ACLRupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-Anterior cruciate ligament rupture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-knee,BODY_PART,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-2017-04-20,DATE,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-213,NUMBER,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-31,NUMBER,True,https://en.wikipedia.org/wiki/Zlatan_Ibrahimovic
-Jack Wilshere,PERSON,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-Arsenal FC,ORG,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-England,GPE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-2015-16,SEASON,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-Jack Wilshere Fibula fracture 2015-16,INJURY,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-Fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-Fibula fracture,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-fibula,BODY_PART,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-2015-08-08,DATE,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-161,NUMBER,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-27,NUMBER,True,https://en.wikipedia.org/wiki/Jack_Wilshere
-Thiago Alcantara,PERSON,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-Liverpool FC,ORG,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-Spain,GPE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-Premier League,COMPETITION,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-2020-21,SEASON,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-Thiago Alcantara Meniscus tear 2020-21,INJURY,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-MeniscusTear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-Meniscus tear,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-meniscus,BODY_PART,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-2020-10-17,DATE,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-84,NUMBER,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-14,NUMBER,True,https://en.wikipedia.org/wiki/Thiago_Alcantara
-Ousmane Dembele,PERSON,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-FC Barcelona,ORG,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-France,GPE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-La Liga,COMPETITION,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-2019-20,SEASON,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-Ousmane Dembele Hamstring strain 2019-20,INJURY,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-HamstringStrain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-Hamstring strain,INJURY_TYPE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-hamstring,BODY_PART,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-2020-02-03,DATE,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-191,NUMBER,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
-29,NUMBER,True,https://en.wikipedia.org/wiki/Ousmane_Dembele
+entity,label,mcu_context,source_url
+Iron Man,FILM,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Phase 1,PHASE,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+2008-05-02,DATE,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+2008,YEAR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Jon Favreau,DIRECTOR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+origin story,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+technology,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+armor,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+hero introduction,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Terrence Howard,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+James Rhodes,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Gwyneth Paltrow,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Pepper Potts,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Jeff Bridges,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Obadiah Stane,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Clark Gregg,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+Phil Coulson,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+The Incredible Hulk,FILM,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Phase 1,PHASE,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+2008-06-13,DATE,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+2008,YEAR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Louis Leterrier,DIRECTOR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+origin story,TAG,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+science experiment,TAG,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+monster,TAG,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+military pursuit,TAG,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Edward Norton,ACTOR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Bruce Banner,CHARACTER,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Liv Tyler,ACTOR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Betty Ross,CHARACTER,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Tim Roth,ACTOR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Emil Blonsky,CHARACTER,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+William Hurt,ACTOR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Thaddeus Ross,CHARACTER,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Tim Blake Nelson,ACTOR,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Samuel Sterns,CHARACTER,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Iron Man,FILM,True,https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)
+Iron Man 2,FILM,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Phase 1,PHASE,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Iron_Man_2
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Iron_Man_2
+2010-05-07,DATE,True,https://en.wikipedia.org/wiki/Iron_Man_2
+2010,YEAR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Jon Favreau,DIRECTOR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Iron_Man_2
+technology,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_2
+legacy,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_2
+government pressure,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_2
+armor,TAG,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Gwyneth Paltrow,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Pepper Potts,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Don Cheadle,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+James Rhodes,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Scarlett Johansson,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Natasha Romanoff,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Mickey Rourke,ACTOR,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Ivan Vanko,CHARACTER,True,https://en.wikipedia.org/wiki/Iron_Man_2
+The Incredible Hulk,FILM,True,https://en.wikipedia.org/wiki/Iron_Man_2
+Thor,FILM,True,https://en.wikipedia.org/wiki/Thor_(film)
+Phase 1,PHASE,True,https://en.wikipedia.org/wiki/Thor_(film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Thor_(film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Thor_(film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Thor_(film)
+2011-05-06,DATE,True,https://en.wikipedia.org/wiki/Thor_(film)
+2011,YEAR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Kenneth Branagh,DIRECTOR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Thor_(film)
+Fantasy film,GENRE,True,https://en.wikipedia.org/wiki/Thor_(film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Thor_(film)
+origin story,TAG,True,https://en.wikipedia.org/wiki/Thor_(film)
+mythology,TAG,True,https://en.wikipedia.org/wiki/Thor_(film)
+family conflict,TAG,True,https://en.wikipedia.org/wiki/Thor_(film)
+cosmic,TAG,True,https://en.wikipedia.org/wiki/Thor_(film)
+Chris Hemsworth,ACTOR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Thor,CHARACTER,True,https://en.wikipedia.org/wiki/Thor_(film)
+Tom Hiddleston,ACTOR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Loki,CHARACTER,True,https://en.wikipedia.org/wiki/Thor_(film)
+Natalie Portman,ACTOR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Jane Foster,CHARACTER,True,https://en.wikipedia.org/wiki/Thor_(film)
+Anthony Hopkins,ACTOR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Odin,CHARACTER,True,https://en.wikipedia.org/wiki/Thor_(film)
+Idris Elba,ACTOR,True,https://en.wikipedia.org/wiki/Thor_(film)
+Heimdall,CHARACTER,True,https://en.wikipedia.org/wiki/Thor_(film)
+Iron Man 2,FILM,True,https://en.wikipedia.org/wiki/Thor_(film)
+Captain America: The First Avenger,FILM,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Phase 1,PHASE,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+2011-07-22,DATE,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+2011,YEAR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Joe Johnston,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+War film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+origin story,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+war,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+patriotism,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+historical,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Hayley Atwell,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Peggy Carter,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Sebastian Stan,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Bucky Barnes,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Hugo Weaving,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Red Skull,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Tommy Lee Jones,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Chester Phillips,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+Thor,FILM,True,https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger
+The Avengers,FILM,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Phase 1,PHASE,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+2012-05-04,DATE,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+2012,YEAR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Joss Whedon,DIRECTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+team up,TAG,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+ensemble,TAG,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+alien invasion,TAG,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+crossover,TAG,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Chris Hemsworth,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Thor,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Mark Ruffalo,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Bruce Banner,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Scarlett Johansson,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Natasha Romanoff,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Jeremy Renner,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Clint Barton,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Tom Hiddleston,ACTOR,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Loki,CHARACTER,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Captain America: The First Avenger,FILM,True,https://en.wikipedia.org/wiki/The_Avengers_(2012_film)
+Captain America: The Winter Soldier,FILM,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Phase 2,PHASE,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+2014-04-04,DATE,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+2014,YEAR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Anthony Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Joe Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Political thriller,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+espionage,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+conspiracy,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+friendship,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+surveillance,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Scarlett Johansson,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Natasha Romanoff,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Sebastian Stan,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Bucky Barnes,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Anthony Mackie,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Sam Wilson,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Samuel L. Jackson,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Nick Fury,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+The Avengers,FILM,True,https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier
+Guardians of the Galaxy,FILM,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Phase 2,PHASE,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+2014-08-01,DATE,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+2014,YEAR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+James Gunn,DIRECTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Space opera,GENRE,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+cosmic,TAG,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+team up,TAG,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+humor,TAG,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+outlaws,TAG,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Chris Pratt,ACTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Peter Quill,CHARACTER,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Zoe Saldana,ACTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Gamora,CHARACTER,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Dave Bautista,ACTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Drax,CHARACTER,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Vin Diesel,ACTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Groot,CHARACTER,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Bradley Cooper,ACTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Rocket,CHARACTER,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Lee Pace,ACTOR,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Ronan,CHARACTER,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Captain America: The Winter Soldier,FILM,True,https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)
+Avengers: Age of Ultron,FILM,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Phase 2,PHASE,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+2015-05-01,DATE,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+2015,YEAR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Joss Whedon,DIRECTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+team up,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+artificial intelligence,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+global threat,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+ensemble,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Chris Hemsworth,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Thor,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Mark Ruffalo,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Bruce Banner,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Scarlett Johansson,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Natasha Romanoff,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Jeremy Renner,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Clint Barton,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+James Spader,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Ultron,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Guardians of the Galaxy,FILM,True,https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron
+Captain America: Civil War,FILM,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+2016-05-06,DATE,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+2016,YEAR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Anthony Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Joe Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+team conflict,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+politics,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+ensemble,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+crossover,TAG,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Scarlett Johansson,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Natasha Romanoff,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Sebastian Stan,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Bucky Barnes,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Chadwick Boseman,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+T'Challa,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Tom Holland,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Peter Parker,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Daniel Bruhl,ACTOR,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Helmut Zemo,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Avengers: Age of Ultron,FILM,True,https://en.wikipedia.org/wiki/Captain_America:_Civil_War
+Doctor Strange,FILM,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+2016-11-04,DATE,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+2016,YEAR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Scott Derrickson,DIRECTOR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Fantasy film,GENRE,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+origin story,TAG,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+magic,TAG,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+multiverse,TAG,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+mysticism,TAG,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Benedict Cumberbatch,ACTOR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Stephen Strange,CHARACTER,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Chiwetel Ejiofor,ACTOR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Karl Mordo,CHARACTER,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Rachel McAdams,ACTOR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Christine Palmer,CHARACTER,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Benedict Wong,ACTOR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Wong,CHARACTER,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Mads Mikkelsen,ACTOR,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Kaecilius,CHARACTER,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Captain America: Civil War,FILM,True,https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)
+Black Panther,FILM,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+2018-02-16,DATE,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+2018,YEAR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Ryan Coogler,DIRECTOR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+nation,TAG,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+technology,TAG,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+legacy,TAG,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+identity,TAG,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Chadwick Boseman,ACTOR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+T'Challa,CHARACTER,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Michael B. Jordan,ACTOR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Erik Killmonger,CHARACTER,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Lupita Nyong'o,ACTOR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Nakia,CHARACTER,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Danai Gurira,ACTOR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Okoye,CHARACTER,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Letitia Wright,ACTOR,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Shuri,CHARACTER,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Doctor Strange,FILM,True,https://en.wikipedia.org/wiki/Black_Panther_(film)
+Thor: Ragnarok,FILM,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+2017-11-03,DATE,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+2017,YEAR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Taika Waititi,DIRECTOR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Comedy film,GENRE,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+cosmic,TAG,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+comedy,TAG,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+mythology,TAG,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+team up,TAG,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Chris Hemsworth,ACTOR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Thor,CHARACTER,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Tom Hiddleston,ACTOR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Loki,CHARACTER,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Tessa Thompson,ACTOR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Valkyrie,CHARACTER,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Mark Ruffalo,ACTOR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Bruce Banner,CHARACTER,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Cate Blanchett,ACTOR,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Hela,CHARACTER,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Black Panther,FILM,True,https://en.wikipedia.org/wiki/Thor:_Ragnarok
+Avengers: Infinity War,FILM,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+2018-04-27,DATE,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+2018,YEAR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Anthony Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Joe Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+team up,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+cosmic,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+ensemble,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+saga climax,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Chris Hemsworth,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Thor,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Mark Ruffalo,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Bruce Banner,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Tom Holland,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Peter Parker,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Benedict Cumberbatch,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Stephen Strange,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Josh Brolin,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Thanos,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Thor: Ragnarok,FILM,True,https://en.wikipedia.org/wiki/Avengers:_Infinity_War
+Captain Marvel,FILM,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+2019-03-08,DATE,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+2019,YEAR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Anna Boden,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Ryan Fleck,DIRECTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+origin story,TAG,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+cosmic,TAG,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+memory,TAG,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+identity,TAG,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Brie Larson,ACTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Carol Danvers,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Samuel L. Jackson,ACTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Nick Fury,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Ben Mendelsohn,ACTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Talos,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Jude Law,ACTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Yon-Rogg,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Lashana Lynch,ACTOR,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Maria Rambeau,CHARACTER,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Avengers: Infinity War,FILM,True,https://en.wikipedia.org/wiki/Captain_Marvel_(film)
+Avengers: Endgame,FILM,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Phase 3,PHASE,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Marvel Cinematic Universe,FRANCHISE,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Marvel Studios,STUDIO,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+United States,COUNTRY,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+2019-04-26,DATE,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+2019,YEAR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Anthony Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Joe Russo,DIRECTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Action film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Science fiction film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Superhero film,GENRE,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+team up,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+time travel,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+ensemble,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+saga climax,TAG,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Robert Downey Jr.,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Tony Stark,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Chris Evans,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Steve Rogers,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Chris Hemsworth,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Thor,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Mark Ruffalo,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Bruce Banner,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Scarlett Johansson,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Natasha Romanoff,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Jeremy Renner,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Clint Barton,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Josh Brolin,ACTOR,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Thanos,CHARACTER,True,https://en.wikipedia.org/wiki/Avengers:_Endgame
+Captain Marvel,FILM,True,https://en.wikipedia.org/wiki/Avengers:_Endgame

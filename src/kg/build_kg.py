@@ -1,245 +1,204 @@
 """
-Lab Session 4 - KB Construction
-Ontologie et graphe RDF pour les blessures de footballeurs
-Classes: Player, Club, Injury, BodyPart, Competition, Country, MedicalStaff
+Lab Session 4 - KB Construction for the MCU domain.
 """
+
+from __future__ import annotations
 
 import csv
 import re
 import sys
 from pathlib import Path
-from rdflib import Graph, Namespace, URIRef, Literal, RDF, RDFS, OWL, XSD
+
+from rdflib import Graph, Literal, Namespace, OWL, RDF, RDFS, URIRef, XSD
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-FOOTY  = Namespace("http://example.org/football/")
-PROP   = Namespace("http://example.org/football/property/")
-DBO    = Namespace("http://dbpedia.org/ontology/")
+MCU = Namespace("http://example.org/mcu/")
+PROP = Namespace("http://example.org/mcu/property/")
+DBO = Namespace("http://dbpedia.org/ontology/")
 
-ENTITIES_CSV  = Path("data/extracted_knowledge.csv")
+ENTITIES_CSV = Path("data/extracted_knowledge.csv")
 RELATIONS_CSV = Path("data/extracted_relations.csv")
 ONTOLOGY_FILE = Path("kg_artifacts/ontology.ttl")
-KG_FILE       = Path("kg_artifacts/initial_kg.ttl")
+KG_FILE = Path("kg_artifacts/initial_kg.ttl")
 
 
 def to_uri(text: str) -> URIRef:
     slug = re.sub(r"[^a-zA-Z0-9_]", "_", text.strip())
     slug = re.sub(r"_+", "_", slug).strip("_")
-    return FOOTY[slug]
+    return MCU[slug]
 
-def pred_uri(verb: str) -> URIRef:
+
+def pred_uri(predicate: str) -> URIRef:
     known = {
-        "suffersInjury": PROP["suffersInjury"],
-        "injuryType": PROP["injuryType"],
-        "affectsBodyPart": PROP["affectsBodyPart"],
-        "playsFor": PROP["playsFor"],
-        "missedDueTo": PROP["missedDueTo"],
-        "occuredDuring": PROP["occuredDuring"],
-        "represents": PROP["represents"],
-        "recoveryDays": PROP["recoveryDays"],
-        "gamesAbsent": PROP["gamesAbsent"],
-        "injuryDate": PROP["injuryDate"],
+        "directedBy": PROP["directedBy"],
+        "hasCastMember": PROP["hasCastMember"],
+        "appearsInFilm": PROP["appearsInFilm"],
+        "portraysCharacter": PROP["portraysCharacter"],
+        "hasGenre": PROP["hasGenre"],
+        "partOfPhase": PROP["partOfPhase"],
+        "partOfFranchise": PROP["partOfFranchise"],
+        "producedBy": PROP["producedBy"],
+        "hasCountry": PROP["hasCountry"],
+        "releaseDate": PROP["releaseDate"],
+        "releaseYear": PROP["releaseYear"],
+        "followsFilm": PROP["followsFilm"],
+        "hasTag": PROP["hasTag"],
+        "hasRoleType": PROP["hasRoleType"],
     }
-    if verb in known:
-        return known[verb]
-    slug = re.sub(r"[^a-zA-Z0-9_]", "_", verb.strip())
-    return PROP[slug]
+    return known.get(predicate, PROP[predicate])
 
 
-# ── Ontologie domaine Blessures Football ───────────────────────────────────────
 def build_ontology() -> Graph:
-    g = Graph()
-    g.bind("footy", FOOTY)
-    g.bind("prop",  PROP)
-    g.bind("dbo",   DBO)
-    g.bind("owl",   OWL)
-    g.bind("rdfs",  RDFS)
+    graph = Graph()
+    graph.bind("mcu", MCU)
+    graph.bind("prop", PROP)
+    graph.bind("dbo", DBO)
+    graph.bind("owl", OWL)
+    graph.bind("rdfs", RDFS)
 
-    # ── Classes ────────────────────────────────────────────────────────────────
     classes = {
-        "Player":        "A professional football player.",
-        "Club":          "A football club or team.",
-        "Injury":        "A specific injury suffered by a player.",
-        "InjuryType":    "A category of injury (e.g. ACL rupture, fracture).",
-        "BodyPart":      "The body part affected by an injury.",
-        "Competition":   "A football tournament or league.",
-        "Country":       "A nation associated with a player or club.",
-        "Season":        "A football season (e.g. 2022-23).",
-        "MedicalStaff":  "A doctor or physiotherapist involved in treatment.",
+        "Film": "An MCU feature film.",
+        "Director": "A film director working on an MCU film.",
+        "Actor": "A cast member in an MCU film.",
+        "Character": "A fictional character appearing in an MCU film.",
+        "Genre": "A film genre.",
+        "Phase": "A release phase of the MCU.",
+        "Franchise": "A film franchise.",
+        "Studio": "A production studio.",
+        "Country": "A production country.",
+        "Tag": "A thematic tag used for analysis and expansion.",
+        "RoleType": "A cast role category such as lead or villain.",
+        "ReleaseYear": "A release year represented as an entity.",
+        "SagaFilm": "A film inferred to belong to a saga-oriented category.",
+        "PhaseThreeFilm": "A film inferred to be part of Phase 3.",
     }
     for name, comment in classes.items():
-        uri = FOOTY[name]
-        g.add((uri, RDF.type,        OWL.Class))
-        g.add((uri, RDFS.label,      Literal(name, lang="en")))
-        g.add((uri, RDFS.comment,    Literal(comment, lang="en")))
-        g.add((uri, RDFS.subClassOf, OWL.Thing))
+        uri = MCU[name]
+        graph.add((uri, RDF.type, OWL.Class))
+        graph.add((uri, RDFS.label, Literal(name, lang="en")))
+        graph.add((uri, RDFS.comment, Literal(comment, lang="en")))
 
-    # Sous-classes d'InjuryType
-    injury_subtypes = [
-        ("ACLRupture",        "Anterior Cruciate Ligament rupture."),
-        ("HamstringStrain",   "Strain or tear of the hamstring muscle."),
-        ("AchillesRupture",   "Rupture of the Achilles tendon."),
-        ("Fracture",          "Bone fracture."),
-        ("MetatarsalFracture","Fracture of a metatarsal bone in the foot."),
-        ("Concussion",        "Brain concussion from impact."),
-        ("MuscleTear",        "Tear of a muscle fibre."),
-        ("SpainedAnkle",      "Ankle sprain."),
-        ("MeniscusTear",      "Tear of the meniscus cartilage."),
-    ]
-    for name, comment in injury_subtypes:
-        uri = FOOTY[name]
-        g.add((uri, RDF.type,        OWL.Class))
-        g.add((uri, RDFS.label,      Literal(name, lang="en")))
-        g.add((uri, RDFS.comment,    Literal(comment, lang="en")))
-        g.add((uri, RDFS.subClassOf, FOOTY["InjuryType"]))
-
-    # ── Object Properties ──────────────────────────────────────────────────────
     obj_props = [
-        ("suffersInjury",   "Player",       "Injury",       "The player suffered this injury."),
-        ("injuryType",      "Injury",       "InjuryType",   "The type/category of the injury."),
-        ("affectsBodyPart", "Injury",       "BodyPart",     "The body part affected by the injury."),
-        ("playsFor",        "Player",       "Club",         "The player plays or played for this club."),
-        ("missedDueTo",     "Player",       "Injury",       "Games or events missed due to the injury."),
-        ("treatedBy",       "Injury",       "MedicalStaff", "Medical staff who treated the injury."),
-        ("occuredDuring",   "Injury",       "Competition",  "Competition during which the injury occurred."),
-        ("represents",      "Player",       "Country",      "National team represented by the player."),
-        ("locatedIn",       "Club",         "Country",      "Country where the club is based."),
-        ("competesIn",      "Club",         "Competition",  "Competition the club participates in."),
-        ("causesSurgery",   "Injury",       "Injury",       "Injury that required surgery."),
+        ("directedBy", "Film", "Director", "Links a film to its director."),
+        ("hasCastMember", "Film", "Actor", "Links a film to a cast member."),
+        ("appearsInFilm", "Character", "Film", "Links a character or actor appearance to a film."),
+        ("portraysCharacter", "Actor", "Character", "Links an actor to a portrayed character."),
+        ("hasGenre", "Film", "Genre", "Links a film to a genre."),
+        ("partOfPhase", "Film", "Phase", "Links a film to an MCU phase."),
+        ("partOfFranchise", "Film", "Franchise", "Links a film to a franchise."),
+        ("producedBy", "Film", "Studio", "Links a film to its studio."),
+        ("hasCountry", "Film", "Country", "Links a film to a country."),
+        ("followsFilm", "Film", "Film", "Links a film to a previous release in the selected corpus."),
+        ("hasTag", "Film", "Tag", "Links a film to a thematic tag."),
+        ("hasRoleType", "Actor", "RoleType", "Links an actor appearance to a role type."),
+        ("sharesDirectorWith", "Film", "Film", "Derived relation for common directors."),
+        ("sharesCastMemberWith", "Film", "Film", "Derived relation for common cast."),
+        ("sharesGenreWith", "Film", "Film", "Derived relation for common genre."),
+        ("samePhaseAs", "Film", "Film", "Derived relation for phase membership."),
     ]
     for name, domain, range_, comment in obj_props:
         uri = PROP[name]
-        g.add((uri, RDF.type,       OWL.ObjectProperty))
-        g.add((uri, RDFS.label,     Literal(name, lang="en")))
-        g.add((uri, RDFS.comment,   Literal(comment, lang="en")))
-        g.add((uri, RDFS.domain,    FOOTY[domain]))
-        g.add((uri, RDFS.range,     FOOTY[range_]))
+        graph.add((uri, RDF.type, OWL.ObjectProperty))
+        graph.add((uri, RDFS.label, Literal(name, lang="en")))
+        graph.add((uri, RDFS.comment, Literal(comment, lang="en")))
+        graph.add((uri, RDFS.domain, MCU[domain]))
+        graph.add((uri, RDFS.range, MCU[range_]))
 
-    # ── Datatype Properties ────────────────────────────────────────────────────
-    dt_props = [
-        ("injuryDate",        "Injury",  XSD.date,    "Date when the injury occurred."),
-        ("recoveryDays",      "Injury",  XSD.integer, "Number of days of recovery."),
-        ("gamesAbsent",       "Injury",  XSD.integer, "Number of games missed."),
-        ("injuryDescription", "Injury",  XSD.string,  "Textual description of the injury."),
-        ("nationality",       "Player",  XSD.string,  "Nationality of the player."),
-        ("position",          "Player",  XSD.string,  "Playing position (e.g. Midfielder)."),
-        ("birthDate",         "Player",  XSD.date,    "Player's date of birth."),
-        ("foundedYear",       "Club",    XSD.gYear,   "Year the club was founded."),
+    datatype_props = [
+        ("releaseDate", "Film", XSD.date, "Release date of the film."),
+        ("releaseYear", "Film", XSD.gYear, "Release year of the film."),
     ]
-    for name, domain, dtype, comment in dt_props:
+    for name, domain, dtype, comment in datatype_props:
         uri = PROP[name]
-        g.add((uri, RDF.type,      OWL.DatatypeProperty))
-        g.add((uri, RDFS.label,    Literal(name, lang="en")))
-        g.add((uri, RDFS.comment,  Literal(comment, lang="en")))
-        g.add((uri, RDFS.domain,   FOOTY[domain]))
-        g.add((uri, RDFS.range,    dtype))
+        graph.add((uri, RDF.type, OWL.DatatypeProperty))
+        graph.add((uri, RDFS.label, Literal(name, lang="en")))
+        graph.add((uri, RDFS.comment, Literal(comment, lang="en")))
+        graph.add((uri, RDFS.domain, MCU[domain]))
+        graph.add((uri, RDFS.range, dtype))
 
-    # ── BodyPart instances (fixed vocabulary) ──────────────────────────────────
-    body_parts = [
-        "knee", "ankle", "hamstring", "thigh", "calf", "achilles",
-        "foot", "metatarsal", "shoulder", "groin", "back", "hip",
-        "head", "wrist", "fibula", "tibia", "meniscus",
-    ]
-    for bp in body_parts:
-        uri = FOOTY[bp.capitalize()]
-        g.add((uri, RDF.type,   FOOTY["BodyPart"]))
-        g.add((uri, RDFS.label, Literal(bp, lang="en")))
+    for role_type in ("lead", "supporting", "villain"):
+        uri = to_uri(role_type)
+        graph.add((uri, RDF.type, MCU["RoleType"]))
+        graph.add((uri, RDFS.label, Literal(role_type, lang="en")))
 
-    # ── InjuryType instances (fixed vocabulary) ────────────────────────────────
-    known_injuries = [
-        ("ACL_rupture",         "Anterior cruciate ligament rupture", "ACLRupture"),
-        ("hamstring_strain",    "Hamstring muscle strain",            "HamstringStrain"),
-        ("achilles_rupture",    "Achilles tendon rupture",            "AchillesRupture"),
-        ("metatarsal_fracture", "Metatarsal fracture",                "MetatarsalFracture"),
-        ("concussion",          "Head concussion",                    "Concussion"),
-        ("muscle_tear",         "Muscle fibre tear",                  "MuscleTear"),
-        ("ankle_sprain",        "Ankle sprain",                       "SpainedAnkle"),
-        ("meniscus_tear",       "Meniscus cartilage tear",            "MeniscusTear"),
-        ("fibula_fracture",     "Fibula fracture",                    "Fracture"),
-        ("tibia_fracture",      "Tibia fracture",                     "Fracture"),
-    ]
-    for slug, label, subclass in known_injuries:
-        uri = FOOTY[slug]
-        g.add((uri, RDF.type,        FOOTY[subclass]))
-        g.add((uri, RDFS.label,      Literal(label, lang="en")))
-
-    return g
+    return graph
 
 
-# ── NER label → classe ontologie ───────────────────────────────────────────────
 LABEL_TO_CLASS = {
-    "PERSON": FOOTY["Player"],
-    "ORG": FOOTY["Club"],
-    "GPE": FOOTY["Country"],
-    "LOC": FOOTY["Country"],
-    "EVENT": FOOTY["Competition"],
-    "COMPETITION": FOOTY["Competition"],
-    "SEASON": FOOTY["Season"],
-    "INJURY": FOOTY["Injury"],
-    "INJURY_TYPE": FOOTY["InjuryType"],
-    "BODY_PART": FOOTY["BodyPart"],
+    "FILM": MCU["Film"],
+    "DIRECTOR": MCU["Director"],
+    "ACTOR": MCU["Actor"],
+    "CHARACTER": MCU["Character"],
+    "GENRE": MCU["Genre"],
+    "PHASE": MCU["Phase"],
+    "FRANCHISE": MCU["Franchise"],
+    "STUDIO": MCU["Studio"],
+    "COUNTRY": MCU["Country"],
+    "TAG": MCU["Tag"],
+    "ROLE_TYPE": MCU["RoleType"],
+    "YEAR": MCU["ReleaseYear"],
 }
 
 
 def build_kg(ontology: Graph) -> Graph:
-    g = ontology
+    graph = ontology
 
-    entity_types: dict[str, str] = {}
-    with open(ENTITIES_CSV, encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            ent   = row["entity"].strip()
+    with open(ENTITIES_CSV, encoding="utf-8") as file_obj:
+        for row in csv.DictReader(file_obj):
+            entity = row["entity"].strip()
             label = row["label"].strip()
-            entity_types[ent] = label
-
             cls = LABEL_TO_CLASS.get(label)
-            if cls:
-                uri = to_uri(ent)
-                g.add((uri, RDF.type,   cls))
-                g.add((uri, RDFS.label, Literal(ent, lang="en")))
+            if cls is None:
+                continue
+            uri = to_uri(entity)
+            graph.add((uri, RDF.type, cls))
+            graph.add((uri, RDFS.label, Literal(entity, lang="en")))
 
-    with open(RELATIONS_CSV, encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            subj = row["subject"].strip()
-            pred = row["predicate"].strip()
-            obj  = row["object"].strip()
-            s = to_uri(subj)
-            p = pred_uri(pred)
+    with open(RELATIONS_CSV, encoding="utf-8") as file_obj:
+        for row in csv.DictReader(file_obj):
+            subject = row["subject"].strip()
+            predicate = row["predicate"].strip()
+            obj = row["object"].strip()
             object_type = row.get("object_type", "").strip()
 
-            if pred in {"recoveryDays", "gamesAbsent"}:
-                g.add((s, p, Literal(int(obj), datatype=XSD.integer)))
+            subject_uri = to_uri(subject)
+            predicate_uri = pred_uri(predicate)
+
+            if predicate == "releaseDate":
+                graph.add((subject_uri, predicate_uri, Literal(obj, datatype=XSD.date)))
+                continue
+            if predicate == "releaseYear":
+                graph.add((subject_uri, predicate_uri, Literal(obj, datatype=XSD.gYear)))
                 continue
 
-            if pred == "injuryDate":
-                g.add((s, p, Literal(obj, datatype=XSD.date)))
-                continue
+            object_uri = to_uri(obj)
+            graph.add((subject_uri, predicate_uri, object_uri))
 
-            o = to_uri(obj)
-            g.add((s, p, o))
-            if (p, RDF.type, OWL.ObjectProperty) not in g and (p, RDF.type, OWL.DatatypeProperty) not in g:
-                if object_type in {"NUMBER", "DATE"}:
-                    g.add((p, RDF.type, OWL.DatatypeProperty))
-                else:
-                    g.add((p, RDF.type, OWL.ObjectProperty))
-                g.add((p, RDFS.label, Literal(pred, lang="en")))
+            if object_type in LABEL_TO_CLASS:
+                graph.add((object_uri, RDF.type, LABEL_TO_CLASS[object_type]))
+                graph.add((object_uri, RDFS.label, Literal(obj, lang="en")))
 
-    return g
+    return graph
 
 
 def main():
     ONTOLOGY_FILE.parent.mkdir(parents=True, exist_ok=True)
-    print("Building ontology…")
-    onto = build_ontology()
-    onto.serialize(destination=str(ONTOLOGY_FILE), format="turtle")
-    print(f"  ✓ {ONTOLOGY_FILE}")
+    print("Building ontology...")
+    ontology = build_ontology()
+    ontology.serialize(destination=str(ONTOLOGY_FILE), format="turtle")
+    print(f"  OK {ONTOLOGY_FILE}")
 
-    print("Building knowledge graph…")
-    kg = build_kg(onto)
+    print("Building knowledge graph...")
+    kg = build_kg(ontology)
     kg.serialize(destination=str(KG_FILE), format="turtle")
 
-    print(f"  ✓ {KG_FILE}")
-    print(f"  📊 {len(kg)} triples | {len(set(kg.subjects()))} entities | {len(set(kg.predicates()))} predicates")
+    print(f"  OK {KG_FILE}")
+    print(
+        f"  Stats: {len(kg)} triples | {len(set(kg.subjects()))} entities | "
+        f"{len(set(kg.predicates()))} predicates"
+    )
 
 
 if __name__ == "__main__":

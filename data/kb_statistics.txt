@@ -1,6 +1,6 @@
 KB Statistics
 =============
-Triples:   40,950
-Entities:  37,576
-Relations: 14
+Triples:   122,392
+Entities:  7,992
+Relations: 70
 File: kg_artifacts\expanded.nt

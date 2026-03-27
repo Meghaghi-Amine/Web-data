@@ -1,136 +1,230 @@
 private_entity,external_uri,confidence
-ankle,http://www.wikidata.org/entity/Q168002,0.99
-Spain,http://www.wikidata.org/entity/Q29,0.99
-Country,http://www.wikidata.org/entity/Q83440,0.75
-2022-23,http://www.wikidata.org/entity/Q73889978,0.75
-Thiago Alcantara,http://www.wikidata.org/entity/Q17493,0.75
-Player,http://www.wikidata.org/entity/Q937857,0.75
-meniscus,http://www.wikidata.org/entity/Q27438478,0.99
-BodyPart,http://www.wikidata.org/entity/Q4936952,0.75
-Radamel Falcao Anterior cruciate ligament rupture 2013-14,NOT_FOUND,0.0
-Coupe de France,http://www.wikidata.org/entity/Q212412,0.99
-MedicalStaff,NOT_FOUND,0.0
-tibia,http://www.wikidata.org/entity/Q7800437,0.99
-Virgil van Dijk,http://www.wikidata.org/entity/Q133903,0.99
-fibula,http://www.wikidata.org/entity/Q324926,0.99
-MetatarsalFracture,NOT_FOUND,0.0
-causesSurgery,NOT_FOUND,0.0
-Injury,http://www.wikidata.org/entity/Q15752765,0.99
-Abou Diaby Muscle tear 2013-14,NOT_FOUND,0.0
-Sweden,http://www.wikidata.org/entity/Q34,0.99
-MeniscusTear,NOT_FOUND,0.0
-2015-16,http://www.wikidata.org/entity/Q53386085,0.75
-Season,http://www.wikidata.org/entity/Q27020041,0.75
-knee,http://www.wikidata.org/entity/Q25379686,0.99
-knee,http://www.wikidata.org/entity/Q25379686,0.99
-Michael Owen Anterior cruciate ligament rupture 2006-07,NOT_FOUND,0.0
-2016-17,http://www.wikidata.org/entity/Q30201458,0.75
-MuscleTear,NOT_FOUND,0.0
-InjuryType,NOT_FOUND,0.0
-Abou Diaby,http://www.wikidata.org/entity/Q1943,0.99
-Arsenal FC,http://www.wikidata.org/entity/Q9617,0.75
-Fracture,http://www.wikidata.org/entity/Q81841,0.99
-nationality,http://www.wikidata.org/entity/Q42138,0.75
-suffersInjury,NOT_FOUND,0.0
-Kevin De Bruyne Hamstring strain 2023-24,NOT_FOUND,0.0
-hamstring,http://www.wikidata.org/entity/Q196002,0.75
-Netherlands,http://www.wikidata.org/entity/Q55,0.99
-missedDueTo,NOT_FOUND,0.0
-Zlatan Ibrahimovic Anterior cruciate ligament rupture 2016-17,NOT_FOUND,0.0
-thigh,http://www.wikidata.org/entity/Q129757,0.99
-Competition,http://www.wikidata.org/entity/Q476300,0.99
-Liverpool FC,http://www.wikidata.org/entity/Q1130849,0.75
-Club,http://www.wikidata.org/entity/Q988108,0.99
-injuryType,NOT_FOUND,0.0
-Santi Cazorla Achilles tendon rupture 2016-17,NOT_FOUND,0.0
-occuredDuring,NOT_FOUND,0.0
-locatedIn,NOT_FOUND,0.0
-UEFA Champions League,http://www.wikidata.org/entity/Q18756,0.99
-HamstringStrain,NOT_FOUND,0.0
-injuryDate,NOT_FOUND,0.0
-AchillesRupture,NOT_FOUND,0.0
-Jack Wilshere,http://www.wikidata.org/entity/Q15199,0.99
-Jack Wilshere Fibula fracture 2015-16,NOT_FOUND,0.0
-Meniscus cartilage tear,NOT_FOUND,0.0
-competesIn,NOT_FOUND,0.0
-Neymar Ankle sprain 2022-23,NOT_FOUND,0.0
-Ligue 1,http://www.wikidata.org/entity/Q13394,0.99
-Head concussion,http://www.wikidata.org/entity/Q52548086,0.75
-2013-14,http://www.wikidata.org/entity/Q53386030,0.75
-playsFor,http://www.wikidata.org/entity/Q477621,0.75
-2006-07,http://www.wikidata.org/entity/Q233604,0.75
-gamesAbsent,NOT_FOUND,0.0
-Radamel Falcao,http://www.wikidata.org/entity/Q138172,0.99
-SpainedAnkle,NOT_FOUND,0.0
-thigh,http://www.wikidata.org/entity/Q129757,0.99
-Luke Shaw,http://www.wikidata.org/entity/Q93563,0.99
-affectsBodyPart,NOT_FOUND,0.0
-AS Monaco FC,http://www.wikidata.org/entity/Q180305,0.99
-Manchester United FC,http://www.wikidata.org/entity/Q18656,0.75
-Newcastle United FC,http://www.wikidata.org/entity/Q18716,0.75
-Ousmane Dembele Hamstring strain 2019-20,NOT_FOUND,0.0
-birthDate,http://www.wikidata.org/entity/Q2389905,0.75
-Fibula fracture,http://www.wikidata.org/entity/Q1410873,0.75
-represents,http://www.wikidata.org/entity/Q109425297,0.99
-ankle,http://www.wikidata.org/entity/Q168002,0.99
-Neymar,http://www.wikidata.org/entity/Q142794,0.99
-Paris Saint-Germain FC,http://www.wikidata.org/entity/Q483020,0.99
-Achilles tendon rupture,http://www.wikidata.org/entity/Q340311,0.99
-Brazil,http://www.wikidata.org/entity/Q155,0.99
-Belgium,http://www.wikidata.org/entity/Q31,0.99
-Luke Shaw Tibia fracture 2015-16,NOT_FOUND,0.0
-Ousmane Dembele,http://www.wikidata.org/entity/Q20851003,0.75
-Premier League,http://www.wikidata.org/entity/Q9448,0.99
-Muscle fibre tear,NOT_FOUND,0.0
-France,http://www.wikidata.org/entity/Q142,0.99
-Tibia fracture,http://www.wikidata.org/entity/Q3080298,0.99
-Kevin De Bruyne,http://www.wikidata.org/entity/Q357984,0.99
-tibia,http://www.wikidata.org/entity/Q7800437,0.99
-Thiago Alcantara Meniscus tear 2020-21,NOT_FOUND,0.0
-Michael Owen,http://www.wikidata.org/entity/Q128829,0.99
-Concussion,http://www.wikidata.org/entity/Q326921,0.99
-ACLRupture,NOT_FOUND,0.0
-position,http://www.wikidata.org/entity/Q1449592,0.75
-Santi Cazorla,http://www.wikidata.org/entity/Q185225,0.99
-2019-20,http://www.wikidata.org/entity/Q81068910,0.75
-Zlatan Ibrahimovic,http://www.wikidata.org/entity/Q46896,0.75
-foot,http://www.wikidata.org/entity/Q3710,0.99
-England,http://www.wikidata.org/entity/Q21,0.99
-Ankle sprain,http://www.wikidata.org/entity/Q61967536,0.75
-injuryDescription,NOT_FOUND,0.0
-Manchester City FC,http://www.wikidata.org/entity/Q50602,0.75
-Virgil van Dijk Anterior cruciate ligament rupture 2020-21,NOT_FOUND,0.0
-foundedYear,NOT_FOUND,0.0
-Muscle tear,http://www.wikidata.org/entity/Q91630461,0.75
-World Cup,http://www.wikidata.org/entity/Q19317,0.75
-2023-24,http://www.wikidata.org/entity/Q111309338,0.75
-Metatarsal fracture,http://www.wikidata.org/entity/Q35865379,0.75
-meniscus,http://www.wikidata.org/entity/Q27438478,0.99
-2020-21,http://www.wikidata.org/entity/Q57401068,0.75
-Ankle sprain,http://www.wikidata.org/entity/Q61967536,0.75
-hamstring,http://www.wikidata.org/entity/Q196002,0.75
-shoulder,http://www.wikidata.org/entity/Q16363,0.99
-head,http://www.wikidata.org/entity/Q23640,0.99
-UEFA Europa League,http://www.wikidata.org/entity/Q18760,0.99
-Meniscus tear,http://www.wikidata.org/entity/Q95595412,0.99
-fibula,http://www.wikidata.org/entity/Q324926,0.99
-Hamstring strain,http://www.wikidata.org/entity/Q66068465,0.75
-Fibula fracture,http://www.wikidata.org/entity/Q1410873,0.75
-groin,http://www.wikidata.org/entity/Q65182530,0.99
-treatedBy,NOT_FOUND,0.0
-hip,http://www.wikidata.org/entity/Q537199,0.75
-metatarsal,http://www.wikidata.org/entity/Q320524,0.75
-Hamstring muscle strain,http://www.wikidata.org/entity/Q77815740,0.75
-Tibia fracture,http://www.wikidata.org/entity/Q3080298,0.99
-recoveryDays,NOT_FOUND,0.0
-FC Barcelona,http://www.wikidata.org/entity/Q7156,0.75
-Colombia,http://www.wikidata.org/entity/Q739,0.99
-Achilles tendon rupture,http://www.wikidata.org/entity/Q340311,0.99
-Anterior cruciate ligament rupture,http://www.wikidata.org/entity/Q66406255,0.99
-La Liga,http://www.wikidata.org/entity/Q324867,0.99
-calf,http://www.wikidata.org/entity/Q2935,0.99
-achilles,http://www.wikidata.org/entity/Q18086783,0.99
-wrist,http://www.wikidata.org/entity/Q674840,0.99
-Anterior cruciate ligament rupture,http://www.wikidata.org/entity/Q66406255,0.99
-achilles,http://www.wikidata.org/entity/Q18086783,0.99
-back,http://www.wikidata.org/entity/Q285676,0.99
+2008,NOT_FOUND,0.0
+2010,NOT_FOUND,0.0
+2011,NOT_FOUND,0.0
+2012,NOT_FOUND,0.0
+2014,NOT_FOUND,0.0
+2015,NOT_FOUND,0.0
+2016,NOT_FOUND,0.0
+2017,NOT_FOUND,0.0
+2018,NOT_FOUND,0.0
+2019,NOT_FOUND,0.0
+Action film,http://dbpedia.org/resource/Action_film,0.99
+Actor,NOT_FOUND,0.0
+Anna Boden,http://dbpedia.org/resource/Anna_Boden,0.99
+Anthony Hopkins,NOT_FOUND,0.0
+Anthony Mackie,NOT_FOUND,0.0
+Anthony Russo,http://dbpedia.org/resource/Anthony_Russo,0.99
+Avengers: Age of Ultron,http://dbpedia.org/resource/Avengers:_Age_of_Ultron,0.99
+Avengers: Endgame,http://dbpedia.org/resource/Avengers:_Endgame,0.99
+Avengers: Infinity War,http://dbpedia.org/resource/Avengers:_Infinity_War,0.99
+Ben Mendelsohn,NOT_FOUND,0.0
+Benedict Cumberbatch,NOT_FOUND,0.0
+Benedict Wong,NOT_FOUND,0.0
+Betty Ross,NOT_FOUND,0.0
+Black Panther,http://dbpedia.org/resource/Black_Panther_(film),0.99
+Bradley Cooper,NOT_FOUND,0.0
+Brie Larson,NOT_FOUND,0.0
+Bruce Banner,NOT_FOUND,0.0
+Bucky Barnes,NOT_FOUND,0.0
+Captain America: Civil War,http://dbpedia.org/resource/Captain_America:_Civil_War,0.99
+Captain America: The First Avenger,http://dbpedia.org/resource/Captain_America:_The_First_Avenger,0.99
+Captain America: The Winter Soldier,http://dbpedia.org/resource/Captain_America:_The_Winter_Soldier,0.99
+Captain Marvel,http://dbpedia.org/resource/Captain_Marvel_(film),0.99
+Carol Danvers,NOT_FOUND,0.0
+Cate Blanchett,NOT_FOUND,0.0
+Chadwick Boseman,NOT_FOUND,0.0
+Character,NOT_FOUND,0.0
+Chester Phillips,NOT_FOUND,0.0
+Chiwetel Ejiofor,NOT_FOUND,0.0
+Chris Evans,NOT_FOUND,0.0
+Chris Hemsworth,NOT_FOUND,0.0
+Chris Pratt,NOT_FOUND,0.0
+Christine Palmer,NOT_FOUND,0.0
+Clark Gregg,NOT_FOUND,0.0
+Clint Barton,NOT_FOUND,0.0
+Comedy film,http://dbpedia.org/resource/Comedy_film,0.99
+Country,NOT_FOUND,0.0
+Danai Gurira,NOT_FOUND,0.0
+Daniel Bruhl,NOT_FOUND,0.0
+Dave Bautista,NOT_FOUND,0.0
+Director,NOT_FOUND,0.0
+Doctor Strange,http://dbpedia.org/resource/Doctor_Strange_(2016_film),0.99
+Don Cheadle,NOT_FOUND,0.0
+Drax,NOT_FOUND,0.0
+Edward Norton,NOT_FOUND,0.0
+Emil Blonsky,NOT_FOUND,0.0
+Erik Killmonger,NOT_FOUND,0.0
+Fantasy film,http://dbpedia.org/resource/Fantasy_film,0.99
+Film,NOT_FOUND,0.0
+Franchise,NOT_FOUND,0.0
+Gamora,NOT_FOUND,0.0
+Genre,NOT_FOUND,0.0
+Groot,NOT_FOUND,0.0
+Guardians of the Galaxy,http://dbpedia.org/resource/Guardians_of_the_Galaxy_(film),0.99
+Gwyneth Paltrow,NOT_FOUND,0.0
+Hayley Atwell,NOT_FOUND,0.0
+Heimdall,NOT_FOUND,0.0
+Hela,NOT_FOUND,0.0
+Helmut Zemo,NOT_FOUND,0.0
+Hugo Weaving,NOT_FOUND,0.0
+Idris Elba,NOT_FOUND,0.0
+Iron Man,http://dbpedia.org/resource/Iron_Man_(2008_film),0.99
+Iron Man 2,http://dbpedia.org/resource/Iron_Man_2,0.99
+Ivan Vanko,NOT_FOUND,0.0
+James Gunn,http://dbpedia.org/resource/James_Gunn,0.99
+James Rhodes,NOT_FOUND,0.0
+James Spader,NOT_FOUND,0.0
+Jane Foster,NOT_FOUND,0.0
+Jeff Bridges,NOT_FOUND,0.0
+Jeremy Renner,NOT_FOUND,0.0
+Joe Johnston,http://dbpedia.org/resource/Joe_Johnston,0.99
+Joe Russo,http://dbpedia.org/resource/Joe_Russo,0.99
+Jon Favreau,http://dbpedia.org/resource/Jon_Favreau,0.99
+Josh Brolin,NOT_FOUND,0.0
+Joss Whedon,http://dbpedia.org/resource/Joss_Whedon,0.99
+Jude Law,NOT_FOUND,0.0
+Kaecilius,NOT_FOUND,0.0
+Karl Mordo,NOT_FOUND,0.0
+Kenneth Branagh,http://dbpedia.org/resource/Kenneth_Branagh,0.99
+Lashana Lynch,NOT_FOUND,0.0
+Lee Pace,NOT_FOUND,0.0
+Letitia Wright,NOT_FOUND,0.0
+Liv Tyler,NOT_FOUND,0.0
+Loki,NOT_FOUND,0.0
+Louis Leterrier,http://dbpedia.org/resource/Louis_Leterrier,0.99
+Lupita Nyong'o,NOT_FOUND,0.0
+Mads Mikkelsen,NOT_FOUND,0.0
+Maria Rambeau,NOT_FOUND,0.0
+Mark Ruffalo,NOT_FOUND,0.0
+Marvel Cinematic Universe,http://dbpedia.org/resource/Marvel_Cinematic_Universe,0.99
+Marvel Studios,http://dbpedia.org/resource/Marvel_Studios,0.99
+Michael B. Jordan,NOT_FOUND,0.0
+Mickey Rourke,NOT_FOUND,0.0
+Nakia,NOT_FOUND,0.0
+Natalie Portman,NOT_FOUND,0.0
+Natasha Romanoff,NOT_FOUND,0.0
+Nick Fury,NOT_FOUND,0.0
+Obadiah Stane,NOT_FOUND,0.0
+Odin,NOT_FOUND,0.0
+Okoye,NOT_FOUND,0.0
+Peggy Carter,NOT_FOUND,0.0
+Pepper Potts,NOT_FOUND,0.0
+Peter Parker,NOT_FOUND,0.0
+Peter Quill,NOT_FOUND,0.0
+Phase,NOT_FOUND,0.0
+Phase 1,http://dbpedia.org/resource/Marvel_Cinematic_Universe:_Phase_One,0.99
+Phase 2,http://dbpedia.org/resource/Marvel_Cinematic_Universe:_Phase_Two,0.99
+Phase 3,http://dbpedia.org/resource/Marvel_Cinematic_Universe:_Phase_Three,0.99
+PhaseThreeFilm,NOT_FOUND,0.0
+Phil Coulson,NOT_FOUND,0.0
+Political thriller,http://dbpedia.org/resource/Political_thriller,0.99
+Rachel McAdams,NOT_FOUND,0.0
+Red Skull,NOT_FOUND,0.0
+ReleaseYear,NOT_FOUND,0.0
+Robert Downey Jr.,NOT_FOUND,0.0
+Rocket,NOT_FOUND,0.0
+RoleType,NOT_FOUND,0.0
+Ronan,NOT_FOUND,0.0
+Ryan Coogler,http://dbpedia.org/resource/Ryan_Coogler,0.99
+Ryan Fleck,http://dbpedia.org/resource/Ryan_Fleck,0.99
+SagaFilm,NOT_FOUND,0.0
+Sam Wilson,NOT_FOUND,0.0
+Samuel L. Jackson,NOT_FOUND,0.0
+Samuel Sterns,NOT_FOUND,0.0
+Scarlett Johansson,NOT_FOUND,0.0
+Science fiction film,http://dbpedia.org/resource/Science_fiction_film,0.99
+Scott Derrickson,http://dbpedia.org/resource/Scott_Derrickson,0.99
+Sebastian Stan,NOT_FOUND,0.0
+Shuri,NOT_FOUND,0.0
+Space opera,http://dbpedia.org/resource/Space_opera,0.99
+Stephen Strange,NOT_FOUND,0.0
+Steve Rogers,NOT_FOUND,0.0
+Studio,NOT_FOUND,0.0
+Superhero film,http://dbpedia.org/resource/Superhero_film,0.99
+T'Challa,NOT_FOUND,0.0
+Tag,NOT_FOUND,0.0
+Taika Waititi,http://dbpedia.org/resource/Taika_Waititi,0.99
+Talos,NOT_FOUND,0.0
+Terrence Howard,NOT_FOUND,0.0
+Tessa Thompson,NOT_FOUND,0.0
+Thaddeus Ross,NOT_FOUND,0.0
+Thanos,NOT_FOUND,0.0
+The Avengers,http://dbpedia.org/resource/The_Avengers_(2012_film),0.99
+The Incredible Hulk,http://dbpedia.org/resource/The_Incredible_Hulk_(film),0.99
+Thor,http://dbpedia.org/resource/Thor_(film),0.99
+Thor: Ragnarok,http://dbpedia.org/resource/Thor:_Ragnarok,0.99
+Tim Blake Nelson,NOT_FOUND,0.0
+Tim Roth,NOT_FOUND,0.0
+Tom Hiddleston,NOT_FOUND,0.0
+Tom Holland,NOT_FOUND,0.0
+Tommy Lee Jones,NOT_FOUND,0.0
+Tony Stark,NOT_FOUND,0.0
+Ultron,NOT_FOUND,0.0
+United States,http://dbpedia.org/resource/United_States,0.99
+Valkyrie,NOT_FOUND,0.0
+Vin Diesel,NOT_FOUND,0.0
+War film,http://dbpedia.org/resource/War_film,0.99
+William Hurt,NOT_FOUND,0.0
+Wong,NOT_FOUND,0.0
+Yon-Rogg,NOT_FOUND,0.0
+Zoe Saldana,NOT_FOUND,0.0
+alien invasion,NOT_FOUND,0.0
+appearsInFilm,NOT_FOUND,0.0
+armor,NOT_FOUND,0.0
+artificial intelligence,NOT_FOUND,0.0
+comedy,NOT_FOUND,0.0
+conspiracy,NOT_FOUND,0.0
+cosmic,NOT_FOUND,0.0
+crossover,NOT_FOUND,0.0
+directedBy,NOT_FOUND,0.0
+ensemble,NOT_FOUND,0.0
+espionage,NOT_FOUND,0.0
+family conflict,NOT_FOUND,0.0
+followsFilm,NOT_FOUND,0.0
+friendship,NOT_FOUND,0.0
+global threat,NOT_FOUND,0.0
+government pressure,NOT_FOUND,0.0
+hasCastMember,NOT_FOUND,0.0
+hasCountry,NOT_FOUND,0.0
+hasGenre,NOT_FOUND,0.0
+hasRoleType,NOT_FOUND,0.0
+hasTag,NOT_FOUND,0.0
+hero introduction,NOT_FOUND,0.0
+historical,NOT_FOUND,0.0
+humor,NOT_FOUND,0.0
+identity,NOT_FOUND,0.0
+lead,NOT_FOUND,0.0
+legacy,NOT_FOUND,0.0
+magic,NOT_FOUND,0.0
+memory,NOT_FOUND,0.0
+military pursuit,NOT_FOUND,0.0
+monster,NOT_FOUND,0.0
+multiverse,NOT_FOUND,0.0
+mysticism,NOT_FOUND,0.0
+mythology,NOT_FOUND,0.0
+nation,NOT_FOUND,0.0
+origin story,NOT_FOUND,0.0
+outlaws,NOT_FOUND,0.0
+partOfFranchise,NOT_FOUND,0.0
+partOfPhase,NOT_FOUND,0.0
+patriotism,NOT_FOUND,0.0
+politics,NOT_FOUND,0.0
+portraysCharacter,NOT_FOUND,0.0
+producedBy,NOT_FOUND,0.0
+releaseDate,NOT_FOUND,0.0
+releaseYear,NOT_FOUND,0.0
+saga climax,NOT_FOUND,0.0
+samePhaseAs,NOT_FOUND,0.0
+science experiment,NOT_FOUND,0.0
+sharesCastMemberWith,NOT_FOUND,0.0
+sharesDirectorWith,NOT_FOUND,0.0
+sharesGenreWith,NOT_FOUND,0.0
+supporting,NOT_FOUND,0.0
+surveillance,NOT_FOUND,0.0
+team conflict,NOT_FOUND,0.0
+team up,NOT_FOUND,0.0
+technology,NOT_FOUND,0.0
+time travel,NOT_FOUND,0.0
+villain,NOT_FOUND,0.0
+war,NOT_FOUND,0.0
