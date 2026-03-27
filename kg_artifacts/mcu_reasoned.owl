@@ -58,24 +58,24 @@
 <owl:NamedIndividual rdf:about="Avengers_Infinity_War">
   <rdf:type rdf:resource="Film"/>
   <partOfPhase rdf:resource="Phase_3"/>
-  <hasGenre rdf:resource="Action_film"/>
   <hasGenre rdf:resource="Superhero_film"/>
+  <hasGenre rdf:resource="Action_film"/>
   <rdf:type rdf:resource="PhaseThreeSagaFilm"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="Avengers_Endgame">
   <rdf:type rdf:resource="Film"/>
   <partOfPhase rdf:resource="Phase_3"/>
-  <hasGenre rdf:resource="Action_film"/>
   <hasGenre rdf:resource="Superhero_film"/>
+  <hasGenre rdf:resource="Action_film"/>
   <rdf:type rdf:resource="PhaseThreeSagaFilm"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="Iron_Man">
   <rdf:type rdf:resource="Film"/>
   <partOfPhase rdf:resource="Phase_1"/>
-  <hasGenre rdf:resource="Action_film"/>
   <hasGenre rdf:resource="Superhero_film"/>
+  <hasGenre rdf:resource="Action_film"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="Phase_1">

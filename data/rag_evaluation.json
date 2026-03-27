@@ -1,7 +1,7 @@
 [
   {
     "question": "Who directed Iron Man?",
-    "baseline_answer": "The context does not specify who directed Iron Man, so I cannot answer this question from the provided context.",
+    "baseline_answer": "The context does not provide information about who directed Iron Man, so I cannot answer this question from the provided context.",
     "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?directorLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:directedBy ?director .\n  ?director rdfs:label ?directorLabel .\n  FILTER(LCASE(STR(?filmLabel)) = \"iron man\")\n}",
     "rag_rows": [
       [
@@ -13,7 +13,7 @@
   },
   {
     "question": "Which films are in Phase 3?",
-    "baseline_answer": "I cannot provide real-time information about the Marvel Cinematic Universe films, so I cannot answer this question. For the most up-to-date information about the films in Phase 3, please check the official Marvel Cinematic Universe website or any other reliable sources.",
+    "baseline_answer": "I cannot access real-time information, therefore I cannot answer this question. For the most up-to-date information on Marvel Cinematic Universe films, please check the official Marvel Cinematic Universe website or social media pages.",
     "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?filmLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:partOfPhase ?phase .\n  ?phase rdfs:label ?phaseLabel .\n  FILTER(LCASE(STR(?phaseLabel)) = \"phase 3\")\n}\nORDER BY ?filmLabel",
     "rag_rows": [
       [
@@ -37,7 +37,7 @@
   },
   {
     "question": "Which actors appear in Avengers: Endgame?",
-    "baseline_answer": "The actors who appear in Avengers: Endgame are:\n\n- Chris Evans as Captain America\n- Robert Downey Jr. as Iron Man\n- Spider-Man: Tom Holland\n- Mark Ruffalo as Hulk\n- Scarlett Johansson as Black Widow\n- Chris Hemsworth as Thor\n- Brie Larson as Brie\n- Gwyneth Paltrow as Pepper Potts\n- Jeremy Renner as Hawkeye\n- Paul Rudd as Ant-Man\n- Joe Russo and Anthony Russo as Directors",
+    "baseline_answer": "The actors who appear in Avengers: Endgame are:\n\n- Robert Downey Jr. as Iron Man\n- Chris Evans as Captain America\n- Mark Ruffalo as Hulk\n- Thor: Chris Hemsworth\n- Zendaya as Spider-Man\n- Jeremy Renner as Hawkeye\n- Paul Rudd as Ant-Man\n- Joe Russo as Director\n- Scarlett Johansson as Black Widow\n- Chris Pratt as Starlord\n- Elizabeth Olsen as Scarlet Witch\n- Jeremy Irons as Doctor Strange",
     "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?actorLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:hasCastMember ?actor .\n  ?actor rdfs:label ?actorLabel .\n  FILTER(LCASE(STR(?filmLabel)) = \"avengers: endgame\")\n}\nORDER BY ?actorLabel",
     "rag_rows": [
       [
@@ -61,7 +61,7 @@
   },
   {
     "question": "Which films were directed by the Russo brothers?",
-    "baseline_answer": "The Russo brothers have directed several Marvel Cinematic Universe films, including Avengers: Infinity War and Avengers: Endgame.",
+    "baseline_answer": "The Russo brothers have directed the films Captain America: The Winter Soldier and Avengers: Endgame.",
     "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT DISTINCT ?filmLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:directedBy ?director .\n  ?director rdfs:label ?directorLabel .\n  FILTER(LCASE(STR(?directorLabel)) = \"anthony russo\" || LCASE(STR(?directorLabel)) = \"joe russo\")\n}\nORDER BY ?filmLabel",
     "rag_rows": [
       [
@@ -82,7 +82,7 @@
   },
   {
     "question": "Which characters does Robert Downey Jr. portray?",
-    "baseline_answer": "Robert Downey Jr. portrays Iron Man in the Marvel Cinematic Universe films.",
+    "baseline_answer": "Robert Downey Jr. portrays Iron Man, a superhero in the Marvel Cinematic Universe.",
     "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT DISTINCT ?characterLabel WHERE {\n  ?actor rdf:type mcu:Actor ;\n         rdfs:label ?actorLabel ;\n         prop:portraysCharacter ?character .\n  ?character rdfs:label ?characterLabel .\n  FILTER(LCASE(STR(?actorLabel)) = \"robert downey jr.\")\n}\nORDER BY ?characterLabel",
     "rag_rows": [
       [
@@ -94,7 +94,7 @@
   },
   {
     "question": "Which films have the superhero film genre?",
-    "baseline_answer": "Sure, here are the films that have the superhero film genre:\n\n- Iron Man\n- Spider-Man: Homecoming\n- Thor: Ragnarok\n- Black Widow\n- Avengers: Infinity War\n- Avengers: Endgame",
+    "baseline_answer": "Sure, here's a list of Marvel Cinematic Universe films that have the superhero film genre:\n\n* The Avengers: Endgame\n* Avengers: Infinity War\n* Spider-Man: Homecoming\n* Iron Man\n* Thor: The Dark World\n* Black Widow\n* Guardians of the Galaxy\n* Ant-Man\n* Captain Marvel\n* Black Panther\n* Avengers: Infinity War",
     "rag_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX mcu: <http://example.org/mcu/>\nPREFIX prop: <http://example.org/mcu/property/>\nSELECT ?filmLabel WHERE {\n  ?film rdf:type mcu:Film ;\n        rdfs:label ?filmLabel ;\n        prop:hasGenre ?genre .\n  ?genre rdfs:label ?genreLabel .\n  FILTER(LCASE(STR(?genreLabel)) = \"superhero film\")\n}\nORDER BY ?filmLabel",
     "rag_rows": [
       [
