@@ -48,6 +48,24 @@ Important generated artifacts:
 
 ## Installation
 
+Tested environment:
+
+- Windows 10/11 PowerShell
+- Python 3.10 or newer
+- 8 GB RAM minimum
+- Java optional for OWLReady2 reasoners
+
+Minimal setup to run the code:
+
+```powershell
+python --version
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+. .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
 Create and activate a virtual environment:
 
 ```powershell
@@ -72,6 +90,8 @@ The project is intentionally **deterministic and offline-friendly**.
 - No external large download is required to regenerate the data produced by the pipeline.
 
 If the generated files are missing, simply rerun the corresponding pipeline steps.
+
+Because the project data is generated locally, there is no separate large dataset download link to provide. The repository itself is sufficient to reproduce the graph artifacts.
 
 ## How to Run Each Module
 
@@ -120,6 +140,14 @@ ollama pull gemma:2b
 ollama serve
 ```
 
+You can verify that Ollama is running with:
+
+```powershell
+curl http://localhost:11434
+```
+
+The expected answer is similar to `Ollama is running`.
+
 Then start the CLI demo:
 
 ```powershell
@@ -139,6 +167,7 @@ Minimum:
 - CPU: 4 cores
 - RAM: 8 GB
 - Disk: 4 GB free
+- Python: 3.10+
 - GPU: not required
 
 Recommended:
@@ -150,6 +179,7 @@ Recommended:
 Observed setup notes:
 - KGE training runs on CPU if no CUDA device is available.
 - Ollama with a small model such as `gemma:2b` is sufficient for the RAG demo.
+- Java is optional; if unavailable, the SWRL module uses a manual fallback for the expected reasoning outputs.
 
 ## Current Results
 
@@ -171,14 +201,9 @@ Main KGE comparison:
 
 ## Screenshot
 
-If the repository contains an `images/` folder, a representative project screenshot can be included in GitHub markdown like this:
+A representative project screenshot is included below:
 
-```markdown
 ![RAG evaluation screenshot](images/step10.png)
-```
-
-For the final report, the LaTeX source is available in:
-- `reports/final_report.tex`
 
 ## Notes
 
